@@ -47,4 +47,4 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 * **yavg** average y-pixel value of hole
 * **pts** pixel area of hole (point in MSER region)
 * **ellipse** area of ellipse covering [xmin, xmax] and [ymin, ymax]
-* **covar** [covariance](http://en.wikipedia.org/wiki/Covariance) of point coordinates (used to measure "centered-ness"
+* **covar** [covariance](http://en.wikipedia.org/wiki/Covariance) of point coordinates (used to measure "centered-ness")
