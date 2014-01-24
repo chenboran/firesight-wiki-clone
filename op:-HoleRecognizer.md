@@ -9,6 +9,8 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
  `1`:show MSER hole candidates; 
  `2`:show matched holes only
 
+<img src="output0.jpg">
+
 #### Model
 <pre>
     "holes":[
