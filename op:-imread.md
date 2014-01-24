@@ -2,7 +2,7 @@ Set working image to contents of given file using [imread](http://docs.opencv.or
 
 #### Example
 <pre>
-{ "op":"imread", "path":"path-to-image-file" }
+{ "op":"imread", "path":"cam.jpg" }
 </pre>
 
 * **path** image file path
