@@ -4,7 +4,7 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 <pre> {"op":"HoleRecognizer", "diamMin":22.6, "diamMax":29.9, "show":1}</pre>
 * **diamMin** minimum diameter in pixels
 * **diamMax** maximum diameter in pixels
-* **show** 
+* **show** update working image and 
  `0`:do not show recognized holes; 
  `1`:show MSER hole candidates (see below); 
  `2`:show matched holes only (fuchsia)
