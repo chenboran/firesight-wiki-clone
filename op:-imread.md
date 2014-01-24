@@ -5,6 +5,8 @@ Set working image to contents of given file using [imread](http://docs.opencv.or
 { "op":"imread", "path":"path-to-image-file" }
 </pre>
 
+* **path** image file path
+
 #### Model
 <pre>
   { "cols":800, "rows":200 }
