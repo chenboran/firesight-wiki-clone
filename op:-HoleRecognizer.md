@@ -38,7 +38,7 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
       }
     ]
 </pre>
-* **holes** array of JSON objects describing matched holes
+* **holes** array of JSON objects. each describing a matched hole
 * **xmin** minimum x-pixel value of hole
 * **xmax** maximum x-pixel value of hole
 * **xavg** average x-pixel value of hole
