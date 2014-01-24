@@ -6,8 +6,8 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 * **diamMax** maximum diameter in pixels
 * **show** 
  `0`:do not show recognized holes; 
- `1`:show MSER hole candidates; 
- `2`:show matched holes only
+ `1`:show MSER hole candidates (see below); 
+ `2`:show matched holes only (fuchsia)
 
 <img src="output0.jpg">
 
