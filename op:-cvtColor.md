@@ -2,3 +2,8 @@
 
 #### Example
 <pre>{"op":"cvtColor", "code":"CV_RGB2GRAY", "dstCn":0}</pre>
+
+* **code** CV_BGR2GRAY, CV_RGB2GRAY, CV_GRAY2BGR, CV_GRAY2RGB
+
+#### Model
+<pre>{}</pre>
