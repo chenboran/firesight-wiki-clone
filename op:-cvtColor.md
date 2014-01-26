@@ -3,7 +3,7 @@
 #### Example
 <pre>{"op":"cvtColor", "code":"CV_RGB2GRAY", "dstCn":0}</pre>
 
-* **code** _CV_BGR2GRAY_, CV_RGB2GRAY, CV_GRAY2BGR, CV_GRAY2RGB
+* **code** `CV_BGR2GRAY`, CV_RGB2GRAY, CV_GRAY2BGR, CV_GRAY2RGB
 * **dstCn** Output channels (0:auto)
 
 #### Model
