@@ -6,6 +6,7 @@
 Using JSON for specifying the pipeline has certain advantages:
 * a simple text editor lets a user experiment with a useful subset of OpenCV
 * applications can easily create dynamic image processing pipelines in response to changing user needs
+* improved error handling and messages (e.g., detect invalid file for imread)
 
 ### Pipeline Stages 
 Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
