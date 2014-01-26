@@ -1,4 +1,4 @@
-Set working image to contents of given file using [imread](http://docs.opencv.org/doc/user_guide/ug_mat.html#input-output) 
+Set working image to contents of given file using [imread](http://docs.opencv.org/modules/highgui/doc/reading_and_writing_images_and_video.html?highlight=imread#imread) 
 
 #### Example
 <pre>
