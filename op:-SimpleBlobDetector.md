@@ -1,7 +1,7 @@
 [SimpleBlobDetector](http://docs.opencv.org/modules/features2d/doc/common_interfaces_of_feature_detectors.html#simpleblobdetector)  wrapper
 
 #### Examples
-<ref>{"op":"SimpleBlobDetector" "thresholdStep":10}</ref>
+<pre>{"op":"SimpleBlobDetector" "thresholdStep":10}</pre>
 Stage attribute values (e.g., "thresholdStep") correspond to the fields of [SimpleBlobDetector::Params](http://docs.opencv.org/modules/features2d/doc/common_interfaces_of_feature_detectors.html#simpleblobdetector)
 
 #### Model
