@@ -51,3 +51,4 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 
 #### Example
 <pre>firesight -i img/cam.jpg -p json/HoleRecognizer.json</pre>
+Output image `target/HoleRecognizer.jpg`
