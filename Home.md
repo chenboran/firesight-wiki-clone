@@ -4,7 +4,7 @@
 * **firesight** a UNIX executable
 
 Using JSON for specifying the pipeline has certain advantages:
-* no programming is required to specify a pipeline and a simple text editor lets a user experiment with a useful subset of OpenCV
+* a simple text editor lets a user experiment with a useful subset of OpenCV
 * applications can easily create dynamic image processing pipelines in response to changing user needs
 
 ### Pipeline Stages 
