@@ -1,4 +1,4 @@
-[Convert](Converts an image from one color space to another) image from one color space to another.
+[Convert](http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor) image from one color space to another.
 
 #### Example
 <pre>{"op":"cvtColor", "code":"CV_BGR2GRAY", "dstCn":0}</pre>
