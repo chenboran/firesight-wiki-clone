@@ -1,6 +1,6 @@
 Recognize holes(s) of given range in diameter within image using amended [MSER](http://docs.opencv.org/modules/features2d/doc/feature_detection_and_description.html#mser) algorithm.
 
-#### Example
+#### Pipeline
 <pre> {"op":"HoleRecognizer", "diamMin":22.6, "diamMax":29.9, "show":1}</pre>
 * **diamMin** minimum diameter in pixels
 * **diamMax** maximum diameter in pixels
@@ -48,3 +48,6 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 * **pts** pixel area of hole (point in MSER region)
 * **ellipse** area of ellipse covering [xmin, xmax] and [ymin, ymax]
 * **covar** [covariance](http://en.wikipedia.org/wiki/Covariance) of point coordinates (used to measure "centered-ness")
+
+#### Example
+<pre>firesight -i img/cam.jpg -p json/HoleRecognizer.json</pre>
