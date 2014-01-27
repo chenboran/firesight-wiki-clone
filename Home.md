@@ -14,6 +14,7 @@ Pipeline stages can be named. If the "name" field is omitted, stages are named i
 * [[op: Canny]]
 * [[op: cvtColor]]
 * [[op: dilate]]
+* [[op: drawKeypoints]]
 * [[op: erode]]
 * [[op: HoleRecognizer]]
 * [[op: imread]]
