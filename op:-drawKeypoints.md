@@ -11,4 +11,4 @@
 
 #### Example
 <pre>firesight -i img/cam.jpg -p json/drawKeypoints.json</pre>
-<img src="https://raw.github.com/wiki/firepick1/FireSight/drawKeypoints.jpg">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/drawKeypoints.jpg">
