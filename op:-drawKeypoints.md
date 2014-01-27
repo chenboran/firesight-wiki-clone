@@ -13,3 +13,6 @@
 <pre>firesight -i img/cam.jpg -p json/drawKeypoints.json</pre>
 Output image saved as `target/drawKeypoints.jpg`
 <img src="https://github.com/firepick1/FireSight/blob/master/img/drawKeypoints.jpg?raw=true">
+
+#### See Also
+* [[op: SimpleBlobDetector]]
