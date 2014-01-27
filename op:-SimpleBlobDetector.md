@@ -11,4 +11,7 @@ Stage attribute values (e.g., "thresholdStep") correspond to the fields of [Simp
 
 #### Example
 <pre>firepick -i img/cam.jpg -p json/SimpleBlobDetector.json</pre>
-Output image is written to `target/SimpleBlobDetector.jpg`
+Grayscale working image is written to `target/SimpleBlobDetector.jpg`
+
+#### See Also
+* [[op: drawKeypoints]]
