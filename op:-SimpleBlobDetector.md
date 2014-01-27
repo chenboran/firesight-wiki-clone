@@ -15,3 +15,4 @@ Grayscale working image is written to `target/SimpleBlobDetector.jpg`
 
 #### See Also
 * [[op: drawKeypoints]]
+* [[op: HoleRecognizer]]
