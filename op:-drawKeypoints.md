@@ -7,7 +7,7 @@
 * **flags** int value of desired DrawMatchesFlags (5 is more informative than the default value of `0`)
 
 #### Model
-<ref>{}</ref>
+<pre>{}</pre>
 
 #### Example
 <pre>firesight -i img/cam.jpg -p json/drawKeypoints.json</pre>
