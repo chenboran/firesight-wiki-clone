@@ -16,6 +16,7 @@
 
 #### Model
 <pre>{}</pre>
+TBD: The MSER regions are a bit verbose for the model, but perhaps a KeyPoint summary might be useful.
 
 #### Examples
 <pre>firesight -i img/MSER_phj -p img/MSER_phj.json</pre>
