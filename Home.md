@@ -19,4 +19,5 @@ Pipeline stages can be named. If the "name" field is omitted, stages are named i
 * [[op: HoleRecognizer]]
 * [[op: imread]]
 * [[op: imwrite]]
+* [[op: MSER]]
 * [[op: SimpleBlobDetector]]
