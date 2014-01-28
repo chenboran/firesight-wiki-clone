@@ -12,6 +12,7 @@
 * **areaThreshold** the area threshold to cause re-initialize. default `1.01`
 * **minMargin** ignore too small margin. default `0.003`
 * **edgeBlurSize** the aperture size for edge blur. default `5`
+* _FireSight_:**color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
 
 #### Model
 <pre>{}</pre>
