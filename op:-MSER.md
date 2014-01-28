@@ -18,4 +18,4 @@
 
 #### Examples
 <pre>firesight -i img/MSER_phj -p img/MSER_phj.json</pre>
-<img src="">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
