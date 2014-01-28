@@ -19,4 +19,5 @@
 #### Examples
 <pre>firesight -i img/MSER_phj -p img/MSER_phj.json</pre>
 Output image written to `target/MSER.jpg`
+
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
