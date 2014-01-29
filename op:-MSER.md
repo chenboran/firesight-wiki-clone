@@ -3,7 +3,7 @@
 #### Pipeline
 <pre>{"op":"MSER", "color":[255, 0, 255], "minArea":1100, "maxArea":1200}</pre>
 
-* **delta** delta, in the code, it compares (size_{i}-size_{i-delta})/size_{i-delta}. default `5.
+* **delta** delta, in the code, it compares (size_{i}-size_{i-delta})/size_{i-delta}. default `5`
 * **minArea** prune the area which smaller than minArea. default `60`
 * **maxArea** prune the area which bigger than maxArea. default `14400`
 * **maxVariation** prune the area have simliar size to its children. default `0.25`
@@ -12,6 +12,7 @@
 * **areaThreshold** the area threshold to cause re-initialize. default `1.01`
 * **minMargin** ignore too small margin. default `0.003`
 * **edgeBlurSize** the aperture size for edge blur. default `5`
+* **mask** JSON object (x,y,width,height) specifying mask rectangle. default no mask. 
 * _FireSight_:**color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
 
 #### Model
