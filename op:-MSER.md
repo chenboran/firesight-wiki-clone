@@ -20,7 +20,17 @@
 TBD: The MSER regions are a bit verbose for the model, but perhaps a KeyPoint summary might be useful.
 
 #### Examples
+In the following examples, output image is written to `target/MSER.jpg`
+
+##### Simple MSER [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
 <pre>firesight -i img/MSER_phj -p img/MSER_phj.json</pre>
-Output image written to `target/MSER.jpg`
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
+
+##### MSER with Mask [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phf.json)
+<pre>firesight -i img/MSER_phf -p img/MSER_phf.json</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phf.jpg?raw=true">
+
+##### Grayscale MSER with Mask [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phh.json)
+<pre>firesight -i img/MSER_phh -p img/MSER_phh.json</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phh.jpg?raw=true">
