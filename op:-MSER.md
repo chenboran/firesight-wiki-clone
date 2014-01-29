@@ -7,12 +7,12 @@
 * **minArea** prune the area which smaller than minArea. default `60`
 * **maxArea** prune the area which bigger than maxArea. default `14400`
 * **maxVariation** prune the area have simliar size to its children. default `0.25`
-* **minDiversity** trace back to cut off mser with diversity < min_diversity. default `0.2`
-* **maxEvolution** for color image, the evolution steps. default `200`
-* **areaThreshold** the area threshold to cause re-initialize. default `1.01`
-* **minMargin** ignore too small margin. default `0.003`
-* **edgeBlurSize** the aperture size for edge blur. default `5`
-* **mask** JSON object (x,y,width,height) specifying mask rectangle. default no mask. 
+* **minDiversity** trace back to cut off mser with diversity < min_diversity. Default `0.2`
+* **maxEvolution** for color image, the evolution steps. Default `200`
+* **areaThreshold** the area threshold to cause re-initialize. Default `1.01`
+* **minMargin** ignore too small margin. Default `0.003`
+* **edgeBlurSize** the aperture size for edge blur. Default `5`
+* **mask** If provided, a JSON object (x,y,width,height) specifies MSER mask rectangle. By default, entire image is processed. 
 * _FireSight_:**color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
 
 #### Model
