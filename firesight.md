@@ -5,4 +5,4 @@ The executable FireSight application is `firesight`
 * **-trace** if present, enable cout tracing
 
 #### See Also
-* [[libfiresight.so]]
+* [[lib_firesight.so]]
