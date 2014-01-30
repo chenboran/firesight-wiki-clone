@@ -9,5 +9,5 @@ To use FireSight as a library, simple create a Pipeline with a JSON string
 Call the pipeline to process the image
 <pre>json_t *pModel = pipeline.process(image);</pre>
 
-Free the returned model!
+When you're done with it, free the returned model!
 <pre>free(pModel)</pre>
