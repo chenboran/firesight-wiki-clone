@@ -1,9 +1,13 @@
-The FireSight shared library is `lib_firesight.so`
+You can use the FireSight C++ shared library, `lib_firesight.so`, to build your own application.
 
 * See [FireSight.cpp](https://github.com/firepick1/FireSight/blob/master/FireSight.cpp) for an example of calling the shared library
 * See [CMakeLists.txt](https://github.com/firepick1/FireSight/blob/master/CMakeLists.txt) for an example of how to build an application that uses the shared library
 
-To use FireSight as a library, simple create a Pipeline with a JSON string
+#### Example (process)
+To use FireSight as a library, first specificy a pipeline:
+<pre>char *pPipelineStr = provideYourOwnJsonPipelineString();</pre>
+
+Then create a simple Pipeline with a JSON string
 <pre>Pipeline pipeline(pJsonPipeline);</pre>
 
 Call the pipeline to process the image
