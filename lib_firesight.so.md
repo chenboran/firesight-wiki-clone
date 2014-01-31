@@ -8,7 +8,7 @@ To use FireSight as a library, first specify a pipeline:
 <pre>char *pPipelineStr = provideYourOwnJsonPipelineString();</pre>
 
 Then create a simple Pipeline with a JSON string
-<pre>Pipeline pipeline(pJsonPipeline);</pre>
+<pre>Pipeline pipeline(pPipelineStr);</pre>
 
 Call the pipeline to process the image
 <pre>json_t *pModel = pipeline.process(image);</pre>
