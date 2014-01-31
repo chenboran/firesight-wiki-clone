@@ -10,4 +10,4 @@ Call the pipeline to process the image
 <pre>json_t *pModel = pipeline.process(image);</pre>
 
 When you're done with it, free the returned model!
-<pre>free(pModel)</pre>
+<pre>json_decref(pModel)</pre>
