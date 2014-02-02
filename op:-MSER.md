@@ -20,7 +20,7 @@ The following parameters are exclusive to _FireSight_:
 Default of `360` is best for horizontal regions. An offset of `180` is best for vertical regions.
 
 #### Model
-If `"detect":"keypoints"` is specified, a KeyPoint model is generated for the stage for each MSER region detected:
+If `"detect":"keypoints"` is specified, a KeyPoint model is generated for the stage for each MSER region detected. The following model corresponds the _MSER with keypoints_ example below:
 <pre>
  "mser":{
     "keypoints":[
