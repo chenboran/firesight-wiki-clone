@@ -14,15 +14,35 @@
 * **edgeBlurSize** the aperture size for edge blur. Default `5`
 * **mask** If provided, a JSON object (x,y,width,height) specifies MSER mask rectangle. By default, entire image is processed. 
 * _FireSight_:**color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
+* _FireSight_:**detect** `keypoints` adds a KeyPoint JSON object in model for each detected MSER region. Each KeyPoint is determined from eigenvectors and covariance matrix of region.
+* _FireSight_:**q4Offset** Degrees to add to negative angles to ensure positive KeyPoint angles. 
+Default of `360` is best for horizontal regions. An offset of `180` is best for vertical regions.
 
 #### Model
-<pre>{}</pre>
-TBD: The MSER regions are a bit verbose for the model, but perhaps a KeyPoint summary might be useful.
+If `"detect":"keypoints"` is specified, a KeyPoint model is generated for the stage for each MSER region detected:
+<pre>
+ "mser":{
+    "keypoints":[
+      {
+        "pt.x":209.50672912597656,
+        "pt.y":71.5,
+        "size":38.892269134521484,
+        "angle":359.97735595703125
+      },
+      {
+        "pt.x":121.55968475341797,
+        "pt.y":72.026527404785156,
+        "size":37.947780609130859,
+        "angle":359.83328247070312
+      }
+    ]
+  }
+</pre>
 
 #### Examples
 In the following examples, output image is written to `target/MSER.jpg`
 
-##### Simple MSER [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
+##### MSER with keypoints [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
 <pre>firesight -i img/MSER_phj.jpg -p json/MSER_phj.json -o target/MSER.jpg</pre>
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
