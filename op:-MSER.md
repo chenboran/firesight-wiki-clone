@@ -13,14 +13,15 @@
 * **minMargin** ignore too small margin. Default `0.003`
 * **edgeBlurSize** the aperture size for edge blur. Default `5`
 * **mask** If provided, a JSON object (x,y,width,height) specifies MSER mask rectangle. By default, entire image is processed. 
-The following parameters are exclusive to _FireSight_: 
+
+The following pipeline parameters are exclusive to _FireSight_: 
 * **color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
 * **detect** `keypoints` adds a KeyPoint JSON object to the stage model for each detected MSER region. Each KeyPoint is determined from eigenvectors and covariance matrix of region.
 * **q4Offset** Degrees to add to negative angles (i.e., fourth quadrant) to ensure positive KeyPoint angles. 
 Default of `360` is best for horizontal regions. An offset of `180` is best for vertical regions.
 
 #### Model
-If `"detect":"keypoints"` is specified, a KeyPoint model is generated for the stage for each MSER region detected. The following model corresponds with the _MSER with keypoints_ example below:
+If `"detect":"keypoints"` is specified, a stage model KeyPoint is added for each MSER region detected. The following model corresponds with the _MSER with keypoints_ example below:
 <pre>
  "mser":{
     "keypoints":[
