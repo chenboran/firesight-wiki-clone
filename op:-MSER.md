@@ -45,14 +45,14 @@ If `"detect":"keypoints"` is specified, a stage model KeyPoint is added for each
 In the following examples, output image is written to `target/MSER.jpg`
 
 ##### MSER with keypoints [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
-<pre>firesight -i img/MSER_phj.jpg -p json/MSER_phj.json -o target/MSER.jpg</pre>
+<pre>firesight -i img/ass_place_phj.jpg -p json/MSER_phj.json -o target/MSER.jpg</pre>
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
 
 ##### MSER with Mask [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phf.json)
-<pre>firesight -i img/MSER_phf.jpg -p json/MSER_phf.json -o target/MSER.jpg</pre>
+<pre>firesight -i img/ass_place_phf.jpg -p json/MSER_phf.json -o target/MSER.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phf.jpg?raw=true">
 
 ##### Grayscale MSER with Mask [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phh.json)
-<pre>firesight -i img/MSER_phh.jpg -p json/MSER_phh.json -o target/MSER.jpg</pre>
+<pre>firesight -i img/ass_place_phh.jpg -p json/MSER_phh.json -o target/MSER.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phh.jpg?raw=true">
