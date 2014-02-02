@@ -1,4 +1,4 @@
-[MSER](http://docs.opencv.org/modules/features2d/doc/feature_detection_and_description.html#mser) wrapper
+[OpenCV MSER](http://docs.opencv.org/modules/features2d/doc/feature_detection_and_description.html#mser) wrapper with FireSight filtering extensions.
 
 #### Pipeline
 <pre>{"op":"MSER", "color":[255, 0, 255], "minArea":1100, "maxArea":1200}</pre>
