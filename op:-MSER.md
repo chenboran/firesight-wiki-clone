@@ -15,7 +15,7 @@
 * **mask** If provided, a JSON object (x,y,width,height) specifies MSER mask rectangle. By default, entire image is processed. 
 The following parameters are exclusive to _FireSight_: 
 * **color** if provided, matched regions will be colored with BGR Scalar having 1-4 values. For alternating colors, use: [-1,-1,-1,-1]
-* **detect** `keypoints` adds a KeyPoint JSON object in model for each detected MSER region. Each KeyPoint is determined from eigenvectors and covariance matrix of region.
+* **detect** `keypoints` adds a KeyPoint JSON object to the stage model for each detected MSER region. Each KeyPoint is determined from eigenvectors and covariance matrix of region.
 * **q4Offset** Degrees to add to negative angles (i.e., fourth quadrant) to ensure positive KeyPoint angles. 
 Default of `360` is best for horizontal regions. An offset of `180` is best for vertical regions.
 
