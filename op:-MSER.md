@@ -59,6 +59,7 @@ In the following examples, output image is written to `target/MSER.jpg`
 ##### MSER with `"detect":"rects"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/pcb.json)
 <pre>firesight -i img/pcb.jpg -p json/pcb.json -o target/pcb_out.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb_out.jpg?raw=true">
+
 A typical RotatedRect is represented as:
 <pre>
 {
