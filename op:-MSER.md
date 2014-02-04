@@ -76,6 +76,6 @@ In the following examples, output image is written to `target/MSER.jpg`
 <pre>firesight -i img/ass_place_phh.jpg -p json/MSER_phh.json -o target/MSER.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phh.jpg?raw=true">
 
-##### MSER with `"detect":"rects"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/pcb.json)
-<pre>firesight -i img/pcb.jpg -p json/pcb.json -o target/pcb_out.jpg</pre>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/pcb_out.jpg?raw=true">
+##### MSER with `"detect":"keypoints"` and `"detect":"rects"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj2.json)
+<pre>firesight -i img/ass_place_phj.jpg -p json/MSER_phj2.json -o target/MSER_phj2.jpg</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj2.jpg?raw=true">
