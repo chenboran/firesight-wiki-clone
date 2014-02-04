@@ -40,12 +40,32 @@ If `"detect":"keypoints"` is specified, a stage model KeyPoint is added for each
   }
 </pre>
 
+If `"detect":"rects"` is specified, the stage model is updated with a JSON object for each region's _minAreaRect()_ RotatedRect:
+<pre>
+{
+    "rects":[
+      {
+        "x":209.0,
+        "y":71.0,
+        "width":54.0,
+        "height":22.0,
+        "angle":0.0
+      },
+      {
+        "x":121.5,
+        "y":72.0,
+        "width":53.0,
+        "height":20.0,
+        "angle":-0.0
+      }
+    ]
+  }
+</pre>
 #### Examples
 In the following examples, output image is written to `target/MSER.jpg`
 
 ##### MSER with `"detect":"keypoints"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
 <pre>firesight -i img/ass_place_phj.jpg -p json/MSER_phj.json -o target/MSER.jpg</pre>
-
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
 
 ##### MSER with Mask [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phf.json)
@@ -59,14 +79,3 @@ In the following examples, output image is written to `target/MSER.jpg`
 ##### MSER with `"detect":"rects"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/pcb.json)
 <pre>firesight -i img/pcb.jpg -p json/pcb.json -o target/pcb_out.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb_out.jpg?raw=true">
-
-A typical RotatedRect is represented as:
-<pre>
-{
-   "x":517.96722412109375,
-   "y":68.98492431640625,
-   "width":26.95372200012207,
-   "height":35.94903564453125,
-   "angle":-1.8476102352142334
-}
-</pre>
