@@ -1,4 +1,4 @@
-FireSight op draws _RotatedRect_ array from named stage model.  
+FireSight op draws _RotatedRect_ array from named stage model.  Because some folks like square corners, while others are well-rounded.
 
 #### Pipeline
 <pre>{"op":"drawRects","model":"s2", "color":[255, 0, 255], "flags":5}</pre>
