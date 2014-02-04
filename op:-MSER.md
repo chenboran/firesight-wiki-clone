@@ -43,7 +43,7 @@ If `"detect":"keypoints"` is specified, a stage model KeyPoint is added for each
 #### Examples
 In the following examples, output image is written to `target/MSER.jpg`
 
-##### MSER with keypoints [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
+##### MSER with `"detect":"keypoints"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/MSER_phj.json)
 <pre>firesight -i img/ass_place_phj.jpg -p json/MSER_phj.json -o target/MSER.jpg</pre>
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phj.jpg?raw=true">
@@ -56,7 +56,7 @@ In the following examples, output image is written to `target/MSER.jpg`
 <pre>firesight -i img/ass_place_phh.jpg -p json/MSER_phh.json -o target/MSER.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/MSER_phh.jpg?raw=true">
 
-##### MSER with rects [pipeline](https://github.com/firepick1/FireSight/blob/master/json/pcb.json)
+##### MSER with `"detect":"rects"` [pipeline](https://github.com/firepick1/FireSight/blob/master/json/pcb.json)
 <pre>firesight -i img/pcb.jpg -p json/pcb.json -o target/pcb_out.jpg</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb_out.jpg?raw=true">
 A typical RotatedRect is represented as:
