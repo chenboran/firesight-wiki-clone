@@ -8,7 +8,7 @@ FireSight op draws _RotatedRect_ array from named stage model.  Because some fol
 #### Model
 <pre>{}</pre>
 
-#### Example
+#### Example [pipeline](https://github.com/firepick1/FireSight/blob/master/json/drawRects.json)
 <pre>firesight -i img/ass_place_phj.jpg -p json/drawRects.json -o target/drawRects.jpg</pre>
 Output image saved as `target/drawRects.jpg`
 
