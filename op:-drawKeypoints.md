@@ -16,3 +16,4 @@ Output image saved as `target/drawKeypoints.jpg`
 
 #### See Also
 * [[op: SimpleBlobDetector]]
+* [[op: drawRects]]
