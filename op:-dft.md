@@ -1,4 +1,4 @@
-Discrete Fourier Transform [OpenCV dft](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#dft) wrapper with some FireSight goodies.
+Discrete Fourier Transform [OpenCV dft](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#dft) wrapper.
 
 * **flags** JSON array of strings representing bits to be OR'd: `DFT_SCALE`, `DFT_INVERSE`, `DFT_COMPLEX_OUTPUT`, `DFT_REAL_OUTPUT`. Creates a CV_32F 2D Mat on forward transform. Creates a CV_8U Mat on inverse transform.
 
