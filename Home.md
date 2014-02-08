@@ -13,6 +13,8 @@ Pipeline stages can be named. If the "name" field is omitted, stages are named i
 * [[op: blur]]
 * [[op: Canny]]
 * [[op: cvtColor]]
+* [[op: dft]]
+* [[op: dftSpectrum]]
 * [[op: dilate]]
 * [[op: drawKeypoints]]
 * [[op: drawRects]]
