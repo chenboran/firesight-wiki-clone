@@ -10,10 +10,22 @@ The _dft_ stage changes the data format of the pipeline working Mat. It creates 
 #### Examples
 
 ##### DFT of white rectangle [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)
-<pre>firesight -p json/dft-rect2.json -o target/dft-rect.jpg</pre>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true">
+<pre>firesight -i img/whiterect.jpg -p json/dft-spectrum.json -o target/dft-rect.jpg</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true">&nbsp;&nbsp;&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
 
-<img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
+##### [White rectangle](https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true) DFT and inverse DFT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft.json)
+
+<pre> firesight -i img/whiterect.jpg -p json/dft.json -o target/dft.jpg</pre>
+
+Demonstrates that the input/output images are identical after being passed through:
+* forward DFT:
+<pre>
+({"flags": ["DFT_SCALE", "DFT_COMPLEX_OUTPUT"], "op": "dft", "comment": "Compute DFT of image"}
+</pre>
+* inverse DFT:
+<pre>
+{"flags": ["DFT_INVERSE", "DFT_REAL_OUTPUT"], "op": "dft", "comment": "Compute inverse DFT to restore image"}
+</pre>
 
 #### See Also
 [[op: dftSpectrum]]
