@@ -14,7 +14,7 @@ The _FireSight_ `dftSpectrum` pipeline stage wraps several OpenCV calls that hel
 
 #### Examples
 
-##### DFT of white rectangle [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)
+##### [White rectangle](https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true") DFT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)
 
 <pre>firesight -p json/dft-rect.json -o target/dft-rect.jpg</pre>
 
@@ -87,7 +87,6 @@ CV_8UC1(400x400) show:[195-204,195-204] Normalized spectrum
   255   255   255   255   255   255   255   255   255   255
    92   110   124   133   136   136   133   124   110    92
 </pre>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true">
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
 
