@@ -8,3 +8,17 @@ The _FireSight_ `dftSpectrum` pipeline stage wraps several OpenCV calls that hel
 * **show** `phase` Replaces working image with the CV_32F1 phase of the complex spectrum
 * **show** `real` Replaces working image with the CV_32F1 real part of the complex spectrum
 * **show** `imaginary` Replaces working image with the CV_32F1 imaginary part of the complex spectrum
+
+#### Model
+<pre>{}</pre>
+
+#### Examples
+
+##### DFT of white rectangle [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)
+<pre>firesight -p json/dft-rect.json -o target/dft-rect.jpg</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true">
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
+
+#### See Also
+[[op: dft]]
