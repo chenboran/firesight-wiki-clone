@@ -5,10 +5,12 @@ Discrete Fourier Transform [OpenCV dft](http://docs.opencv.org/modules/core/doc/
 #### Model
 <pre>{}</pre>
 
-#### Example
-<pre>firesight -p json/dft-rect2.json -o target/dft-rect.jpg</pre>
-<img src="img/whiterect.jpg">
+#### Examples
 
-<img src="img/dft-rect.jpg">
+##### White rectangle [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)
+<pre>firesight -p json/dft-rect2.json -o target/dft-rect.jpg</pre>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/whiterect.jpg?raw=true">
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
 
 
