@@ -13,4 +13,6 @@ Discrete Fourier Transform [OpenCV dft](http://docs.opencv.org/modules/core/doc/
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
 
+#### See Also
+[[op: dftSpectrum]]
 
