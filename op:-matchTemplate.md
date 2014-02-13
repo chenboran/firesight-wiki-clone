@@ -50,4 +50,4 @@ Correlation-based template matching is quite powerful. The frequency spectrum of
 * **width** Widht of rectangle
 * **corr** Normalized correlation over the interval [0,1], with respect to **maxVal**
 
-#### Example: Find 37x29 rectangles in a pcb image [pipeline]()
+#### Example: Find 37x29 rectangles in a pcb image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchCCOEFF_NORMED.json)
