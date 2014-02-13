@@ -2,6 +2,11 @@
 
 Correlation-based template matching is quite powerful. The frequency spectrum of a template is multiplied by the frequency spectrum of an image to obtain the correlation. Maxima (or minima, depending on the method) indicate the candidates for matching. If the images to be recognized are all in a flat plane orthogonal to the camera, there is little or no need to account for perspective skew or near/far size adjustments. For this reason, matchTemplate alone can be used quite effectively in a great majority pick-and-place use cases.
 
+* **method** Default is `CV_TM_CCOEFF_NORMED`. 
+* **output** Image for stage output. Default is `current`, which displays working image. To use input image, use `input`; to see correlation image, use `corr`.
+* **threshold** If **maxVal** is below this value, then no matches will be reported
+* **corr** Normalized recognition threshold in the interval [0,1]. Used to determine best match of candidates. For CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, and CV_TM_CCORR_NORMED methods, this is a minimum threshold. For all other methods, it is a minimum threshold.
+
 #### Model
 <pre>
 {
@@ -51,3 +56,4 @@ Correlation-based template matching is quite powerful. The frequency spectrum of
 * **corr** Normalized correlation over the interval [0,1], with respect to **maxVal**
 
 #### Example: Find 37x29 rectangles in a pcb image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchCCOEFF_NORMED.json)
+<pre>firesight -i img/pcb.jpg -p json/matchCCOEFF_NORMED.json -o target/matchCCOEFF_NORMED.jpg</pre>
