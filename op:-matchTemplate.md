@@ -7,7 +7,7 @@ Correlation-based template matching is quite powerful. The frequency spectrum of
 ###### FireSight extensions
 * **output** Image for stage output. Default is `current`, which displays working image. To use input image, use `input`; to see correlation image, use `corr`.
 * **threshold** If **maxVal** is below this value, then no matches will be reported
-* **corr** Normalized recognition threshold in the interval [0,1]. Used to determine best match of candidates. For CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, and CV_TM_CCORR_NORMED methods, this is a minimum threshold. For all other methods, it is a minimum threshold.
+* **corr** Normalized recognition threshold in the interval [0,1]. Used to determine best match of candidates. For CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, and CV_TM_CCORR_NORMED methods, this is a minimum threshold for positive recognition; for all other methods, it is a maximum threshold.
 
 #### Model
 <pre>
