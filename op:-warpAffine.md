@@ -1,4 +1,4 @@
-FireSight wrapper for OpenCV [wrapAffine](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine):
+FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine):
 
 * **angle** Rotate image by given angle in degrees. Default `0`
 * **cx** Center of rotation. Default is center of image
