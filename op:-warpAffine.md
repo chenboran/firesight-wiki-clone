@@ -1,0 +1,24 @@
+FireSight wrapper for OpenCV [wrapAffine](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpaffine):
+
+* **angle** Rotate image by given angle in degrees. Default `0`
+* **cx** Center of rotation. Default is center of image
+* **cy** Center of rotation. Default is center of image
+* **dx** Translation after rotation. Default is `0`
+* **dy** Translation after rotation. Default is `0`
+* **width** Width of output image. Default is width of original image. If `-1`, width will be automatically computed to show full image (vs. cropping it).
+* **height** Height of output image. Default is height of original image. If `-1`, height will be automatically computed to show full image (vs. cropping it).
+* **scale** Size scale of output image. Default is `1`
+* **borderValue** Color to use for background. Default is `[0,0,0]` BGR
+
+#### Model
+<pre>{}</pre>
+
+#### Example: Rotate a duck by 30 degrees and scale it by 0.5 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-rotate.json)
+<pre>firesight -i img/duck.jpg -p json/warpAffine-rotate.json -o target/warpAffine-rotate.jpg</pre>
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-rotate.jpg?raw=true">
+
+#### Example: Translate a duck by (50,50) pixels [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-translate.json)
+<pre>firesight -i img/duck.jpg -p json/warpAffine-translate.json -o target/warpAffine-translate.jpg</pre>
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-translate.jpg?raw=true">
