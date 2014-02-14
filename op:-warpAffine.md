@@ -5,8 +5,8 @@ FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc
 * **cy** Center of rotation. Default is center of image
 * **dx** Translation after rotation. Default is `0`
 * **dy** Translation after rotation. Default is `0`
-* **width** Width of output image. Default is width of original image. If `-1`, width will be automatically computed to show full image (vs. cropping it).
-* **height** Height of output image. Default is height of original image. If `-1`, height will be automatically computed to show full image (vs. cropping it).
+* **width** Width of output image. Default is width of original image. _FireSight:_ If `-1`, width will be automatically computed to show full image (vs. cropping it).
+* **height** Height of output image. Default is height of original image. _FireSight:_ If `-1`, height will be automatically computed to show full image (vs. cropping it).
 * **scale** Size scale of output image. Default is `1`
 * **borderValue** Color to use for background. Default is `[0,0,0]` BGR
 
