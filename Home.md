@@ -1,3 +1,5 @@
+<img src="https://github.com/firepick1/FirePick/wiki/prototype.png">
+
 [FireSight](https://github.com/firepick1/FireSight/blob/master/README.md) interprets the JSON specification of an image processing pipeline and generates a corresponding JSON model of the recognized features for use by other applications. FireSight is available as:
 
 * **[[lib_firesight.so]]** a C++ shared library
