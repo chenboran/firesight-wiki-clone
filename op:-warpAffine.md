@@ -9,6 +9,7 @@ FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc
 * **height** Height of output image. Default is height of original image. _FireSight:_ If `-1`, height will be automatically computed to show full image (vs. cropping it).
 * **scale** Size scale of output image. Default is `1`
 * **borderValue** Color to use for background. Default is `[0,0,0]` BGR
+* **borderMode** Specifies how border of transformed image should be filled: `BORDER_CONSTANT` uses **borderValue**, `BORDER_REPLICATE` replicates border pixels, `BORDER_REFLECT` fills with a mirror image of source image doubling the border value, `BORDER_REFLECT_101` fills with a mirror image of source image without doubling the border value, `BORDER_WRAP` fills with repeated copies of the source image.
 
 #### Model
 <pre>{}</pre>
@@ -17,6 +18,12 @@ FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc
 <pre>firesight -i img/duck.jpg -p json/warpAffine-rotate.json -o target/warpAffine-rotate.jpg</pre>
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-rotate.jpg?raw=true">
+
+#### Example: Rotate a duck by 30 degrees with BORDER_REPLICATE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-rotate2.json)
+<pre>firesight -i img/duck.jpg -p json/warpAffine-rotate2.json -o target/warpAffine-rotate2.jpg</pre>
+The choice of border fill when rotating an image can strongly influence the use of that image as a template for matching. Using BORDER_REPLICATE can greatly improve matching accuracy:
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-rotate2.jpg?raw=true">
 
 #### Example: Translate a duck by (50,50) pixels [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-translate.json)
 <pre>firesight -i img/duck.jpg -p json/warpAffine-translate.json -o target/warpAffine-translate.jpg</pre>
