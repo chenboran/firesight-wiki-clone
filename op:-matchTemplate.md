@@ -81,7 +81,7 @@ Bright spots in the correlation image correspond to matches:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/match45.jpg?raw=true">
 
-<a name="anchor"></a>
+<a name="chris"></a>
 #### Example: Find template at 0, 90, 180, and 270 degrees [pipeline](https://github.com/firepick1/FireSight/blob/master/json/chris-match-search.json)
 <pre>firesight -i img/chris-reference.jpg -p json/chris-match-search.json -o target/chris-match.jpg</pre>
 Here is a simple way to recognize four orientations with a single pipeline. Although easy to put together, it quadruples the total time taken to match the templates:
