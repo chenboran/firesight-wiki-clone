@@ -2,7 +2,9 @@ Thos _FireSight_ stage creates recognition templates for different angles using 
 
 Although rotation invariance is achievable, it comes at a cost. For example, the ring projection of a rectangle template will recognize a "+'or an "X". In other words, there is a tradeoff between rotation-invariance and matching accuracy. One way to address is this is by only using a subset of angles of interest. For example, a [0,90,180,270] multi-angle template will reject an "X" even though it will recognize a "+".
 
-* **angles** JSON array of angles. Default is `[]`, which produces a ring projection of input image.
+* **angles** JSON array of angles. Default is `[]`, which produces a ring projection of input image. 
+
+NOTE: The input matrix need not be square: **warpRing** will automatically create a template of the correct width and height to enclose all the angles specified. 
 
 #### Model
 The stage model for _warpRing_ gives the image size of the generated template, which will vary according to the angles specified. A ring projection will always result in a square image:
