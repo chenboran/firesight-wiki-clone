@@ -19,7 +19,7 @@ The stage model for _warpRing_ gives the image size of the generated template, w
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162.jpg?raw=true">&nbsp;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162-4way.jpg?raw=true">
 
-#### Example: 8-way rectangle template  [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpRing-4way.json)
+#### Example: 8-way rectangle template  [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpRing-8way.json)
 <pre>firesight -i img/rectangle100x162.jpg -p json/warpRing-8way.json -o target/rectangle100x162-8way.jpg</pre>
 ###### Rectangle template and 8-way template
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162.jpg?raw=true">&nbsp;
