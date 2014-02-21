@@ -25,8 +25,14 @@ The stage model for _warpRing_ gives the image size of the generated template, w
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162.jpg?raw=true">&nbsp;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162-8way.jpg?raw=true">
 
-#### Example: Ring-projected rectangle template  [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchRing-4way.json)
+#### Example: Ring-projected rectangle template  [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchRing.json)
 <pre>firesight -i img/rectangle100x162.jpg -p json/warpRing.json -o target/rectangle100x162-ring.jpg</pre>
 ###### Rectangle template and 8-way template
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162.jpg?raw=true">&nbsp;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/rectangle100x162-ring.jpg?raw=true">
+
+#### Example: Spin the duck  [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchRing-4way.json)
+<pre>firesight -i img/duck.jpg -p json/warpRing-4way.json -o target/duck-4way.jpg</pre>
+###### Duck and 4-way dizzy duck
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck-4way.jpg?raw=true">
