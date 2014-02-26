@@ -1,6 +1,6 @@
 #### Prerequisites
 1. [Install git version 1.9.0 or later](http://git-scm.com/download/win)
-1. [Install OpenCV Pre-build Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html). These instructions were tested with OpenCV 2.4.8
+1. [Install OpenCV 2.4.8 pre-built Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html).
 1. Verify installation by typing `opencv_performance` and you should see:
 <pre>
 Usage: opencv_performance
