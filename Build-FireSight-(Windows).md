@@ -1,5 +1,7 @@
 #### Prerequisites
 1. [Install git version 1.9.0 or later](http://git-scm.com/download/win)
+1. [Install Visual Studio 2010 C++ Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
+1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
 1. [Install OpenCV 2.4.8 pre-built Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html).
 1. Verify installation by typing `opencv_performance` and you should see:
 <pre>
