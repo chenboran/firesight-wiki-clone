@@ -16,7 +16,8 @@ If the caller does NOT provide a parameter's value, then you'll get an error unl
 <pre>
 [
   {"op":"resize", "fx":"{{fx||0.5}}", "fy":"{{fy||0.5}}"}
-]</pre>
+]
+</pre>
 
 Pipeline parameter values can be defined using the `-D` option of [[firesight]]:
 <pre>firesight -i img/duck.jpg -p json/resize.json -o target/resize.jpg -Dfx=0.25 -Dfy=0.5</pre>
