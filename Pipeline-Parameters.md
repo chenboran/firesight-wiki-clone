@@ -22,6 +22,9 @@ If the caller does NOT provide a parameter's value, then you'll get an error unl
 Pipeline parameter values can be defined using the `-D` option of [[firesight]]:
 <pre>firesight -i img/duck.jpg -p json/resize.json -o target/resize.jpg -Dfx=0.25 -Dfy=0.5</pre>
 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true"> &larr;Original Duck
+<img src="https://github.com/firepick1/FireSight/blob/master/img/resize.jpg?raw=true"> &larr;Parametrically resized Duck
+
 For C++ users, see [FireSight.cpp](https://github.com/firepick1/FireSight/blob/master/FireSight.cpp) for an example of using an `ArgMap` to provide parameter values.
 
 #### JSON Data Types
