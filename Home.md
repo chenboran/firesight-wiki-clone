@@ -26,6 +26,7 @@ Pipeline stages can be named. If the "name" field is omitted, stages are named i
 * [[op: imwrite]]
 * [[op: matchTemplate]]
 * [[op: MSER]]
+* [[op: resize]]
 * [[op: SimpleBlobDetector]]
 * [[op: warpAffine]]
 * [[op: warpRing]]
