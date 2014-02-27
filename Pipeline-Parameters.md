@@ -22,6 +22,8 @@ If the caller does NOT provide a parameter's value, then you'll get an error unl
 Pipeline parameter values can be defined using the `-D` option of [[firesight]]:
 <pre>firesight -i img/duck.jpg -p json/resize.json -o target/resize.jpg -Dfx=0.25 -Dfy=0.5</pre>
 
+For C++ users, see [FireSight.cpp](https://github.com/firepick1/FireSight/blob/master/FireSight.cpp) for an example of using an `ArgMap` to provide parameter values.
+
 #### JSON Data Types
 
 In the above example, we introduced a parameter for a JSON numeric double value. More precisely, we specified the parameter using a string (e.g., "{{fy||0.5}}"), and a string isn't a JSON number. _FireSight_ handles this by applying the JSON parser to any value with embedded parameter delimiters (i.e., "{{"). Since the string is parsed, we end up with a real JSON object as the replacement. This lets us parameterize a JSON array used to represent a BGR color that defaults to magenta:
