@@ -6,12 +6,8 @@ _FireSight_ wrapper for [OpenCV resize()](http://docs.opencv.org/modules/imgproc
 #### Model
 <pre>{}</pre>
 
-#### Example: squeeze the duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/resize.json)
+#### Example: Squeeze the Duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/resize.json)
 <pre>firesight -i img/duck.jpg -p json/resize.json -o target/resize.jpg -Dfx=0.25 -Dfy=0.5</pre>
-<table>
-<tr><th>Original</th><th>Squeezed</th></tr>
-<tr>
-<td><img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true"></td>
-<td><img src="https://github.com/firepick1/FireSight/blob/master/img/resize.jpg?raw=true"></td>
-</tr>
-</table>
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true"> &larr;Original Duck
+<img src="https://github.com/firepick1/FireSight/blob/master/img/resize.jpg?raw=true"> &larr;Squeezed Duck
