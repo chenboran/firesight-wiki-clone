@@ -5,20 +5,20 @@ If you find yourself creating many pipelines that only differ by a few simple va
 ]
 </pre>
 
-If we want to resize an image by 75%, we could certainly create another pipeline. However, it may be easier to use a pipeline with parameters _{{fx}}_ and _{{fy}}_. Specifically, the caller provides definitions for _fx_ and _fy_, since the braces are parameter delimiters:
+If we want to resize an image by 75%, we could certainly create another pipeline. However, it may be easier to use a pipeline with parameters `{fx}}` and `{{fy}}`. Specifically, the caller provides definitions for _fx_ and _fy_, since the braces are parameter delimiters:
 <pre>
 [
   {"op":"resize", "fx":"{{fx}}", "fy":"{{fy}}"}
 ]
 </pre>
 
-If the caller does NOT provide a parameter's value, then you'll get an error unless you provide a default value using the _||_ delimiter:
+If the caller does NOT provide a parameter's value, then you'll get an error unless you provide a default value using the `||` delimiter:
 <pre>
 [
   {"op":"resize", "fx":"{{fx||0.5}}", "fy":"{{fy||0.5}}"}
 ]</pre>
 
-Pipeline parameter values can be defined using the "-D" option of [[firesight]]:
+Pipeline parameter values can be defined using the `-D` option of [[firesight]]:
 <pre>firesight -i img/duck.jpg -p json/resize.json -o target/resize.jpg -Dfx=0.25 -Dfy=0.5</pre>
 
 #### JSON Data Types
