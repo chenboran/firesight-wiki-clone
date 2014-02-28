@@ -1,12 +1,17 @@
 These instructions have been tested using:
 * Windows 7 Professional SP1; CMake 2.8.12.2
 
-#### Prerequisites
-1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
+#### Prerequisites: FireSight
 1. [Install git version 1.9.0 or later](http://git-scm.com/download/win)
-1. [Install Visual Studio 2010 C++ Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
-1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
-1. [Install OpenCV 2.4.8 pre-built Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html).
+1. Open a CMD prompt and cd to the root directory that will contain your FireSight project
+1. `git clone https://github.com/firepick1/FireSight`
+1. `git remote add -t 2.5 -f jansson git://github.com/akheron/jansson`
+1. `git merge -s ours --no-commit jansson/2.5`
+1. `git read-tree --prefix=jansson/ -u jansson/2.5`
+1. `git commit -m "sub-tree merge jansson/2.5"`
+
+#### Prerequisites: OpenCV
+1. [Install OpenCV 2.4.8 pre-built Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html). Take care to specify the correct value for _OPENCV_DIR_. For example, your system may be on C: instead of D:. Also be sure to choose the **x86 32-bit libraries** for OpenCV unless CMake says you have a 64-bit machine.
 1. Verify installation by typing `opencv_performance` and you should see:
 <pre>
 Usage: opencv_performance
@@ -21,6 +26,19 @@ Usage: opencv_performance
   [-w <sample_width = 24>]
   [-h <sample_height = 24>]
 </pre>
+
+#### Prerequisites: Visual Studio
+Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, which can run on Windows 7.
+1. [Install Visual Studio 2010 C++ Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
+1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
+
+#### Prerequisites: CMake
+1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
+1. Launch CMake
+1. **Where is the source code:** _Example: c:\github\FireSight_
+1. **Where to build the binaries:** _Example: c:\github\FireSight\target`
+1. **Configure** There should be no red text in lower window
+1. **Generate**
 
 #### Build FireSight
 1. Open a CMD prompt and cd to the root directory that will contain your FireSight project
