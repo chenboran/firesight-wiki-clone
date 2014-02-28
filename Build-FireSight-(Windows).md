@@ -50,4 +50,4 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. **Open Project** Locate your FireSight folder and open msvc\firesight.sln_
 1. Right click _solution 'firesight' (8 projects)_ and **Rebuild Solution**
 1. Open CMD prompt in FireSight directory
-1. `target\firesight.exe -i img\pcb.jpg -p json\matchAngle.json -Dangle=45 -Dtemplate=img\tmplt-33x29.jpg -o target\matchAngle.jpg`
+1. `target\firesight.exe -i img\pcb.jpg -p json\matchAngle.json -Dtemplate=img\tmplt-33x29.jpg -o target\matchAngle.jpg`
