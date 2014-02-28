@@ -27,10 +27,15 @@ Usage: opencv_performance
   [-h <sample_height = 24>]
 </pre>
 
-#### Prerequisites: Visual Studio
-Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, which can run on Windows 7.
-1. [Install Visual Studio 2010 C++ Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
+#### Prerequisites: Visual C++ 2010 Express
+Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, which can run on Windows 7. Visual Studio 2013 requires Windows 8.
+1. [Install Visual C++ 2010 Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
 1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
+
+#### Prerequisites: Build Jansson
+1. Launch Visual C++ 2010 Express
+1. **Open Project** Locate your FireSight folder and open _jansson\win32\vs2010\jansson.sln_
+1. Right click _jansson_ project and **Rebuild**
 
 #### Prerequisites: CMake
 1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
@@ -41,6 +46,8 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. **Generate**
 
 #### Build FireSight
-1. Open a CMD prompt and cd to the root directory that will contain your FireSight project
-1. `git clone https://github.com/firepick1/FireSight`
-1. `git subtree add --squash --prefix=cmake git://github.com/rpavlik/cmake-modules.git master`
+1. Launch Visual C++ 2010 Express
+1. **Open Project** Locate your FireSight folder and open msvc\firesight.sln_
+1. Right click _solution 'firesight' (8 projects)_ and **Rebuild Solution**
+1. Open CMD prompt in FireSight directory
+1. `target\firesight.exe -i img\pcb.jpg -p json\matchAngle.json -Dangle=45 -Dtemplate=img\tmplt-33x29.jpg -o target\matchAngle.jpg`
