@@ -1,14 +1,10 @@
 These instructions have been tested using:
 * Windows 7 Professional SP1; CMake 2.8.12.2
 
-#### Prerequisites: FireSight
+#### Prerequisites: FireSight source
 1. [Install git version 1.9.0 or later](http://git-scm.com/download/win)
 1. Open a CMD prompt and cd to the root directory that will contain your FireSight project
 1. `git clone https://github.com/firepick1/FireSight`
-1. `git remote add -t 2.5 -f jansson git://github.com/akheron/jansson`
-1. `git merge -s ours --no-commit jansson/2.5`
-1. `git read-tree --prefix=jansson/ -u jansson/2.5`
-1. `git commit -m "sub-tree merge jansson/2.5"`
 
 #### Prerequisites: OpenCV
 1. [Install OpenCV 2.4.8 pre-built Libraries for Windows](http://docs.opencv.org/doc/tutorials/introduction/windows_install/windows_install.html). Take care to specify the correct value for _OPENCV_DIR_. For example, your system may be on C: instead of D:. Also be sure to choose the **x86 32-bit libraries** for OpenCV unless CMake says you have a 64-bit machine.
@@ -33,17 +29,18 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
 
 #### Prerequisites: Build Jansson
-1. Launch Visual C++ 2010 Express
-1. **Open Project** Locate your FireSight folder and open _jansson\win32\vs2010\jansson.sln_
-1. Right click _jansson_ project and **Rebuild**
+1. From a CMD prompt, cd to your FireSight directory
+1. `git clone -b 2.5 git://github.com/akheron/jansson`
+1. `jansson\win32\vs2010\jansson.sln` to launch Visual C++ 2010 Express
+1. `F7` to Build Solution
 
 #### Prerequisites: CMake
 1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
 1. Launch CMake
 1. **Where is the source code:** _Example: c:\github\FireSight_
 1. **Where to build the binaries:** _Example: c:\github\FireSight\target`
-1. **Configure** There should be no red text in lower window
-1. **Generate**
+1. **Configure** to initialize CMake. There should be no red text in lower window.
+1. **Generate** to create _msvc\firesight.sln_
 
 #### Build FireSight
 1. Launch Visual C++ 2010 Express
