@@ -56,9 +56,10 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. **Open Project** Locate your FireSight folder and open msvc\firesight.sln_
 1. **Tools|Options|Debugging|Output Window|Module Load Messages** `Off` 
 1. Right click _firesight_ project (the third project, not the first one)_ and **Set as Startup Project**
-1. Right click _firesight_ project and choose **Properties*.
+1. Right click _firesight_ project and choose **Properties**
 1. Select **Debuggging**
 1. **Command** `$(MSBuildProjectDirectory)\..\target\firesight.exe`
 1. **Command Arguments** `-i img\pcb.jpg -p json\matchAngle.json -Dtemplate=img\tmplt-37x29.jpg -o target\matchAngle.jpg`
 1. **Working Directory** `$(MSBuildProjectDirectory)\..`
+1. `OK` to exit Properties dialog
 1. `F10` to step into main()
