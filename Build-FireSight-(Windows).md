@@ -29,7 +29,6 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. [Install Visual C++ 2010 Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
 1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
 
-
 #### Prerequisites: Build Jansson
 1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
 1. From a CMD prompt, `cd` _your-FireSight-directory_
@@ -49,7 +48,7 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. `F7` to Build Solution
 1. Confirm that build created **jansson\msvc\bin\Debug\jansson_d.dll**
 
-#### Prerequisites: CMake
+#### Prerequisites: Create FireSight MSVC solution
 1. Launch CMake
 1. **Where is the source code:** _your-FireSight-directory_
 1. **Where to build the binaries:** _your-FireSight-directory_\msvc`
