@@ -41,7 +41,7 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. **Configure**
 1. **Specify the generator for this project** `Visual Studio 10` [Finish]
 1. **JANSSON_BUILD_DOCS** `[ ]`
-1. **JSNSSON_BUILD_SHARED_LIBS** `[X]`
+1. **JANSSON_BUILD_SHARED_LIBS** `[X]`
 1. **Configure**
 1. **Generate** to create _msvc\jansson.sln_
 1. From a CMD prompt, cd to your FireSight directory
