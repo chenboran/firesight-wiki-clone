@@ -28,18 +28,31 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. [Install Visual C++ 2010 Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
 1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
 
+
 #### Prerequisites: Build Jansson
+1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
+1. From a CMD prompt, `cd` _your-FireSight-directory_
+1. `git clone git://github.com/akheron/jansson`
+1. Launch CMake to build jansson as a sub-directory of FireSight
+1. **Where is the source code:** _your-FireSight-directory_\jansson
+1. **Where to build the binaries:** _your-FireSight-directory_\jansson\msvc
+1. **File | Delete Cache**
+1. **Configure**
+1. **Specify the generator for this project** `Visual Studio 10` [Finish]
+1. **JANSSON_BUILD_DOCS** `[ ]`
+1. **JSNSSON_BUILD_SHARED_LIBS** `[X]`
+1. **Configure**
+1. **Generate** to create _msvc\jansson.sln_
 1. From a CMD prompt, cd to your FireSight directory
-1. `git clone -b 2.5 git://github.com/akheron/jansson`
-1. `jansson\win32\vs2010\jansson.sln` to launch Visual C++ 2010 Express
+1. `jansson\msvc\jansson.sln`
 1. `F7` to Build Solution
+1. Confirm that build created **jansson\msvc\bin\Debug\jansson_d.dll**
 
 #### Prerequisites: CMake
-1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
 1. Launch CMake
-1. **Where is the source code:** _Example: c:\github\FireSight_
-1. **Where to build the binaries:** _Example: c:\github\FireSight\target`
-1. **Configure** to initialize CMake. There should be no red text in lower window.
+1. **Where is the source code:** _your-FireSight-directory_
+1. **Where to build the binaries:** _your-FireSight-directory_\msvc`
+1. **Configure** There should be no red text in lower window.
 1. **Generate** to create _msvc\firesight.sln_
 
 #### Build FireSight
