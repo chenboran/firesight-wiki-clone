@@ -1,5 +1,6 @@
 These instructions have been tested using:
 * Windows 7 Professional SP1; CMake 2.8.12.2
+* Visual Studio C++ Express 2010
 
 #### Prerequisites: FireSight source
 1. [Install git version 1.9.0 or later](http://git-scm.com/download/win)
@@ -52,7 +53,9 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. Launch CMake
 1. **Where is the source code:** _your-FireSight-directory_
 1. **Where to build the binaries:** _your-FireSight-directory_\msvc`
-1. **Configure** There should be no red text in lower window.
+1. **File | Delete Cache**
+1. **Configure**
+1. **Specify the generator for this project** `Visual Studio 10` [Finish]
 1. **Generate** to create _msvc\firesight.sln_
 
 #### Build FireSight
