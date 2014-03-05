@@ -1,6 +1,6 @@
 _FireSight_ stage computes [Peak Signal to Noise Ratio (PSNR)](http://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio). The PSNR is a fast measure of [image similarity](http://docs.opencv.org/doc/tutorials/highgui/video-input-psnr-ssim/video-input-psnr-ssim.html#image-similarity-psnr-and-ssim). The PSNR for similar images is higher than the PSNR for dissimilar images. However the PSNR for identical images is undefined. 
 
-* **threshold** If 0 or greated, the threshold below which images are treated as different. The default of `-1` will only mark identical images as "SAME" in the model.
+* **threshold** If 0 or greater, this specifies the threshold below which images are treated as different. The default of `-1` will only mark identical images as "SAME" in the model.
 * **path** Path to reference image to be compared to pipeline image
 
 NOTE: The PSNR stage is used by _FireSight_ itself in unit tests. OpenCV on different platforms transforms images in similar, but not identical ways. The PSNR stage is therefore helpful in comparing, for example, Raspberry Pi FireSight images with Windows FireSight images.
