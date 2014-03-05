@@ -23,3 +23,16 @@ PSNR value &rarr; <br>
 <pre>{ "PSNR":29.65368665440641 }</pre>
 
 Note that the PSNR value is quite close to the 30-50dB range typical for PSNR values deemed acceptable for comparing lossy compressed images with their originals. This demonstrates that differences discernible to humans may not be detected by PSNR. The reason for this is that image difference is highly local (the green rectangles).
+
+#### Example: Compare dissimilar images [pipeline]()
+<pre>target/firesight -i img/pcb.jpg -p json/PSNR.json -Dpath=img/matchCCORR_NORMED.jpg</pre>
+pcb.jpg &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
+
+matchCCORR_NORMED.jpg &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/matchCCORR_NORMED.jpg?raw=true"> 
+
+PSNR value &rarr; <br>
+<pre>{ "PSNR":15.855542323067283 }</pre>
+
+In this case, the PSNR indicates some similarity, but the PSNR is low enough to indicate that these images are different.
