@@ -26,6 +26,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op: imwrite]]
 * [[op: matchTemplate]]
 * [[op: MSER]]
+* [[op: PSNR]]
 * [[op: resize]]
 * [[op: SimpleBlobDetector]]
 * [[op: warpAffine]]
