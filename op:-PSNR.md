@@ -38,3 +38,17 @@ PSNR value &rarr; <br>
 <pre>{ "PSNR":15.855542323067283 }</pre>
 
 In this case, the PSNR indicates some similarity, but the PSNR is low enough to indicate that these images are different.
+
+#### Example: Compare somewhat seemingly identical images [pipeline]()
+<pre>target/firesight -i img/matchAngle-win.png -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
+matchAngle-win.png &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle-win.png ?raw=true">
+
+matchAngle.jpg &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle.jpg?raw=true"> 
+
+PSNR value &rarr; <br>
+<pre>{ "PSNR":36.764313895181303 }</pre>
+
+Images seen as identical can have PSNR values as low as 36.8dB.
+
