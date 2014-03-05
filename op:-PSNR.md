@@ -39,7 +39,7 @@ PSNR value &rarr; <br>
 
 In this case, the PSNR indicates some similarity, but the PSNR is low enough to indicate that these images are different.
 
-#### Example: Compare somewhat seemingly identical images [pipeline]()
+#### Example: Compare seemingly identical images [pipeline]()
 <pre>target/firesight -i img/matchAngle-win.png -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
 matchAngle-win.png &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle-win.png?raw=true">
