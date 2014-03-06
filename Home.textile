@@ -12,6 +12,7 @@ Using JSON for specifying the pipeline has certain advantages:
 
 ### Pipeline Stages 
 Each stage in a pipeline performs a specific operation on the current pipeline image. Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
+* [[op: backgroundSubtractor]]
 * [[op: blur]]
 * [[op: Canny]]
 * [[op: cvtColor]]
