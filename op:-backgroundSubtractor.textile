@@ -1,0 +1,3 @@
+_FirePick_ wraps the [OpenCV BackgroundSubtractor](http://docs.opencv.org/java/org/opencv/video/BackgroundSubtractor.html) in the _backgroundSubtractor_ stage. 
+
+* **method** Currently the default `MOG2` is the only [supported method](http://docs.opencv.org/java/org/opencv/video/BackgroundSubtractorMOG2.html). 
