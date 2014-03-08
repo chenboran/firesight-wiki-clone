@@ -41,6 +41,8 @@ In this case, the PSNR indicates some similarity, but the PSNR is low enough to 
 
 #### Example: Compare seemingly identical images [pipeline]()
 <pre>target/firesight -i img/matchAngle-win.png -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
+The following images were generated on different platforms running different versions of OpenCV. What's interesting about these pictures is that they look the same to the human eye, however PSNR detects a slight difference.
+
 matchAngle-win.png &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle-win.png?raw=true">
 
