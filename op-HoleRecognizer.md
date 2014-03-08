@@ -54,4 +54,4 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 Output image `target/HoleRecognizer.jpg`
 
 #### See Also
-* [[op: SimpleBlobDetector]] which is an alternate solution
+* [[op SimpleBlobDetector]] which is an alternate solution

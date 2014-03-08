@@ -9,4 +9,4 @@ OpenCV [erode](http://docs.opencv.org/modules/imgproc/doc/filtering.html?highlig
 <pre>{}</pre>
 
 #### See Also
-* [[op: dilate]]
+* [[op dilate]]

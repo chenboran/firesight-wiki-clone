@@ -10,17 +10,17 @@ The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor
 #### Model
 <pre>{}</pre>
 
-#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/backgroundSubtractorMOG2-fgMask.json)
-<pre>firesight -i img/backgroundSubtractorMOG2.jpg -p json/backgroundSubtractorMOG2-fgMask.json -o target/backgroundSubtractorMOG2-fgMask.png -DbgImg=img/pcb.jpg</pre>
+#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/mog2-fgMask.json)
+<pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/mog2-fgMask.png -DbgImg=img/pcb.jpg</pre>
 
 Background image &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
 
 Background with text &rarr;<br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/backgroundSubtractorMOG2.jpg?raw=true"> 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2.jpg?raw=true"> 
 
 Foreground mask (Windows) &rarr;<br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/backgroundSubtractorMOG2-fgMask-win.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask-win.png?raw=true">
 
 Since Raspberry Pi is based on older OpenCV 2.3, the results are not as good &rarr;
-<img src="https://github.com/firepick1/FireSight/blob/master/img/backgroundSubtractorMOG2-fgMask.png?raw=true"> 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask.png?raw=true"> 

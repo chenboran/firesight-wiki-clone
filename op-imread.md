@@ -16,4 +16,4 @@ Set working image to contents of given file using [imread](http://docs.opencv.or
 * **rows** image pixel height
 
 #### See Also
-* [[op: imwrite]]
+* [[op imwrite]]

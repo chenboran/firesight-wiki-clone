@@ -15,5 +15,5 @@ Output image saved as `target/drawKeypoints.jpg`
 <img src="https://github.com/firepick1/FireSight/blob/master/img/drawKeypoints.jpg?raw=true">
 
 #### See Also
-* [[op: SimpleBlobDetector]]
-* [[op: drawRects]]
+* [[op SimpleBlobDetector]]
+* [[op drawRects]]

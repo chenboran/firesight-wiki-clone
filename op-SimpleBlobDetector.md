@@ -14,5 +14,5 @@ Stage attribute values (e.g., "thresholdStep") correspond to the fields of [Simp
 Grayscale working image is written to `target/SimpleBlobDetector.jpg`
 
 #### See Also
-* [[op: drawKeypoints]]
-* [[op: HoleRecognizer]]
+* [[op drawKeypoints]]
+* [[op HoleRecognizer]]

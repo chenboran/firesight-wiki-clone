@@ -10,4 +10,4 @@ OpenCV [dilate](http://docs.opencv.org/modules/imgproc/doc/filtering.html?highli
 <pre>{}</pre>
 
 #### See Also
-* [[op: erode]]
+* [[op erode]]

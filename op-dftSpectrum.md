@@ -91,4 +91,4 @@ CV_8UC1(400x400) show:[195-204,195-204] Normalized spectrum
 <img src="https://github.com/firepick1/FireSight/blob/master/img/dft-rect.jpg?raw=true">
 
 #### See Also
-[[op: dft]]
+[[op dft]]

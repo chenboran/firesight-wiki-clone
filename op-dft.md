@@ -1,6 +1,6 @@
 Discrete Fourier Transform [OpenCV dft](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#dft) wrapper. 
 
-The _dft_ stage changes the data format of the pipeline working Mat. It creates a CV_32F complex Mat on forward transform. It creates a CV_8U Mat on inverse transform. The dynamic range of the complex spectrum is too large to be visually meaningful. To visualize the spectrum, see [[op: dftSpectrum]].
+The _dft_ stage changes the data format of the pipeline working Mat. It creates a CV_32F complex Mat on forward transform. It creates a CV_8U Mat on inverse transform. The dynamic range of the complex spectrum is too large to be visually meaningful. To visualize the spectrum, see [[op dftSpectrum]].
 
 * **flags** JSON array of strings representing bits to be OR'd: `DFT_SCALE`, `DFT_INVERSE`, `DFT_COMPLEX_OUTPUT`, `DFT_REAL_OUTPUT`. 
 
@@ -26,5 +26,5 @@ Demonstrates that the input/output images are identical after being passed throu
 </pre>
 
 #### See Also
-[[op: dftSpectrum]]
+[[op dftSpectrum]]
 
