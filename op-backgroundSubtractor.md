@@ -31,3 +31,7 @@ The previous example demonstrates that the Raspberry Pi (or at least OpenCV 2.3)
 
 _varThreshold_ set to `64` &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask64.png?raw=true"> 
+
+#### See Also
+* [[op erode]]
+* [[op dilate]]
