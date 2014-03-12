@@ -78,3 +78,6 @@ Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, whi
 1. **Working Directory** `$(MSBuildProjectDirectory)\..`
 1. `OK` to exit Properties dialog
 1. `F10` to step into main()
+
+#### See Also
+* [[Build FireSight (Linux)]]
