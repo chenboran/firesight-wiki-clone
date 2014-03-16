@@ -22,12 +22,12 @@ Background with text &rarr;<br>
 Foreground mask (Windows) &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask-win.png?raw=true">
 
-Since Raspberry Pi is based on older OpenCV 2.3, the results are not as good &rarr;
+Raspberry Pi uses OpenCV 32-bit, and the results are not as good &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask.png?raw=true"> 
 
 #### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/mog2-fgMask.json)
 <pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/mog2-fgMask64.png -DbgImg=img/pcb.jpg -Dvt=64</pre>
-The previous example demonstrates that the Raspberry Pi (or at least OpenCV 2.3) version of BackgroundSubtractorMOG2 does not work as well as the 2.4.8 version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `vt` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
+The previous example demonstrates that the Raspberry Pi (or at least OpenCV 2.3) version of BackgroundSubtractorMOG2 does not work as well as the 64-bit version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `vt` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
 
 _varThreshold_ set to `64` &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask64.png?raw=true"> 
