@@ -7,6 +7,7 @@ _FireSight_ wrapper for [OpenCV absdiff](http://opencv.jp/opencv-2svn_org/cpp/co
 
 #### Example: Green is red [pipeline](https://github.com/firepick1/FireSight/blob/master/json/absdiff.json)
 <pre>firesight -i img/pcb.jpg -p json/absdiff.json -Dimg=img/mog2.jpg -o target/absdiff.png</pre>
+> Pixel:4ms
 
 The pipeline image &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
