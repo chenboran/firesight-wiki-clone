@@ -5,7 +5,7 @@ _FireSight_ wrapper for [OpenCV absdiff](http://opencv.jp/opencv-2svn_org/cpp/co
 #### Model
 <pre>{}</pre>
 
-#### Example: Green is red [pipeline](https://github.com/firepick1/FireSight/blob/master/json/absdiff.json)
+#### Example: Not all green [pipeline](https://github.com/firepick1/FireSight/blob/master/json/absdiff.json)
 <pre>firesight -i img/pcb.jpg -p json/absdiff.json -Dimg=img/mog2.jpg -o target/absdiff.png</pre>
 > Pixel:4ms
 
@@ -15,6 +15,6 @@ The pipeline image &rarr; <br>
 The comparison image &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2.jpg?raw=true">
 
-Note that the absolute difference of the two is red and green. This happens because the absolute difference is a per-channel difference of each color. <br>
+Note that the absolute difference of the two is not all green even though the only "difference" between the two images is that one has green text. <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/absdiff.png?raw=true">
 
