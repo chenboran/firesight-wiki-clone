@@ -1,4 +1,4 @@
-_FireSight_ wrapper for [OpenCV absdiff](http://opencv.jp/opencv-2svn_org/cpp/core_operations_on_arrays.html#cv-absdiff), which takes the per-channel absolute different of two images. _FireSight_ stage compares specified image with current pipeline image and changes output to the absolute difference.
+_FireSight_ wrapper for [OpenCV absdiff](http://opencv.jp/opencv-2svn_org/cpp/core_operations_on_arrays.html#cv-absdiff), which takes the per-channel absolute difference of two images. _FireSight_ stage compares specified image with current pipeline image and changes output to the absolute difference of the two.
 
 * **path** Path to second image
 
