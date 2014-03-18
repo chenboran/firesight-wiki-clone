@@ -1,3 +1,10 @@
+On Windows, _FireSight_ builds as:
+* **lib_firesight.dll** a C++ Release DLL
+* **lib_firesight.lib** a C++ Release LIB
+* **lib_firesight_d.dll** a C++ Debug DLL
+* **lib_firesight_d.lib** a C++ Debug LIB
+* **firesight.exe** Command line interface
+
 These instructions have been tested using:
 * Windows 7 Professional SP1; CMake 2.8.12.2
 * Visual Studio C++ Express 2010
