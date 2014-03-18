@@ -13,6 +13,7 @@ Windows:
 * **lib_firesight_d.lib** a C++ Debug LIB
 * **firesight.exe** Command line interface
 
+
 Using JSON for specifying the pipeline has certain advantages:
 * a simple text editor lets a user experiment with a useful subset of OpenCV
 * applications can easily create dynamic image processing pipelines in response to changing user needs
@@ -44,3 +45,5 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 
 #### See Also
 * [[Pipeline Parameters]]
+* [[Build FireSight (Linux)]]
+* [[Build FireSight (Windows)]]
