@@ -1,3 +1,6 @@
+On you Unix, _FireSight_ is built as:
+* **[[lib_firesight.so]]** a C++ shared library
+* **[[firesight]]** a UNIX command line interface
 
 ### Debian, Ubuntu
 
