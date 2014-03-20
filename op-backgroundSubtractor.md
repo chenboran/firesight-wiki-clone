@@ -1,11 +1,11 @@
 The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor](http://docs.opencv.org/java/org/opencv/video/BackgroundSubtractor.html) class. Background subtraction is excellent for detecting the orientation and offset of objects newly placed on a known background. For pick-and-place operations, this stage can help determine angular and offset error of a picked part. The stage output image is the binary foreground mask computed by the background subtractor.
 
-* **method** The default `MOG2` is the only [supported method](http://docs.opencv.org/modules/video/doc/motion_analysis_and_object_tracking.html#backgroundsubtractormog2). 
-* **bShadowDetection** The OpenCV and FireSight default is `true`, but _false_ may be more useful given the lack of shadows in most pick-and-place images.
+* **method** The default `absdiff` works well for static images. Method [MOG2](http://docs.opencv.org/modules/video/doc/motion_analysis_and_object_tracking.html#backgroundsubtractormog2) may be more useful for video. 
 * **varThreshold** [OpenCV recommends](http://docs.opencv.org/modules/video/doc/motion_analysis_and_object_tracking.html#backgroundsubtractormog2) the default of `16`. Higher values reduce sensitivity and therefore noise.
-* **background** If provided, this specifies the path to a fixed background image to compare. 
-* **history** If non-zero, specifies the number of preceding images to aggregate as the background for comparison. The default is `0`. A non-zero value really only matters for video pipelines that need to compute an ever-changing background from the most recent video frames. 
-* **learningRate** Default is `-1`. 
+* **bShadowDetection** (MOG2) The OpenCV and FireSight default is `true`, but _false_ may be more useful given the lack of shadows in most pick-and-place images.
+* **background**  (MOG2) If provided, this specifies the path to a fixed background image to compare. 
+* **history**  (MOG2) If non-zero, specifies the number of preceding images to aggregate as the background for comparison. The default is `0`. A non-zero value really only matters for video pipelines that need to compute an ever-changing background from the most recent video frames. 
+* **learningRate**  (MOG2) Default is `-1`. 
 
 #### Model
 <pre>{}</pre>
