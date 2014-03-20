@@ -40,7 +40,7 @@ _varThreshold_ set to `64` &rarr;
 > Pixel:5ms
 
 Thanks to Chris, who pointed out that a faster and simpler method of background subtraction 
-can be had by simply combining [absdiff](op absdiff) and [threshold](op threshold). 
+can be had by simply combining [absdiff](op absdiff) and [threshold](op threshold). As you can see, setting _method_ to _absdiff_ is 6x faster and results in cleaner output:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-absdiff.png?raw=true"> 
 
