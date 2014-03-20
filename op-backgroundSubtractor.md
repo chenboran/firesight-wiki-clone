@@ -10,8 +10,8 @@ The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor
 #### Model
 <pre>{}</pre>
 
-#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/mog2-fgMask.json)
-<pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/mog2-fgMask.png -DbgImg=img/pcb.jpg</pre>
+#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
+<pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/bgsub.png -DbgImg=img/pcb.jpg</pre>
 
 Background image &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -20,17 +20,17 @@ Background with text &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/mog2.jpg?raw=true"> 
 
 Foreground mask (Windows) &rarr;<br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask-win.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-mog2-64.png?raw=true">
 
 Raspberry Pi uses OpenCV 32-bit, and the results are not as good &rarr;
-<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask.png?raw=true"> 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-mog2.png?raw=true"> 
 
-#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/mog2-fgMask.json)
-<pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/mog2-fgMask64.png -DbgImg=img/pcb.jpg -Dvt=64</pre>
+#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
+<pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-mog2.png -DbgImg=img/pcb.jpg -Dvt=64</pre>
 The previous example demonstrates that the 32-bit OpenCV version of BackgroundSubtractorMOG2 does not work as well as the 64-bit version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `vt` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
 
 _varThreshold_ set to `64` &rarr;
-<img src="https://github.com/firepick1/FireSight/blob/master/img/mog2-fgMask64.png?raw=true"> 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-mog2-64.png?raw=true"> 
 
 #### See Also
 * [[op erode]]
