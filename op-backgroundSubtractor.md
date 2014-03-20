@@ -10,8 +10,8 @@ The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor
 #### Model
 <pre>{}</pre>
 
-#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
-<pre>firesight -i img/mog2.jpg -p json/mog2-fgMask.json -o target/bgsub.png -DbgImg=img/pcb.jpg</pre>
+#### Example 1: BackgroundSubtractorMOG2 varThreshold=16 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
+<pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub.png -DbgImg=img/pcb.jpg</pre>
 
 Background image &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -25,13 +25,22 @@ Foreground mask (Windows) &rarr;<br>
 Raspberry Pi uses OpenCV 32-bit, and the results are not as good &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-mog2.png?raw=true"> 
 
-#### Example: Detect text overlay in image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
-<pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-mog2.png -DbgImg=img/pcb.jpg -Dvt=64</pre>
-The previous example demonstrates that the 32-bit OpenCV version of BackgroundSubtractorMOG2 does not work as well as the 64-bit version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `vt` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
+#### Example 2: BackgroundSubtractorMOG2 varThreshold=64 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
+<pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-mog2.png -DbgImg=img/pcb.jpg -Dthresh=64</pre>
+The previous example demonstrates that the 32-bit OpenCV version of BackgroundSubtractorMOG2 does not work as well as the 64-bit version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `thresh` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
 
 _varThreshold_ set to `64` &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-mog2-64.png?raw=true"> 
 
+#### Example 3: absdiff method, thresh=32 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
+<pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-absdiff.png -DbgImg=img/pcb.jpg -Dthresh=32 -Dmethod=absdiff</pre>
+Thanks to Chris, who pointed out that a faster and simpler method of background subtraction 
+can be had by simply combining [absdiff](op absdiff) and [threshold](op threshold). 
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/bgsub-absdiff.png?raw=true"> 
+
 #### See Also
 * [[op erode]]
 * [[op dilate]]
+* [[op absdiff]]
+* [[op threshold]]
