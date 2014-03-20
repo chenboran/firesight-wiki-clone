@@ -29,4 +29,4 @@ Increasing the threshold to 65 reduces the detail &rarr; <br>
 > Pixel:0.5ms
 
 Converting to grayscale gives the expected mask &rarr; <br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/threshol.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/threshold.png?raw=true">
