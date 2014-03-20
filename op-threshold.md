@@ -1,8 +1,8 @@
 The _FireSight_ wrapper for [OpenCV threshold](http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html?highlight=threshold#threshold)  compares each pixel to a threshold value and replaces the pixel with a value determined by the threshold type.
 
 * **type** Default value is `THRESH_BINARY`.
-* **thresh** Threshold value
-* **maxval** For THRESH_BINARY and THRESH_BINARY_INV, the replacement value for the type.
+* **thresh** Threshold value. Default is `128`
+* **maxval** For THRESH_BINARY and THRESH_BINARY_INV, the replacement value for the type. Default is `255`, which is ideal for creating image masks for 8-bit images.
 
 _FireSight_ only:
 * **gray** Default value is `true`, which converts input image to grayscale before threshold
