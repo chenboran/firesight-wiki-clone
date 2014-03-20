@@ -11,8 +11,22 @@ _FireSight_ wrapper for [OpenCV threshold](http://docs.opencv.org/modules/imgpro
 <pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold1.png -Dthresh=1</pre>
 > Pixel:0.3ms
 
-The input image &rarr; <br>
+The input image appears bland and simple &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/absdiff.png?raw=true">
 
-The threshold image &rarr; <br>
+Setting a threshold of 1 reveals the subtle detail in the image &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold1.png?raw=true">
+
+#### Example: threshold 64 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
+<pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold1.png -Dthresh=64</pre>
+> Pixel:0.3ms
+
+Increasing the threshold to 65 reduces the detail &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64.png?raw=true">
+
+#### Example: grayscale threshold 64 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
+<pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold1.png -Dthresh=64 -Dcvt=cvtColor</pre>
+> Pixel:0.5ms
+
+Converting to grayscale gives the expected mask &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/threshol.png?raw=true">
