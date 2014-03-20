@@ -23,6 +23,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op PSNR]]
 * [[op resize]]
 * [[op SimpleBlobDetector]]
+* [[op threshold]]
 * [[op warpAffine]]
 * [[op warpRing]]
 
