@@ -24,7 +24,7 @@ However, setting a threshold of 1 reveals subtle detail &rarr; <br>
 <pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold64-color.png -Dthresh=64 -Dgray=false</pre>
 > Pixel:0.3ms
 
-Increasing the threshold to 64 reduces the detail, but introduces different colors &rarr; <br>
+Increasing the threshold to 64 reduces the detail, but accentuates colors &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64-color.png?raw=true">
 
 #### Example: threshold 64 grayscale [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
