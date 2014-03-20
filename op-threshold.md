@@ -33,3 +33,10 @@ Increasing the threshold to 64 reduces the detail, but accentuates colors &rarr;
 
 Converting to grayscale gives the expected mask &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64.png?raw=true">
+
+#### Example 4: threshold type THRESH_BINARY_INV [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
+<pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold64-inv.png -Dthresh=64 -Dtype=THRESH_BINARY_INV</pre>
+> Pixel:2ms
+
+Changing the threshold type to THRESH_BINARY_INV produces the following &rarr; <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64-inv.png?raw=true">
