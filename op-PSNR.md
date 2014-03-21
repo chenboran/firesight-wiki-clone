@@ -15,6 +15,7 @@ The model stores the PSNR value or "SAME" if the images are found to be similar 
 
 #### Example 1: Compare somewhat similar images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>firesight -i img/pcb.jpg -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
+> Pixel: 6ms
 
 pcb.jpg &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -29,6 +30,8 @@ Note that the PSNR value is quite close to the 30-50dB range typical for PSNR va
 
 #### Example 2: Compare dissimilar images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>firesight -i img/pcb.jpg -p json/PSNR.json -Dpath=img/matchCCORR_NORMED.jpg</pre>
+> Pixel: 6ms
+
 pcb.jpg &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
 
@@ -42,6 +45,8 @@ In this case, the PSNR indicates some similarity, but the PSNR is low enough to 
 
 #### Example 3: Compare seemingly identical images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>firesight -i img/matchAngle-64.png -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
+> Pixel: 6ms
+
 The following images were generated on different platforms running different versions of OpenCV. What's interesting about these pictures is that they look the same to the human eye. However, PSNR detects a slight difference.
 
 matchAngle-64.png &rarr; <br>
