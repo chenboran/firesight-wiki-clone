@@ -12,7 +12,7 @@ The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor
 
 #### Example 1: BackgroundSubtractorMOG2 varThreshold=16 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
 <pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub.png -DbgImg=img/pcb.jpg -Dmethod=MOG2</pre>
-> Pixel:11.8ms Win7/ThinkPad-T410:22.0ms
+> [[Pixel]]:11.8ms &bull; [[T410]]:22.0ms &bull; [[RPi]]:[[OOM]]
 
 Background image &rarr;<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -28,7 +28,6 @@ Raspberry Pi uses OpenCV 32-bit, and the results are not as good &rarr;
 
 #### Example 2: BackgroundSubtractorMOG2 varThreshold=64 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
 <pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-mog2.png -DbgImg=img/pcb.jpg -Dmethod=MOG2 -Dthresh=64 </pre>
-> Pixel:11.9ms Win7/ThinkPad-T410:22.0ms
 
 The previous example demonstrates that the 32-bit OpenCV version of BackgroundSubtractorMOG2 does not work as well as the 64-bit version of OpenCV. However, we can improve our results by using the _varThreshold_, which is bound to the `thresh` pipeline parameter. To reduce noise artifacts, we increase _varThreshold_ from the default `16` to `64`:
 
@@ -37,7 +36,7 @@ _varThreshold_ set to `64` &rarr;
 
 #### Example 3: absdiff method, thresh=32 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
 <pre>firesight -i img/mog2.jpg -p json/bgsub.json -o target/bgsub-absdiff.png -DbgImg=img/pcb.jpg -Dmethod=absdiff -Dthresh=32 -Dmethod=absdiff</pre>
-> Pixel:2.4ms Win7/ThinkPad-T410:9.7ms RaspberryPi:
+> [[Pixel]]:2.4ms &bull; [[T410]]:9.7ms [[RPi]]:82.6ms
 
 Thanks to Chris, who pointed out that a faster and simpler method of background subtraction 
 can be had by simply combining [absdiff](op absdiff) and [threshold](op threshold). As you can see, setting _method_ to _absdiff_ is 6x faster and results in cleaner output:
