@@ -13,7 +13,7 @@ The model stores the PSNR value or "SAME" if the images are found to be similar 
 }
 </pre>
 
-#### Example: Compare somewhat similar images [pipeline]()
+#### Example 1: Compare somewhat similar images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>target/firesight -i img/pcb.jpg -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
 pcb.jpg &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -26,7 +26,7 @@ PSNR value &rarr; <br>
 
 Note that the PSNR value is quite close to the 30-50dB range typical for PSNR values deemed acceptable for comparing lossy compressed images with their originals. This demonstrates that differences discernible to humans may be glossed over by PSNR. The reason for this is that in this case, we have a highly local image difference (i.e., the green rectangles).
 
-#### Example: Compare dissimilar images [pipeline]()
+#### Example 2: Compare dissimilar images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>target/firesight -i img/pcb.jpg -p json/PSNR.json -Dpath=img/matchCCORR_NORMED.jpg</pre>
 pcb.jpg &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
@@ -39,12 +39,12 @@ PSNR value &rarr; <br>
 
 In this case, the PSNR indicates some similarity, but the PSNR is low enough to indicate that these images are different.
 
-#### Example: Compare seemingly identical images [pipeline]()
+#### Example 3: Compare seemingly identical images [pipeline](https://github.com/firepick1/FireSight/blob/master/json/PSNR.json)
 <pre>target/firesight -i img/matchAngle-win.png -p json/PSNR.json -Dpath=img/matchAngle.jpg</pre>
 The following images were generated on different platforms running different versions of OpenCV. What's interesting about these pictures is that they look the same to the human eye. However, PSNR detects a slight difference.
 
 matchAngle-win.png &rarr; <br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle-win.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle-64.png?raw=true">
 
 matchAngle.jpg &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/matchAngle.jpg?raw=true"> 
