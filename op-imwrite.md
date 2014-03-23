@@ -13,4 +13,4 @@ Write working image to given file using [imwrite](http://docs.opencv.org/doc/use
 * **result** bool returned from imwrite
 
 #### See Also
-* [[op: imread]]
+* [[op imread]]

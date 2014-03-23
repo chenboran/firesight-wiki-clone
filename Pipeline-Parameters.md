@@ -37,4 +37,4 @@ In the above example, we introduced a parameter for a JSON numeric double value.
 </pre>
 
 #### See Also
-* [[op: resize]]
+* [[op resize]]
