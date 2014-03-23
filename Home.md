@@ -1,6 +1,6 @@
 <a href="https://github.com/firepick1/FirePick/wiki/Status"><img src="https://github.com/firepick1/FirePick/wiki/prototype.png"></a>
 
-[FireSight](https://github.com/firepick1/FireSight/blob/master/README.md) interprets a declarative specification of an image processing pipeline that generates a data model of the recognized features for use by other applications. The pipeline declaration and data model both use the JSON data format.
+[FireSight](https://github.com/firepick1/FireSight/blob/master/README.md) interprets a declarative specification of an image processing pipeline that generates a data model of the recognized features for use by other applications. The pipeline declaration and data model both use the JSON data format. Examples shown use the [[[firesight]] command line application.
 
 ### Pipeline Stages 
 Each stage in a pipeline performs a specific operation on the current pipeline image. Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
