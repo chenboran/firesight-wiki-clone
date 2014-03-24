@@ -29,7 +29,7 @@ For convenience, _FireSight_ will generate one histogram for each channel of a c
   }
 }</pre>
 
-#### Example 1: multi-channel histogram [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcHist.json)
+#### Example 1: multi-channel threshold histogram [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcHist.json)
 <pre>firesight -i img/threshold64-color.png  -p json/calcHist.json</pre>
 > [[Pixel]]:1.3ms
 
