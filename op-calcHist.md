@@ -1,4 +1,4 @@
-The _FireSight_ **calcHist** stage is primarily diagnostic and provides only a subset of the functionality of [OpenCV calcHist](http://docs.opencv.org/modules/imgproc/doc/histograms.html?highlight=histogram#histograms). 
+The _FireSight_ **calcHist** stage generates a histogram for the current pipeline image. This stage is primarily diagnostic and provides only a subset of the functionality of [OpenCV calcHist](http://docs.opencv.org/modules/imgproc/doc/histograms.html?highlight=histogram#histograms). 
 
 * **accumulate** If true, bin values for separate channels will be summed. Default is `false`
 * **channels** is a JSON vector of channel indexes. The default is `[]`, which will use all image channels. For an RGB image, this will be identical to `[0 1 2]`. For a monochrome image, this will be identical to `[0]`. The maximum number of channels in the array is 4.
