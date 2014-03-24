@@ -7,6 +7,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op absdiff]]
 * [[op backgroundSubtractor]]
 * [[op blur]]
+* [[op calcHist]]
 * [[op Canny]]
 * [[op cvtColor]]
 * [[op dft]]
