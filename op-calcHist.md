@@ -1,4 +1,4 @@
-The **calcHist** operation is the _FireSight_ wrapper for the [OpenCV calcHist](http://docs.opencv.org/modules/imgproc/doc/histograms.html?highlight=histogram#histograms)
+The _FireSight_ **calcHist** stage is primarily diagnostic and provides only a subset of the functionality of [OpenCV calcHist](http://docs.opencv.org/modules/imgproc/doc/histograms.html?highlight=histogram#histograms). 
 
 * **accumulate** If true, bin values for separate channels will be summed. Default is `false`
 * **channels** is a JSON vector of channel indexes. The default is `[]`, which will use all image channels. For an RGB image, this will be identical to `[0 1 2]`. For a monochrome image, this will be identical to `[0]`. The maximum number of channels in the array is 4.
@@ -15,11 +15,11 @@ For single channel images or if _accumulate_ is true, the histogram model is a s
    "0":40751,
    "1":60157,
 ...
-  "216":2
+   "216":2
   }
 }</pre>
 
-For color images when _accumulates_ is false, the model has one histogram value for each selected channel:
+For convenience, _FireSight_ will generate one histogram for each channel of a color image if _accumulate_ is false. The histogram values are combined into JSON arrays for each histogram bin:
 <pre>{
 "hist":{
    "0":[28983,40751,35947],
@@ -36,7 +36,7 @@ For color images when _accumulates_ is false, the model has one histogram value 
 The input color image is the result of a [threshold](op threshold) pipeline &rarr; <br>
 <img src="https://raw.githubusercontent.com/firepick1/FireSight/master/img/threshold64-color.png">
 
-The **calcHist** model demonstrates that the threshold operation concentrated all pixel values for each channel into either 0 or 255:
+The resulting **calcHist** model demonstrates that the threshold operation concentrated all pixel values for each channel into either 0 or 255:
 <pre>{
   "FireSight":{"version":"0.8.5","url":"https://github.com/firepick1/FireSight"},
   "s1":{
