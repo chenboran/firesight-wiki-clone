@@ -3,7 +3,23 @@ _FireSight_ wrapper for [OpenCV absdiff](http://opencv.jp/opencv-2svn_org/cpp/co
 * **path** Path to second image
 
 #### Model
-<pre>{}</pre>
+The _absdiff_ pipeline operation by itself does not add anything to the data model, but it may be convenient to append a [calcHist](op calcHist) stage to the pipeline in order to add a histogram to the model. In the example shown below, the histogram indicates that the 200x800 images compared are identical because the _absdiff_ output is 0 for all pixels.
+<pre>{
+  "FireSight":{
+    "version":"0.8.5",
+    "url":"https://github.com/firepick1/FireSight"
+  },
+  "s1":{},
+  "s2":{
+    "hist":{
+      "0":[
+        160000,
+        160000,
+        160000
+      ]
+    }
+  }
+}</pre>
 
 #### Example: Not all green [pipeline](https://github.com/firepick1/FireSight/blob/master/json/absdiff.json)
 <pre>firesight -i img/pcb.jpg -p json/absdiff.json -Dimg=img/mog2.jpg -o target/absdiff.png</pre>
