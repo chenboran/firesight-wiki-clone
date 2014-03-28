@@ -1,10 +1,10 @@
 [Convert](http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html#cvtcolor) image from one color space to another.
 
-#### Example
-<pre>{"op":"cvtColor", "code":"CV_BGR2GRAY", "dstCn":0}</pre>
-
 * **code** `CV_BGR2GRAY` is default. See below for additional color codes.
 * **dstCn** Output channels (`0`:auto)
+
+#### Example
+<pre>{"op":"cvtColor", "code":"CV_BGR2GRAY", "dstCn":0}</pre>
 
 ##### Color Codes
 <pre>
