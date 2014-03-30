@@ -97,7 +97,7 @@ move to the right.
 </pre>
 
 ### Example 2: Horizontal 0mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
-<pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
+<pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-0a.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
 
 The image below is the _calcOffset_ output of comparing a 
