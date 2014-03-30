@@ -18,6 +18,7 @@ A typical pipeline output image is shown above. The inner green rectangle is the
 The outer green rectangle is the matchable area computed from the _xtol_ and _ytol_ parameters (see below).
 The upper left inset is the correlation output from _matchTemplate_&mdash;white pixels indicate high correlation. 
 
+Parameters for _calcOffset_ are:
 * **channels** JSON array of integers that specifies the image channels used for comparison. 
 The default is `[]`, which specifies a grayscale conversion. Use `[0,1,2]` for a BGR comparison. 
 Use `[2]` for a red channel comparison.
@@ -61,7 +62,7 @@ The JSON object for each matched channel is a JSON object with:
 * y offset (`dy`)
 * highest matched correlation value (`match`)
 
-If you specify grayscale conversion (i.e., channels=[])for color images, the matched channel will be "0". 
+If you specify grayscale conversion (i.e., channels=[]) for color images, the matched channel will be "0". 
 If you specify multiple channels (e.g., channels=[0,1,2]), individual XY offsets are computed for each channel as shown above.
 Normally, one channel is enough, specifying more channels is slower since matchTemplate is executed for each channel.
 
