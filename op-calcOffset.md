@@ -81,6 +81,21 @@ taken 1mm to the right of the baseline image:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true">
 
+The JSON model returned by _calcHist_ show a 14 pixel X-axis difference attributable to the 1mm 
+move to the right.
+
+<pre>
+{
+  "channels":{
+    "0":{ "dx":14, "dy":0, "match":"0.984573" }
+  },
+  "rects":[
+    { "x":400, "y":100, "width":736, "height":136, "angle":0 },
+    { "x":400, "y":100, "width":800, "height":200, "angle":0 }
+  ]
+}
+</pre>
+
 ### Example 2: Horizontal 0mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
