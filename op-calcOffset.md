@@ -1,5 +1,5 @@
 _FireSight_ _calcOffset_ compares the pipeline image with a baseline template image and 
-computes the XY offset between the two images. The _FireSIght_ _calcOffset_ operation is implemented using 
+computes the XY offset between the two images. It is implemented using 
 [OpenCV matchTemplate](http://docs.opencv.org/modules/imgproc/doc/object_detection.html?highlight=matchtemplate#matchtemplate)
 but the implementation is unique to _FireSight_. The XY offsets computed by _calcOffset_ are helpful
 in many CNC scenarios:
@@ -9,24 +9,24 @@ in many CNC scenarios:
 * camera resolution calibration
 * semi-closed loop operation
 
-THe output image of the [calcOffset.json](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json) 
-pipeline has two stages. The first stage computes the offset. The second stage draws the green lines:
+The output image of the [calcOffset.json](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json) 
+pipeline has two stages. The first stage is _calcOffset_. The second stage draws the green lines:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true">
 
-A typical _calcOffset_ output image is shown above. The inner green rectangle is the region of interest used for _matchTemplate_.
+A typical pipeline output image is shown above. The inner green rectangle is the region of interest used for _matchTemplate_.
 The outer green rectangle is the matchable area computed from the _xtol_ and _ytol_ parameters (see below).
-The upper left inset is the correlation output from _matchTemplate_--white pixels indicate high correlation. 
+The upper left inset is the correlation output from _matchTemplate_&mdash;white pixels indicate high correlation. 
 
 * **channels** JSON array of integers that specifies the image channels used for comparison. 
-The default is `[]`, which uses a grayscale conversion. Specify `[0,1,2]` for a BGR comparison; 
-`[2]` for a red channel comparison, etc.
-* **minval** Minimum matching value (0 is no match, 1 is perfect match). The default is `0.7`.
-* **template** Path to baseline template image
+The default is `[]`, which specifies a grayscale conversion. Use `[0,1,2]` for a BGR comparison. 
+Use `[2]` for a red channel comparison.
+* **minval** Minimum matching correlation value (0 is no match, 1 is perfect match). The default is `0.7`.
+* **template** File path of baseline template image
 * **xtol** X-axis +/- image comparison tolerance. Default is `32` pixels. 
-Smaller values will result in higher accuracy. Larger values will let you detect larger offsets.
+Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
-Smaller values will result in higher accuracy. Larger values will let you detect larger offsets.
+Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 
 ###### Perspective matters
 The XY offsets returned only apply to the Z plane of the images. Images that are nearer/farther will 
