@@ -28,28 +28,31 @@ Smaller values will result in higher accuracy. Larger tolerances are less accura
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 
-###### Perspective matters
+###### Special considerations
+**Perspective matters.**
 The XY offsets returned only apply to the Z plane of the images. Images that are nearer/farther will 
 result in different XY offsets for the identical linear motion of camera and objective. For example, if the camera/objective 
 Z-distance is increased by as little as a centimeter, the XY offsets will change by several pixels.
 
-###### Resolution
-The current resolution of _calcOffset_ is 1 pixel. For the Raspberry Pi camera lens in macro mode, 
+**Resolution** of _calcOffset_ is 1 pixel. For the Raspberry Pi camera lens in macro mode, 
 this is easily 100 microns or less. A future implementation of _calcOffset_ may use interpolation to obtain sub-pixel
 resolution.
 
 #### Model
 The _calcOffset_ JSON model consists of:
 
-* **channels** is a JSON object with a key/value pair for each matched channel. 
-The JSON object for each matched channel is a JSON object with: <br>
-&nbsp;x offset (`dx`), <br>
-&nbsp;y offset (`dy`), and <br>
-&nbsp;highest matched correlation value (`match`).<br>
+**channels** is a JSON object with a key/value pair for each matched channel. 
+The JSON object for each matched channel is a JSON object with: 
+
+* x offset (`dx`) 
+* y offset (`dy`)
+* highest matched correlation value (`match`)
+
 If you specify grayscale conversion (i.e., channels=[])for color images, the matched channel will be "0". 
 If you specify multiple channels (e.g., channels=[0,1,2]), individual XY offsets are computed for each channel as shown above.
 Normally, one channel is enough, specifying more channels is slower since matchTemplate is executed for each channel.
-* **rects** is a JSON array with two rectangles. The smaller rectangle is the region of interest (ROI) used by _matchTemplate_.
+
+**rects** is a JSON array with two rectangles. The smaller rectangle is the region of interest (ROI) used by _matchTemplate_.
 The larger rectangle is ROI extended by the X and Y tolerances. The rectangles are constant, but
 may prove useful as a visual guide in the output image. In the examples, these rects are displayed with a green border.
 <pre>
@@ -66,7 +69,7 @@ may prove useful as a visual guide in the output image. In the examples, these r
 }
 </pre>
 
-### Example 1: 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
+### Example 1: Horizontal 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
 
@@ -75,7 +78,7 @@ the baseline image:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true">
 
-### Example 2: 0mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
+### Example 2: Horizontal 0mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
 
