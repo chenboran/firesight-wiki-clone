@@ -74,9 +74,9 @@ may prove useful as a visual guide in the output image. In the examples, these r
 > Pixel:11.3ms
 
 The image below is the _calcOffset_ output of comparing a 
-[baseline image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+[baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
 with 
-[another image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true)
+[another image](https://github.com/firepick1/FireSight/blob/master/img/headcam1.png?raw=true)
 taken 1mm to the right of the baseline image:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true">
@@ -86,9 +86,9 @@ taken 1mm to the right of the baseline image:
 > Pixel:11.3ms
 
 The image below is the _calcOffset_ output of comparing a 
-[baseline image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+[baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.png?raw=true)
 with 
-[another image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+[another image](https://github.com/firepick1/FireSight/blob/master/img/headcam0a.png?raw=true)
 that was taken after the camera was moved and returned to the "same position". 
 Note that the X and Y offset are non-zero,
 which indicates that the camera detected a ~100 micron translation error due to backlash, micro-step loss, etc.
