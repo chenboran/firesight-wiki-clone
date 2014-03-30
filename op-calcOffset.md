@@ -28,7 +28,8 @@ Smaller values will result in higher accuracy. Larger tolerances are less accura
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 
-###### Special considerations
+#### Special considerations
+
 **Perspective matters.**
 The XY offsets returned only apply to the Z plane of the images. Images that are nearer/farther will 
 result in different XY offsets for the identical linear motion of camera and objective. For example, if the camera/objective 
@@ -39,8 +40,20 @@ this is easily 100 microns or less. A future implementation of _calcOffset_ may 
 resolution.
 
 #### Model
-The _calcOffset_ JSON model consists of:
-
+Here is a sample 3-channel _calcOffset_ JSON model:
+<pre>
+{
+  "channels":{
+    "0":{ "dx":14, "dy":0, "match":"0.978238" },
+    "1":{ "dx":14, "dy":0, "match":"0.984594" },
+    "2":{ "dx":14, "dy":0, "match":"0.976005" }
+  },
+  "rects":[
+    { "x":400, "y":100, "width":736, "height":136, "angle":0 },
+    { "x":400, "y":100, "width":800, "height":200, "angle":0 }
+  ]
+}
+</pre>
 **channels** is a JSON object with a key/value pair for each matched channel. 
 The JSON object for each matched channel is a JSON object with: 
 
@@ -55,26 +68,16 @@ Normally, one channel is enough, specifying more channels is slower since matchT
 **rects** is a JSON array with two rectangles. The smaller rectangle is the region of interest (ROI) used by _matchTemplate_.
 The larger rectangle is ROI extended by the X and Y tolerances. The rectangles are constant, but
 may prove useful as a visual guide in the output image. In the examples, these rects are displayed with a green border.
-<pre>
-{
-  "channels":{
-    "0":{ "dx":14, "dy":0, "match":"0.978238" },
-    "1":{ "dx":14, "dy":0, "match":"0.984594" },
-    "2":{ "dx":14, "dy":0, "match":"0.976005" }
-  },
-  "rects":[
-    { "x":400, "y":100, "width":736, "height":136, "angle":0 },
-    { "x":400, "y":100, "width":800, "height":200, "angle":0 }
-  ]
-}
-</pre>
 
 ### Example 1: Horizontal 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
 
-The image below is the _calcOffset_ output of comparing a baseline image with one that was taken 1mm to the right of
-the baseline image:
+The image below is the _calcOffset_ output of comparing a 
+[baseline image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+with 
+[another image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true)
+taken 1mm to the right of the baseline image:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1.png?raw=true">
 
@@ -82,8 +85,12 @@ the baseline image:
 <pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
 > Pixel:11.3ms
 
-The image below is the _calcOffset_ output of comparing a baseline image with one that was taken 
-after the camera was moved and returned to the "same position". Note that the X and Y offset are non-zero,
+The image below is the _calcOffset_ output of comparing a 
+[baseline image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+with 
+[another image](https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0.png?raw=true)
+that was taken after the camera was moved and returned to the "same position". 
+Note that the X and Y offset are non-zero,
 which indicates that the camera detected a ~100 micron translation error due to backlash, micro-step loss, etc.
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-0a.png?raw=true">
