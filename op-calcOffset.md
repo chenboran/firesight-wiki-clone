@@ -23,6 +23,8 @@ Parameters for _calcOffset_ are:
 The default is `[]`, which specifies a grayscale conversion. Use `[0,1,2]` for a BGR comparison. 
 Use `[2]` for a red channel comparison.
 * **minval** Minimum matching correlation value (0 is no match, 1 is perfect match). The default is `0.7`.
+* **roi** Region of interest JSON array with [x,y,width,height]. 
+Default is image rectangle inset by xtol on left/right and ytol on top/bottom. See Example 3.
 * **template** File path of baseline template image
 * **xtol** X-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
@@ -72,7 +74,7 @@ may prove useful as a visual guide in the output image. In the examples, these r
 
 ### Example 1: Horizontal 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
-> Pixel:11.3ms
+> Pixel:11.5ms
 
 The image below is the _calcOffset_ output of comparing a 
 [baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
@@ -99,7 +101,7 @@ move to the right.
 
 ### Example 2: Horizontal 0mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-0a.png -Dtemplate=img/headcam0.jpg</pre>
-> Pixel:11.3ms
+> Pixel:11.5ms
 
 The image below is the _calcOffset_ output of comparing a 
 [baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
@@ -119,6 +121,39 @@ which indicates that the camera detected a ~100 micron translation error due to 
   "rects":[
     { "x":400, "y":100, "width":736, "height":136, "angle":0 },
     { "x":400, "y":100, "width":800, "height":200, "angle":0 }
+  ]
+}
+</pre>
+
+
+### Example 3: ROI for speed and accuracy [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
+<pre>firesight -i img/headcam0a.jpg -p json/calcOffset.json -o target/calcOffset-0a.png -Dtemplate=img/headcam0.jpg -Droi=[380,75,35,35]</pre>
+> Pixel:4.2ms
+
+Setting a region of interest (ROI) can have affect accuracy as well as speed of _calcOffset_. 
+A good choice for the ROI is a small recdtangle enclosing a high contrast feature. 
+In this example, a component tape sprocket hole serves nicely.
+For comparison, we use the 
+[baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
+and
+[comparison image](https://github.com/firepick1/FireSight/blob/master/img/headcam1.jpg?raw=true)
+from Example 1.
+
+Notice that the tiny 35x35 ROI chosen yields a 2.7x speed improvement along with a higher correlation match value (0.994 vs.0.985). 
+Compare this with the default ROI (see Example 1), 
+which is slower and somewhat less accurate. 
+The default ROI has the advantage of easier setup, since it doesn't require you to choose an ROI.
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-1roi.png?raw=true">
+
+<pre>
+{
+  "channels":{
+    "0":{ "dx":15, "dy":0, "match":"0.993851" }
+  },
+  "rects":[
+    { "x":397, "y":92, "width":35, "height":35, "angle":0 },
+    { "x":397, "y":92, "width":99, "height":99, "angle":0 }
   ]
 }
 </pre>
