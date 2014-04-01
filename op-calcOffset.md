@@ -131,7 +131,7 @@ which indicates that the camera detected a ~100 micron translation error due to 
 > Pixel:4.2ms
 
 Setting a region of interest (ROI) can improve the speed as well as accuracy of _calcOffset_. 
-A good choice for the ROI is a small recdtangle enclosing a high contrast feature. 
+A good choice for the ROI is a small rectangle enclosing a high contrast feature. 
 In this example, a component tape sprocket hole serves nicely.
 For comparison, we use the 
 [baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
