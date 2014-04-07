@@ -74,7 +74,7 @@ may prove useful as a visual guide in the output image. In the examples, these r
 
 ### Example 1: Horizontal 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
-> [[Pixel]]:11.5ms [[SOS]]:156ms
+> [[Pixel]]:11.5ms [[SOS]]:156ms [[RPi]]:574ms
 
 The image below is the _calcOffset_ output of comparing a 
 [baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
