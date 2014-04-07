@@ -2,6 +2,7 @@ _FireSight_ performance benchmarks are done using the `-time` option of `firesig
 
 #### See Also
 * [[RPi]]
+* [[SOS]]
 * [[T410]]
 * [[Pixel]]
 * [[OOM]]
