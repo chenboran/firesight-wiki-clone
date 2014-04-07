@@ -4,6 +4,7 @@ OpenCV may require a lot of memory. For platforms such as Raspberry Pi you may s
 
 #### See Also
 * [[RPi]]
+* [[SOS]]
 * [[T410]]
 * [[Pixel]]
 * [[OOM]]
