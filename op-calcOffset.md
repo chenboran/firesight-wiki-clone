@@ -74,7 +74,7 @@ may prove useful as a visual guide in the output image. In the examples, these r
 
 ### Example 1: Horizontal 1mm offset [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1.png -Dtemplate=img/headcam0.jpg</pre>
-> [[Pixel]]:11.5ms [[SOS]]:156ms [[RPi]]:574ms
+> [[Pixel]]:11.5ms [[SOS]]:~156ms [[RPi]]:574ms
 
 The image below is the _calcOffset_ output of comparing a 
 [baseline image](https://github.com/firepick1/FireSight/blob/master/img/headcam0.jpg?raw=true)
@@ -128,7 +128,7 @@ which indicates that the camera detected a ~100 micron translation error due to 
 
 ### Example 3: ROI for speed and accuracy [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>firesight -i img/headcam1.jpg -p json/calcOffset.json -o target/calcOffset-1roi.png -Dtemplate=img/headcam0.jpg -Droi=[380,75,35,35]</pre>
-> [[Pixel]]:4.2ms [[SOS]]:42.8ms [[RPi]]:205ms
+> [[Pixel]]:4.2ms [[SOS]]:~37ms [[RPi]]:205ms
 
 Setting a region of interest (ROI) can improve the speed as well as accuracy of _calcOffset_. 
 A good choice for the ROI is a small rectangle enclosing a high contrast feature. 
