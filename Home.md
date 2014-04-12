@@ -23,6 +23,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op matchTemplate]]
 * [[op MSER]]
 * [[op PSNR]]
+* [[op putText]]
 * [[op resize]]
 * [[op SimpleBlobDetector]]
 * [[op threshold]]
