@@ -11,4 +11,13 @@ The _putText_ operation provides the function of [OpenCV putText](http://docs.op
 #### Model 
 <pre>{}</pre>
 
-#### Example 1: Quirky Duck [
+#### Example 1: Quirky Duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/putText.json)
+<pre>firesight -i img/duck.png -p json/putText.json -o target/putText.png -Dtext="Quirky Duck" -Dcolor=[64,0,0]</pre>
+
+Input image &rarr;
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.png?raw=true">
+
+Image with text &rarr;
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/putText.png?raw=true">
