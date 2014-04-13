@@ -22,6 +22,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op imwrite]]
 * [[op matchTemplate]]
 * [[op MSER]]
+* [[op normalize]]
 * [[op PSNR]]
 * [[op putText]]
 * [[op resize]]
