@@ -33,6 +33,7 @@ The default NORM_L2 normalization reveals the letters hidden in the test image.
 #### Example 2: High Contrast ABC [pipeline](https://github.com/firepick1/FireSight/blob/master/json/normalize.json)
 <pre>firesight -i img/abc.png -p json/normalize.json -o target/normalize.png -Ddomain=[20,52]</pre>
 > [[Pixel]]:0.8ms
+
 By choosing a _domain_ that matches the values used to represent the letters, we eliminate uninteresting dark/light values.
 This allows us to increase the image gain and bias it toward the value interval of interest:
 
