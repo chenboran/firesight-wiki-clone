@@ -35,3 +35,5 @@ The comparison image &rarr; <br>
 Note that the absolute difference of the two is not all green even though the only "difference" between the two images is that one has green text. <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/absdiff.png?raw=true">
 
+#### See Also
+* [[op normalize]]
