@@ -40,3 +40,7 @@ Converting to grayscale gives the expected mask &rarr; <br>
 
 Changing the threshold type to THRESH_BINARY_INV produces the following &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64-inv.png?raw=true">
+
+### See Also
+* [[op absdiff]]
+* [[op normalize]]
