@@ -21,3 +21,4 @@ Paul Jones has built FireSight on Gentoo.
 
 #### See Also
 * [[Build FireSight (Windows)]]
+* [[Build FireSight (SmartOS/Solaris)]]
