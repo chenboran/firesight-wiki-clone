@@ -34,7 +34,7 @@ The default NORM_L2 normalization reveals the letters hidden in the test image.
 <pre>firesight -i img/abc.png -p json/normalize.json -o target/normalize.png -Ddomain=[20,52]</pre>
 > Pixel:4ms
 
-By choosing a _domain_ that matches the values uses to represent the letters, we eliminate uninteresting dark/light values.
+By choosing a _domain_ that matches the values used to represent the letters, we eliminate uninteresting dark/light values.
 This allows us to increase the image gain and bias it toward the value interval of interest:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/normalize-l2.png?raw=true">
