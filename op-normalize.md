@@ -39,3 +39,6 @@ This allows us to increase the image gain and bias it toward the value interval 
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/normalize-l2.png?raw=true">
 
+#### See Also
+* [[op absdiff]]
+* [[op threshold]]
