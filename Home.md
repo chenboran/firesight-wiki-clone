@@ -33,5 +33,4 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 
 #### See Also
 * [[Pipeline Parameters]]
-* [[Build FireSight (Linux)]]
-* [[Build FireSight (Windows)]]
+* [[Building Firesight]]
