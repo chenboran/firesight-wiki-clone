@@ -1,6 +1,6 @@
-Mathematically, normalization scales the intensity of image pixels relative to a given normalization value and type. Normalization provides a valuable standard of comparison and is implemented by [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize).
+Mathematically, normalization scales the intensity of image pixels relative to a given normalization value (typically 1) and type (typically NORM_L2). Normalization provides a valuable standard of comparison and is implemented by [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize).
 
-Normalization can also be used for contrast shifting and scaling to focus on "pixel values of interest" and is a great visual aid for analyzing images. _FireSight_ extends OpenCV with a _domain_ parameter that lets you choose a range of pixel intensities of interest (see Example 3).
+Normalization can also be used for contrast shifting and scaling to focus on "pixel values of interest" and is a great visual aid for interpreting images. _FireSight_ extends OpenCV with a _domain_ parameter that lets you choose a range of pixel intensities of interest (see Example 3).
 
 * **alpha** Norm value to normalize to or the lower range boundary in case of the range normalization. Default is `1` unless image is 8-bit, in which case _FireSight_ will automatically compute a good value.
 * **beta** Upper range boundary in case of the range normalization; it is not used for the norm normalization. Only used for NORM_MINMAX.
