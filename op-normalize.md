@@ -1,4 +1,4 @@
-_FireSight_ extends [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize). Mathematically, normalization scales the intensity of image pixels relative to a given normalization value and type. This is valuable in providing a standard of comparison. 
+Mathematically, normalization scales the intensity of image pixels relative to a given normalization value and type. Normalization provides a valuable standard of comparison and is implemented by [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize).
 
 Normalization can also be used for contrast shifting and scaling to focus on "pixel values of interest" and is a great visual aid for analyzing images. _FireSight_ extends OpenCV with a _domain_ parameter that lets you choose a range of pixel intensities of interest (see Example 3).
 
