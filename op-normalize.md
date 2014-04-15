@@ -42,3 +42,52 @@ This allows us to increase the image gain and bias it toward the value interval 
 #### See Also
 * [[op absdiff]]
 * [[op threshold]]
+
+#### Example 3: normType and domain
+The following table illustrates the utility of the various normType options. 
+It also shows how the domain interval can improve contrast.
+<table>
+<tr>
+<th>&nbps;</th>
+<th colspan=2> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34.png?raw=true"> </th>
+<th colspan=2> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182.png?raw=true"> </th>
+</tr>
+<tr>
+<th>normType</th>
+<th>no domain</th><th>domain=[20,52]</th>
+<th>no domain</th><th>domain=[164,196]</th>
+</tr>
+
+<tr>
+<td>NORM_MINMAX</td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-minmax.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-minmax-dom.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-minmax.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-minmax-dom.png?raw=true"> </td>
+</tr>
+
+<tr>
+<td>NORM_INF</td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-inf.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-inf-dom.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-inf.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-inf-dom.png?raw=true"> </td>
+</tr>
+
+<tr>
+<td>NORM_L1</td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-l1.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-l1-dom.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-l1.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-l1-dom.png?raw=true"> </td>
+</tr>
+
+<tr>
+<td>NORM_L2</td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-l2.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34-l2-dom.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-l2.png?raw=true"> </td>
+<td> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182-l2-dom.png?raw=true"> </td>
+</tr>
+
+</table>
