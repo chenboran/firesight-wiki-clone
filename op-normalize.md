@@ -1,6 +1,6 @@
-_FireSight_ wrapper for [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize), 
-which scales and shifts the dynamic range of the pixels in an image. Normalization is often used
-to focus on "pixel values of interest" and is a great visual aid for analyzing images..
+_FireSight_ extends [OpenCV normalize](http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#normalize). Mathematically, normalization scales the intensity of image pixels relative to a given normalization value and type. This is valuable in providing a standard of comparison. 
+
+Normalization can also be used for contrast shifting and scaling to focus on "pixel values of interest" and is a great visual aid for analyzing images. _FireSight_ extends OpenCV with a _domain_ parameter that lets you choose a range of pixel intensities of interest (see Example 3).
 
 * **alpha** Norm value to normalize to or the lower range boundary in case of the range normalization. Default is `1` unless image is 8-bit, in which case _FireSight_ will automatically compute a good value.
 * **beta** Upper range boundary in case of the range normalization; it is not used for the norm normalization. Only used for NORM_MINMAX.
@@ -48,7 +48,7 @@ The following table illustrates the utility of the various normType options.
 It also shows how the domain interval can improve contrast.
 <table>
 <tr>
-<th>&nbps;</th>
+<th>&nbsp;</th>
 <th colspan=2> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc34.png?raw=true"> </th>
 <th colspan=2> <img src="https://github.com/firepick1/FireSight/blob/master/img/abc182.png?raw=true"> </th>
 </tr>
