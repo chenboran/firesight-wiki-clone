@@ -4,35 +4,33 @@
 
 ### Pipeline Stages 
 Each stage in a pipeline performs a specific operation on the current pipeline image. Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
-* [[op absdiff]]
+* [[op absdiff]] Compare pixel intensities of two images 
 * [[op backgroundSubtractor]]
 * [[op blur]]
-* [[op calcHist]]
-* [[op calcOffset]]
+* [[op calcHist]] Add histogram to pipeline model
+* [[op calcOffset]] Calculate offset between two images
 * [[op Canny]]
-* [[op cvtColor]]
-* [[op dft]]
-* [[op dftSpectrum]]
-* [[op dilate]]
-* [[op drawKeypoints]]
-* [[op drawRects]]
-* [[op erode]]
-* [[op FireSight]]
+* [[op cvtColor]] Change image color model
+* [[op dft]] Discrete Fourier Transform
+* [[op dftSpectrum]] Analyze DFT
+* [[op drawKeypoints]] Visualize key feature points in pipeline model
+* [[op drawRects]] Visualize rectangles in pipeline model 
+* [[op FireSight]] FireSight configuration
 * [[op HoleRecognizer]]
-* [[op imread]]
-* [[op imwrite]]
-* [[op matchTemplate]]
-* [[op MSER]]
-* [[op morph]]
-* [[op normalize]]
-* [[op PSNR]]
-* [[op putText]]
+* [[op imread]] Read image (multiple formats)
+* [[op imwrite]] Write image (multiple formats)
+* [[op matchTemplate]] 
+* [[op MSER]] Blob detection
+* [[op morph]] Morphological operations
+* [[op normalize]] Adjust intensity
+* [[op PSNR]] Compare two images for similarity using peak signal to noise ratio 
+* [[op putText]] Annotate image
 * [[op resize]]
 * [[op SimpleBlobDetector]]
-* [[op threshold]]
-* [[op warpAffine]]
-* [[op warpRing]]
+* [[op threshold]] Manipulate pixel intensity ranges
+* [[op warpAffine]] Scale, translate and/or rotate image
+* [[op warpRing]] Create rotation-invariant matching templates
 
 #### See Also
-* [[Pipeline Parameters]]
-* [[Building Firesight]]
+* [[Pipeline Parameters]] Create customizable pipelines
+* [[Building Firesight]] Play with or extend FireSight

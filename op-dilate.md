@@ -1,3 +1,5 @@
+# DEPRECATED (see [[op morph]])
+
 OpenCV [dilate](http://docs.opencv.org/modules/imgproc/doc/filtering.html?highlight=dilate#dilate) wrapper. See [overview](http://docs.opencv.org/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html)
 
 #### Pipeline
