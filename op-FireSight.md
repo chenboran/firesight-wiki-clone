@@ -1,4 +1,4 @@
-This operation records _FireSight_ configuration and version information to the pipeline model.
+Record _FireSight_ configuration and version information to the pipeline model.
 
 ### Model
 <pre>
