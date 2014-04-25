@@ -17,6 +17,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op drawKeypoints]]
 * [[op drawRects]]
 * [[op erode]]
+* [[op FireSight]]
 * [[op HoleRecognizer]]
 * [[op imread]]
 * [[op imwrite]]
