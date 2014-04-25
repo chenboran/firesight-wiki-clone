@@ -17,7 +17,7 @@ _FireSight_ wrapper for:
 
 ### Example 2: Erode using disc (ellipse) kernel [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_ERODE -Dksize=3 -o target/morph-erode-3.png</pre>
-<table>
+<table border=0 cellpadding=1>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/morph-erode-3.png?raw=true">
@@ -28,8 +28,7 @@ _FireSight_ wrapper for:
 
 ### Example 3: Dilate using disc (ellipse) kernel [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_DILATE -Dksize=3 -o target/morph-dilate-3.png</pre>
-
-<table>
+<table border=0 cellpadding=1>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/morph-dilate-3.png?raw=true">
