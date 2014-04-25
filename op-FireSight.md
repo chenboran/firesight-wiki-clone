@@ -13,4 +13,4 @@ Record _FireSight_ configuration and version information to the pipeline model.
 
 ### Example 1: FireSight [pipeline](https://github.com/firepick1/FireSight/blob/master/json/FireSight.json)
 <pre>firesight -p json/FireSight.json</pre>
-Generate the pipeline model shwon above.
+Generate the pipeline stage model shown above.
