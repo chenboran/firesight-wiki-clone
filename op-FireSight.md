@@ -11,5 +11,5 @@ This operation records _FireSight_ configuration and version information to the 
 </pre>
 
 
-### Example 1: FireSight [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
+### Example 1: FireSight [pipeline](https://github.com/firepick1/FireSight/blob/master/json/FireSight.json)
 <pre>firesight -p json/FireSight.json</pre>
