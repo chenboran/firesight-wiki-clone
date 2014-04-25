@@ -6,7 +6,7 @@ Write working image to given file using [imwrite](http://docs.opencv.org/doc/use
 </pre>
 * **path** image file path
 
-#### Model
+#### Stage Model
 <pre>
 { "result":true }
 </pre>

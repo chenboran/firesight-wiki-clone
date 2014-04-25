@@ -6,7 +6,7 @@ OpenCV [dilate](http://docs.opencv.org/modules/imgproc/doc/filtering.html?highli
 * **ksize.height** kernel height. Default `3`
 * **shape** Default `MORPH_ELLIPSE`
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### See Also

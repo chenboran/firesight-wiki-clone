@@ -11,7 +11,7 @@ Recognize holes(s) of given range in diameter within image using amended [MSER](
 
 <img src="output0.jpg">
 
-#### Model
+#### Stage Model
 <pre>
     "holes":[
       {

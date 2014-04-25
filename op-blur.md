@@ -8,5 +8,5 @@
 * **anchor.x** center of blurring kernel (-1)
 * **anchor.y** center of blurring kernel (-1)
 
-#### Model
+#### Stage Model
 <pre>{}</pre>

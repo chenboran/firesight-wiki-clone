@@ -3,7 +3,7 @@ _FireSight_ wrapper for [OpenCV resize()](http://docs.opencv.org/modules/imgproc
 * **fx** Horizontal scale, default `1`
 * **fy** Vertical scale, default `1`
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example: Squeeze the Duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/resize.json)

@@ -8,7 +8,7 @@ The _putText_ operation provides the function of [OpenCV putText](http://docs.op
 * **thickness** Default is `1`
 * **fontScale** Default is `1.0`
 
-#### Model 
+#### Stage Model 
 <pre>{}</pre>
 
 #### Example 1: Quirky Duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/putText.json)

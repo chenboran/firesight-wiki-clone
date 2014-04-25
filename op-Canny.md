@@ -3,5 +3,5 @@
 #### Example
 <pre>{"op":"Canny","threshold1":100,"threshold2":300,"apertureSize":3,"L2gradient":false}</pre>
 
-#### Model
+#### Stage Model
 <pre>{}</pre>

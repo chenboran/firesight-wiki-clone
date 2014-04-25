@@ -8,7 +8,7 @@ The _FireSight_ **calcHist** stage generates a histogram for the current pipelin
 
 The current _FireSight_ implementation of **calcHist** only supports 1-dimensional histograms. Future implementations may support the full capability of OpenCV.
 
-#### Model
+#### Stage Model
 For single channel images or if _accumulate_ is true, the histogram model is a sparse JSON object of integers:
 <pre>{
 "hist":{

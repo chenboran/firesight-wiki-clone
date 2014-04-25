@@ -9,7 +9,7 @@ The _FireSight_ `dftSpectrum` pipeline stage wraps several OpenCV calls that hel
 * **show** `real` Replaces working image with the CV_32F1 real part of the complex spectrum
 * **show** `imaginary` Replaces working image with the CV_32F1 imaginary part of the complex spectrum
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Examples

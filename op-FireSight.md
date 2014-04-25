@@ -1,6 +1,6 @@
 Record _FireSight_ configuration and version information to the pipeline stage model.
 
-### Model
+### Stage Model
 <pre>
 {
     "FireSight":{

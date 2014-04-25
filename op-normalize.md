@@ -11,7 +11,7 @@ For 8-bit images, _FireSight_ provides two parameters which are much more conven
 * **domain** JSON array of integers describing value interval to normalize. Default is `[0,255]`. Values outside this interval will be eliminated from pipeline image by truncating and shifting image values. This works for all normalization types and is useful for focusing on a value interval of interest.
 * **range** JSON array of integers describing output value interval. Default is `[0,255]`, which maximizes the dynamic range of the normalized output. This is rarely used.
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Examples

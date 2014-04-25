@@ -4,7 +4,7 @@ Although rotation invariance is achievable, it comes at a cost. For example, the
 
 * **angles** JSON array of angles (e.g., `[0,30,60]`. Default is `[]`, which produces a ring projection of input image. 
 
-#### Model
+#### Stage Model
 The stage model for _warpRing_ gives the result image size of the generated template, which will vary according to the angles specified. A ring projection will always result in a square image:
 <pre>
   {

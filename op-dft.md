@@ -4,7 +4,7 @@ The _dft_ stage changes the data format of the pipeline working Mat. It creates 
 
 * **flags** JSON array of strings representing bits to be OR'd: `DFT_SCALE`, `DFT_INVERSE`, `DFT_COMPLEX_OUTPUT`, `DFT_REAL_OUTPUT`. 
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example: DFT of white rectangle [pipeline](https://github.com/firepick1/FireSight/blob/master/json/dft-rect2.json)

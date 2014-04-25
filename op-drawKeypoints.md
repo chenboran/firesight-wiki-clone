@@ -6,7 +6,7 @@
 * **color** JSON array corresponding to cv::Scalar with 1-4 elements (`[-1 -1 -1 -1]` default)
 * **flags** int value of desired DrawMatchesFlags (5 is more informative than the default value of `0`)
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example

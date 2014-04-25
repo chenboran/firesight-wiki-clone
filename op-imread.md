@@ -7,7 +7,7 @@ Set working image to contents of given file using [imread](http://docs.opencv.or
 
 * **path** image file path
 
-#### Model
+#### Stage Model
 <pre>
   { "cols":800, "rows":200 }
 </pre>

@@ -117,5 +117,5 @@ CV_YUV420sp2BGR
 CV_YUV420sp2RGB
 </pre>
 
-#### Model
+#### Stage Model
 <pre>{}</pre>

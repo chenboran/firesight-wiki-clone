@@ -7,7 +7,7 @@ The _FireSight_ wrapper for [OpenCV threshold](http://docs.opencv.org/modules/im
 _FireSight_ only:
 * **gray** Default value is `true`, which converts input image to grayscale before threshold
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example 1: threshold Pointilism [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)

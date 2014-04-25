@@ -5,7 +5,7 @@ FireSight op draws _RotatedRect_ array from named stage model.  Because some fol
 * **model** name of stage that generates _rects_ model to be drawn
 * **color** JSON array corresponding to cv::Scalar with 1-4 elements (`[-1 -1 -1 -1]` default)
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example [pipeline](https://github.com/firepick1/FireSight/blob/master/json/drawRects.json)

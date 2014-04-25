@@ -42,7 +42,7 @@ Z-distance is increased by as little as a centimeter, the XY offsets will change
 this is easily 100 microns or less. A future implementation of _calcOffset_ may use interpolation to obtain sub-pixel
 resolution.
 
-#### Model
+#### Stage Model
 Here is a sample 3-channel _calcOffset_ JSON model:
 <pre>
 {

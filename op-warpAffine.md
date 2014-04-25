@@ -11,7 +11,7 @@ FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc
 * **borderValue** Color to use for background. Default is `[0,0,0]` BGR
 * **borderMode** Specifies how border of transformed image should be filled: `BORDER_CONSTANT` fills with _borderValue_; `BORDER_REPLICATE` replicates border pixels; `BORDER_REFLECT` fills with a mirror image of source image doubling the border value; `BORDER_REFLECT_101` fills with a mirror image of source image without doubling the border value; `BORDER_WRAP` fills with repeated copies of the source image.
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example: Rotate a duck by 30 degrees and scale it by 0.5 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-rotate.json)

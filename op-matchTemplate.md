@@ -10,7 +10,7 @@ Correlation-based template matching is quite powerful. The frequency spectrum of
 * **corr** Normalized recognition threshold in the interval [0,1]. Used to determine best match of candidates. For CV_TM_CCOEFF, CV_TM_CCOEFF_NORMED, CV_TM_CCORR, and CV_TM_CCORR_NORMED methods, this is a minimum threshold for positive recognition; for all other methods, it is a maximum threshold.
 * **angle** Match template at specified angle in degrees
 
-#### Model
+#### Stage Model
 <pre>
 {
     "maxVal":0.97696870565414429,

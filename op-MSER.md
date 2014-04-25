@@ -19,7 +19,7 @@ The following pipeline parameters are exclusive to _FireSight_:
 * **detect** `keypoints` adds a KeyPoint JSON object to the stage model for each detected MSER region. Each KeyPoint is determined from eigenvectors and covariance matrix of region. The _size_ field of the KeyPoint is calculated from the number of points in the region: _size = 2*sqrt(region.size()/&pi;)_
 * **detect** `rects` adds a RotatedRect JSON object to the stage model for each detected MSER region. Each RotatedRect is calculated by _minAreaRect()_ 
 
-#### Model
+#### Stage Model
 If `"detect":"keypoints"` is specified, a stage model KeyPoint is added for each MSER region detected. The following model corresponds with the _MSER with keypoints_ example below:
 <pre>
  "mser":{

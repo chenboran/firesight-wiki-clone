@@ -7,7 +7,7 @@ The _FirePick backgroundSubtractor_ stage wraps the [OpenCV BackgroundSubtractor
 * **history**  (MOG2) If non-zero, specifies the number of preceding images to aggregate as the background for comparison. The default is `0`. A non-zero value really only matters for video pipelines that need to compute an ever-changing background from the most recent video frames. 
 * **learningRate**  (MOG2) Default is `-1`. 
 
-#### Model
+#### Stage Model
 <pre>{}</pre>
 
 #### Example 1: BackgroundSubtractorMOG2 varThreshold=16 [pipeline](https://github.com/firepick1/FireSight/blob/master/json/bgsub.json)
