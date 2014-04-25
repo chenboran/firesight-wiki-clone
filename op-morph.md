@@ -17,8 +17,8 @@ _FireSight_ wrapper for:
 
 ### Example 2: Erode using disc (ellipse) kernel [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_ERODE -Dksize=3 -o target/morph-erode-3.png</pre>
-3x3 kernel &rarr;
+ksize=3 &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/morph-erode-3.png?raw=true">
-5x5 kernel &rarr;
+ksize=5 &rarr;
 <img src="https://github.com/firepick1/FireSight/blob/master/img/morph-erode-5.png?raw=true">
 
