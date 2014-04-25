@@ -13,11 +13,12 @@ Parameters:
 <pre>{}</pre>
 
 ### Example 1: Create test image [pipeline](https://github.com/firepick1/FireSight/blob/master/json/w.json)
-<pre>firesight -p json/w.json</pre>
+<pre>firesight -p json/w.json -o target/w.png</pre>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/w.png?raw=true">
 
-### Example 2: Erode MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 2: MORPH_ERODE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_ERODE -Dksize=3 -o target/morph-erode-3.png</pre>
+Extend black.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -27,8 +28,9 @@ Parameters:
 </td></tr>
 </table>
 
-### Example 3: Dilate MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 3: MORPH_DILATE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_DILATE -Dksize=3 -o target/morph-dilate-3.png</pre>
+Extend white.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -39,8 +41,9 @@ Parameters:
 </table>
 
 
-### Example 4: Open MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 4: MORPH_OPEN [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_OPEN -Dksize=3 -o target/morph-open-3.png</pre>
+Eliminate white spots.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -51,8 +54,9 @@ Parameters:
 </table>
 
 
-### Example 5: Close MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 5: MORPH_CLOSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_CLOSE -Dksize=3 -o target/morph-close-3.png</pre>
+Eliminate black spots.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -62,8 +66,9 @@ Parameters:
 </td></tr>
 </table>
 
-### Example 6: Gradient MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 6: MORPH_GRADIENT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_GRADIENT -Dksize=3 -o target/morph-gradient-3.png</pre>
+Highlight contours.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -73,8 +78,9 @@ Parameters:
 </td></tr>
 </table>
 
-### Example 7: Top Hat MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 7: MORPH_TOPHAT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_TOPHAT -Dksize=3 -o target/morph-tophat-3.png</pre>
+Highlight local maxima.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
@@ -84,8 +90,9 @@ Parameters:
 </td></tr>
 </table>
 
-### Example 8: Black Hat MORPH_ELLIPSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
+### Example 8: MORPH_BLACKHAT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_BLACKHAT -Dksize=3 -o target/morph-blackhat-3.png</pre>
+Highlight local minima.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
 <tr><td>
