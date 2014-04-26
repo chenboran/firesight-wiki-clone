@@ -18,6 +18,8 @@ Parameters:
 
 ### Example 2: MORPH_ERODE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_ERODE -Dksize=3 -o target/morph-erode-3.png</pre>
+| [[Pixel]]:1.7ms [[SOS]]:2ms [[RPi]]:229ms 
+
 Extend black.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -30,6 +32,8 @@ Extend black.
 
 ### Example 3: MORPH_DILATE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_DILATE -Dksize=3 -o target/morph-dilate-3.png</pre>
+| [[Pixel]]:1.7ms [[SOS]]:2ms [[RPi]]:229ms 
+
 Extend white.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -43,6 +47,8 @@ Extend white.
 
 ### Example 4: MORPH_OPEN [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_OPEN -Dksize=3 -o target/morph-open-3.png</pre>
+| [[Pixel]]:3.1ms [[SOS]]:4.7ms [[RPi]]:454ms 
+
 Eliminate white spots.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -56,6 +62,8 @@ Eliminate white spots.
 
 ### Example 5: MORPH_CLOSE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_CLOSE -Dksize=3 -o target/morph-close-3.png</pre>
+| [[Pixel]]:3.1ms [[SOS]]:4.7ms [[RPi]]:454ms 
+
 Eliminate black spots.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -68,6 +76,8 @@ Eliminate black spots.
 
 ### Example 6: MORPH_GRADIENT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_GRADIENT -Dksize=3 -o target/morph-gradient-3.png</pre>
+| [[Pixel]]:3.7ms [[SOS]]:4.3ms [[RPi]]:526ms 
+
 Highlight contours.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -80,6 +90,8 @@ Highlight contours.
 
 ### Example 7: MORPH_TOPHAT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_TOPHAT -Dksize=3 -o target/morph-tophat-3.png</pre>
+| [[Pixel]]:3.7ms [[SOS]]:4.3ms [[RPi]]:526ms 
+
 Highlight local maxima.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
@@ -92,6 +104,8 @@ Highlight local maxima.
 
 ### Example 8: MORPH_BLACKHAT [pipeline](https://github.com/firepick1/FireSight/blob/master/json/morph.json)
 <pre>firesight -i img/w.png -p json/morph.json -Dmop=MORPH_BLACKHAT -Dksize=3 -o target/morph-blackhat-3.png</pre>
+| [[Pixel]]:3.7ms [[SOS]]:4.3ms [[RPi]]:526ms 
+
 Highlight local minima.
 <table>
 <tr><th>ksize=3</th><th>ksize=5</th></tr>
