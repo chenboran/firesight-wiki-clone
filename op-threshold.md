@@ -1,7 +1,7 @@
 The _FireSight_ wrapper for [OpenCV threshold](http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html?highlight=threshold#threshold)  compares each pixel to a threshold value and replaces the pixel with a value determined by the threshold type.
 
 * **type** Default value is `THRESH_BINARY`.
-* **thresh** Threshold value. Default is `128`. You can also specify `OTSU`, which will add the THRESH_OTSU flag to **type** for automatic thresholding using [Otsu's method](http://en.wikipedia.org/wiki/Otsu's_method)
+* **thresh** Threshold value, normally between 0 and 255. Default is `OTSU`, which will add the THRESH_OTSU flag to **type** for automatic thresholding using [Otsu's method](http://en.wikipedia.org/wiki/Otsu's_method). See Example 5.
 * **maxval** For THRESH_BINARY and THRESH_BINARY_INV, the replacement value for the type. Default is `255`, which is ideal for creating image masks for 8-bit images.
 
 _FireSight_ only:
@@ -42,17 +42,16 @@ Changing the threshold type to THRESH_BINARY_INV produces the following &rarr; <
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64-inv.png?raw=true">
 
 #### Example 5: Otsu's Method [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
-<pre>firesight -i img/part1-0.png -p json/threshold.json -o target/part1-0-otsu.png -Dthresh=OTSU</pre>
+<pre>firesight -i img/part1-0.png -p json/threshold.json -o target/threshold-otsu.png -Dthresh=OTSU</pre>
 > [[Pixel]]:0.7ms
 
-Otsu's method provides automatic thresholding.
-
-Original image &rarr; <br>
+Otsu's method provides automatic thresholding. As with the preceding examples, the original image is generated via **absdiff** and has many non-zero background pixel differences:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/part1-0.png?raw=true">
 
-Threshold using Otsu's method &rarr; <br>
-<img src="https://github.com/firepick1/FireSight/blob/master/img/part1-0-otsu.png?raw=true">
+Using Otsu's method, we can easily calculate a foreground/background threshold. The timings reveal the slight cost of extra processing to determine the threshold: <br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/threshold-otsu.png?raw=true">
 
 ### See Also
 * [[op absdiff]]
 * [[op normalize]]
+* [[op minAreaRect]]
