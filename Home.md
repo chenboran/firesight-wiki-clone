@@ -20,6 +20,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op imread]] Read image (multiple formats)
 * [[op imwrite]] Write image (multiple formats)
 * [[op matchTemplate]] 
+* [[op minAreaRect]] Find minimum area rectangle enclosing pixels within intensity range
 * [[op MSER]] Blob detection
 * [[op morph]] Morphological operations
 * [[op normalize]] Adjust intensity
