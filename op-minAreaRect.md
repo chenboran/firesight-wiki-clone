@@ -26,7 +26,7 @@ JSON structure expected by [[op drawRects]]. The number of points in the Rotated
 
 #### Example 1: Find bright green things [pipeline](https://github.com/firepick1/FireSight/blob/master/json/minAreaRect.json)
 <pre>firesight -i img/abc-color.png -p json/minAreaRect.json -o target/minAreaRect.png -Dmin=128 -Dchannel=1 -Dthickness=1</pre>
-> [[Pixel]]:0.4ms
+> [[Pixel]]:0.4ms [[RPi]]:11ms
 
 Consider a colorful picture:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/abc-color.png?raw=true">
@@ -36,7 +36,7 @@ We can find and box all bright green things using **channel=1** and **min=128**:
 
 #### Example 2: Detect a part [pipeline](https://github.com/firepick1/FireSight/blob/master/json/minAreaRect-thresh.json)
 <pre>firesight -i img/part1-0.png -p json/minAreaRect-thresh.json -o target/minAreaRect-thresh.png</pre>
-> [[Pixel]]:3.6ms
+> [[Pixel]]:3.6ms [[RPi]]:150ms
 
 Suppose we have a pick-and-place head with no part:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/part0.png?raw=true">
