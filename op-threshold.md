@@ -3,6 +3,7 @@ The _FireSight_ wrapper for [OpenCV threshold](http://docs.opencv.org/modules/im
 * **type** Default value is `THRESH_BINARY`.
 * **thresh** Threshold value, normally between 0 and 255. Default is `OTSU`, which will add the THRESH_OTSU flag to **type** for automatic thresholding using [Otsu's method](http://en.wikipedia.org/wiki/Otsu's_method). See Example 5.
 * **maxval** For THRESH_BINARY and THRESH_BINARY_INV, the replacement value for the type. Default is `255`, which is ideal for creating image masks for 8-bit images.
+* **gray** Default is `true`, which converts image to grayscale. If `false`, each channel will be thresholded, unless Otsu's method is chosen, in which the image is autoatically converted to grayscale. (FireSight only)
 
 _FireSight_ only:
 * **gray** Default value is `true`, which converts input image to grayscale before threshold
@@ -29,14 +30,14 @@ Increasing the threshold to 64 reduces the detail, but accentuates colors &rarr;
 
 #### Example 3: threshold 64 grayscale [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
 <pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold64.png -Dthresh=64</pre>
-> [[Pixel]]:0.5ms
+> [[Pixel]]:0.2ms
 
 Converting to grayscale gives the expected mask &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64.png?raw=true">
 
 #### Example 4: threshold type THRESH_BINARY_INV [pipeline](https://github.com/firepick1/FireSight/blob/master/json/threshold.json)
 <pre>firesight -i img/absdiff.png -p json/threshold.json -o target/threshold64-inv.png -Dthresh=64 -Dtype=THRESH_BINARY_INV</pre>
-> [[Pixel]]:0.5ms
+> [[Pixel]]:0.2ms
 
 Changing the threshold type to THRESH_BINARY_INV produces the following &rarr; <br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold64-inv.png?raw=true">
@@ -48,7 +49,8 @@ Changing the threshold type to THRESH_BINARY_INV produces the following &rarr; <
 Otsu's method provides automatic thresholding. As with the preceding examples, the original image is generated via **absdiff** and has many non-zero background pixel differences:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/part1-0.png?raw=true">
 
-Using Otsu's method, we can easily calculate a foreground/background threshold. The timings reveal the slight cost of extra processing to determine the threshold: <br>
+Using Otsu's method, we can easily calculate a foreground/background threshold. 
+Otsu's method does take more time (compare Example 4), but may be worth the convenience.
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold-otsu.png?raw=true">
 
 ### See Also

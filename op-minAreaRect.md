@@ -8,7 +8,7 @@ This _FireSight_ operation relies on
 
 #### Stage Model
 The **minAreaRect** operation is actually a fast single blob detector, and provides a single RotatedRect in the model using the 
-JSON structure expected by [[op drawRects]]
+JSON structure expected by [[op drawRects]]. The number of points in the RotatedRect region is also given so you can compute region density.
 <pre>
 {
   "rects":[
@@ -34,8 +34,8 @@ Consider a colorful picture:<br>
 We can find and box all bright green things using **channel=1** and **min=128**:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/minAreaRect-abc.png?raw=true"> 
 
-#### Example 2: Detecting a part [pipeline](https://github.com/firepick1/FireSight/blob/master/json/minAreaRect-thresh.json)
-<pre>firesight -i img/threshold-otsu.png -p json/minAreaRect-thresh.json -o target/minAreaRect.png</pre>
+#### Example 2: Detect a part [pipeline](https://github.com/firepick1/FireSight/blob/master/json/minAreaRect-thresh.json)
+<pre>firesight -i img/part1-0.png -p json/minAreaRect-thresh.json -o target/minAreaRect-thresh.png</pre>
 > [[Pixel]]:
 
 Suppose we have a pick-and-place head with no part:<br>
@@ -44,9 +44,12 @@ Suppose we have a pick-and-place head with no part:<br>
 We then pick up a part:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/part1.png?raw=true">
 
+Using [[op absdiff]] we get:</br>
+<img src="https://github.com/firepick1/FireSight/blob/master/img/part1-0.png?raw=true">
+
 The pipeline uses [[op threshold]] to generate this image with Otsu's method:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/threshold-otsu.png?raw=true">
 
-Finally, the **minAreaRect** step itself gives us:<br>
+Finally, the **minAreaRect** stage itself gives us:<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/minAreaRect-thresh.png?raw=true">
 
