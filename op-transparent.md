@@ -1,13 +1,12 @@
-_FireSight_ _transparent_ adds an alpha channel to the pipeline image.
+_FireSight_ _transparent_ operation adds an alpha channel to the pipeline image.
 If a background color is specified, _transparent_ assigns foreground/background alpha values.
 
 * **bgcolor** JSON array with [B,G,R] background color. Default is `[]`, which treats entire image as foreground
-* **alphafg** Normalized value between 0 and 1.0 for foreground alpha channel value.
-* **alphabg** Normalized value between 0 and 1.0 for background alpha channel value.
+* **alphafg** Normalized value between 0 and 1.0 for foreground alpha channel value. The default is `1`, which is not transparent.
+* **alphabg** Normalized value between 0 and 1.0 for background alpha channel value. The default is `0`, which is fully transparent.
 * **roi** JSON array with [x,y,width,height] rectangle describing region of interest.
 
 #### Stage Model
-Here is a sample 3-channel _calcOffset_ JSON model:
 <pre>{}</pre>
 
 ### Example 1: Transparent Logo [pipeline](https://github.com/firepick1/FireSight/blob/master/json/transparent.json)

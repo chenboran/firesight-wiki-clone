@@ -29,6 +29,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op resize]]
 * [[op SimpleBlobDetector]]
 * [[op threshold]] Manipulate pixel intensity ranges
+* [[op transparent]] Make image transparent by adding an alpha channel
 * [[op warpAffine]] Scale, translate and/or rotate image
 * [[op warpRing]] Create rotation-invariant matching templates
 
