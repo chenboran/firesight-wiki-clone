@@ -28,6 +28,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op putText]] Annotate image
 * [[op resize]]
 * [[op SimpleBlobDetector]]
+* [[op stageImage]] Replace current pipeline image with previous stage image
 * [[op threshold]] Manipulate pixel intensity ranges
 * [[op transparent]] Make image transparent by adding an alpha channel
 * [[op warpAffine]] Scale, translate and/or rotate image
