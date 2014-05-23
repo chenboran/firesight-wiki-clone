@@ -30,6 +30,8 @@ Default is image rectangle inset by xtol on left/right and ytol on top/bottom. S
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
+* **offset-color** Default is `[]`. JSON array of [B,G,R] colors for marking offset rectangle, which is only drawn 
+if offset is non-zero. Subsequent [[op-drawRects]] stage is required to actually draw the offset rectangle.
 
 #### Special considerations
 
