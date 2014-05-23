@@ -162,7 +162,8 @@ The default ROI has the advantage of easier setup, since it doesn't require you 
 
 ### Example 4: Show offset-color [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>
-firesight -i img/headcam1.png -p json/calcOffset.json -o target/calcOffset-offset-color1.png \
+firesight -i img/headcam1.png -p json/calcOffset.json \
+  -o target/calcOffset-offset-color1.png \
   -Doffset-color=[255,0,255] -Dtemplate=img/headcam0.png
 </pre>
 
