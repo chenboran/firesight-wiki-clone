@@ -30,7 +30,7 @@ Default is image rectangle inset by xtol on left/right and ytol on top/bottom. S
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
-* **offset-color** Default is `[]`. JSON array of [B,G,R] colors for marking offset rectangle, which is only drawn 
+* **offsetColor** Default is `[]`. JSON array of [B,G,R] colors for marking offset rectangle, which is only drawn 
 if offset is non-zero. Subsequent [[op-drawRects]] stage is required to actually draw the offset rectangle.
 
 #### Special considerations
@@ -160,12 +160,12 @@ The default ROI has the advantage of easier setup, since it doesn't require you 
 }
 </pre>
 
-### Example 4: Show offset-color [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
+### Example 4: Show offsetColor [pipeline](https://github.com/firepick1/FireSight/blob/master/json/calcOffset.json)
 <pre>
 firesight -i img/headcam1.png -p json/calcOffset.json \
-  -o target/calcOffset-offset-color1.png \
-  -Doffset-color=[255,0,255] -Dtemplate=img/headcam0.png
+  -o target/calcOffset-offsetColor1.png \
+  -DoffsetColor=[255,0,255] -Dtemplate=img/headcam0.png
 </pre>
 
 For visual feedback, it's useful to declare an _offset_color_ for drawing the offset rectangle if any offset is detected:
-<img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-offset-color1.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-offsetColor1.png?raw=true">
