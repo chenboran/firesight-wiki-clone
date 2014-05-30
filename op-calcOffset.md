@@ -167,5 +167,5 @@ firesight -i img/headcam1.png -p json/calcOffset.json \
   -DoffsetColor=[255,0,255] -Dtemplate=img/headcam0.png
 </pre>
 
-For visual feedback, it's useful to declare an _offset_color_ for drawing the offset rectangle if any offset is detected:
+For visual feedback, it's useful to declare an _offsetColor_ for drawing the offset rectangle if any offset is detected:
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-offsetColor1.png?raw=true">
