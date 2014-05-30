@@ -30,7 +30,7 @@ Default is image rectangle inset by xtol on left/right and ytol on top/bottom. S
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
 * **ytol** Y-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
-* **offsetColor** Default is `[]`. JSON array of [B,G,R] colors for marking offset rectangle, which is only drawn 
+* **offsetColor** Default is `[32,32,255]`. JSON array of [B,G,R] colors for marking offset rectangle, which is only drawn 
 if offset is non-zero. Subsequent [[op-drawRects]] stage is required to actually draw the offset rectangle.
 
 #### Special considerations
@@ -167,5 +167,5 @@ firesight -i img/headcam1.png -p json/calcOffset.json \
   -DoffsetColor=[255,0,255] -Dtemplate=img/headcam0.png
 </pre>
 
-For visual feedback, it's useful to declare an _offsetColor_ for drawing the offset rectangle if any offset is detected:
+For better visual feedback, you can change the _offsetColor_ used for drawing the offset rectangle if any offset is detected:
 <img src="https://github.com/firepick1/FireSight/blob/master/img/calcOffset-offsetColor1.png?raw=true">
