@@ -8,7 +8,7 @@ Detect circle(s) of given range in diameter within image using Hough transform (
  `0`:do not show detected circles; 
  `1`:show detected circles; 
 
-<img src="HoughCircles.jpg">
+<img src="img/HoughCircles.jpg">
 
 #### Stage Model
 <pre>
