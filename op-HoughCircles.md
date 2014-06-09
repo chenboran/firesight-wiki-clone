@@ -9,7 +9,7 @@ Detect circle(s) of given range in diameter within image using Hough transform (
  `1`:show detected circles; 
 
 <img src="img/HoughCircles.jpg">
-![FireSight - HoughCircles](https://github.com/simonfojtu/FireSight/blob/master/img/HoughCircles.jpg)
+![FireSight - HoughCircles](https://github.com/simonfojtu/FireSight/raw/master/img/HoughCircles.jpg)
 
 #### Stage Model
 <pre>
