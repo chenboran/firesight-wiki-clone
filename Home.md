@@ -17,6 +17,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op drawRects]] Visualize rectangles in pipeline model 
 * [[op FireSight]] FireSight configuration
 * [[op HoleRecognizer]]
+* [[op HoughCircles]] Circle detector based on Hough transform
 * [[op imread]] Read image (multiple formats)
 * [[op imwrite]] Write image (multiple formats)
 * [[op matchTemplate]] 
