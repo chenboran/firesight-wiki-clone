@@ -11,8 +11,8 @@ The Hough circles detector is not perfect and often produces some false negative
 The next step is to determine the distance (in pixels) of the holes' centres. For this a [median](https://en.wikipedia.org/wiki/Median) is used.
 
 ##### horizontal line
-true resolution: 11.77 px/mm
-estimated resolution: 11.74 px/mm
+* true resolution: 11.77 px/mm
+* estimated resolution: 11.74 px/mm
 ![8mm](img/8mm_line_circles_RANSAC.png)
 
 ##### vertical line
