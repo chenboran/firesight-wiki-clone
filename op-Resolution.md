@@ -8,7 +8,7 @@ This stage is not yet implemented in FireSight, this page only documents the ide
 
 The Hough circles detector is not perfect and often produces some false negatives and false positives. We know that the holes in the tape form a line, thus a [RANSAC](https://en.wikipedia.org/wiki/RANSAC) is employed to detect the line from all the circles. This gives a somewhat robust estimate of the line position. The line is fitted to the inliers by least-squares.
 
-In the images, all circles (red and green) are the output of the HoughCircles stage. The green ones are inliers found by RANSAC - they form the line.
+In the images, all circles (red and green) are the output of the HoughCircles stage. The green ones are the inliers found by RANSAC.
 
 The next step is to determine the distance (in pixels) of the holes' centres. For this a [median](https://en.wikipedia.org/wiki/Median) is used.
 
