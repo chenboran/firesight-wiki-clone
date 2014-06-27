@@ -10,7 +10,7 @@ The Hough circles detector is not perfect and often produces some false negative
 
 In the images, all circles (red and green) are the output of the HoughCircles stage. The green ones are the inliers found by RANSAC.
 
-The next step is to determine the distance (in pixels) of the holes' centres. For this a [median](https://en.wikipedia.org/wiki/Median) is used.
+The next step is to determine the distance (in pixels) of the holes' centres. For this a [median](https://en.wikipedia.org/wiki/Median) of distances of neighbouring circles is used.
 
 ##### horizontal line
 * true resolution: 11.77 px/mm
