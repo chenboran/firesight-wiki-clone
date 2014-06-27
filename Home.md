@@ -28,6 +28,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op PSNR]] Compare two images for similarity using peak signal to noise ratio 
 * [[op putText]] Annotate image
 * [[op resize]]
+* [[op Resolution]]
 * [[op SimpleBlobDetector]]
 * [[op stageImage]] Replace current pipeline image with previous stage image
 * [[op threshold]] Manipulate pixel intensity ranges
