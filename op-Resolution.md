@@ -11,3 +11,5 @@ The Hough circles detector is not perfect and often produces some false negative
 The next step is to determine the distance (in pixels) of the holes' centres. For this a [median](https://en.wikipedia.org/wiki/Median) is used.
 
 ![FireSight - HoughCircles](https://github.com/simonfojtu/FireSight.wiki/raw/master/img/8mm_line_circles_RANSAC.png)
+
+![](img/8mm_line_circles_RANSAC.png)
