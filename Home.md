@@ -38,3 +38,10 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 #### See Also
 * [[Pipeline Parameters]] Create customizable pipelines
 * [[Building Firesight]] Play with or extend FireSight
+
+
+<svg width="100" height="100">
+   <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+      <line x1=0 y1=0 x2=100 y2=0 stroke="red" stroke-width="1"/>
+         Sorry, your browser does not support inline SVG.
+	 </svg> 
