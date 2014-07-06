@@ -87,3 +87,19 @@ Bright spots in the correlation image correspond to matches:
 Here is a simple way to recognize four orientations with a single pipeline. Although easy to put together, it quadruples the total time taken to match the templates. Other solutions such as template ring projection can create templates capable of recognizing arbitrary or specific angles.
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/chris-match.jpg?raw=true">
+
+#### Example: Find the crash dummy [pipeline](https://github.com/firepick1/FireSight/blob/master/json/match-fiducial.json)
+<a href="http://crashtestdummy.com.au/wp-content/uploads/2010/12/crash-test-dummy-awards.jpg"><img src="http://crashtestdummy.com.au/wp-content/uploads/2010/12/crash-test-dummy-awards.jpg" height=100></a>
+
+A common problem in vision recognition is locating the crash dummy symbol: 
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/fiducial-50.jpg?raw=true">
+
+Interestingly, the best template for matching that symbol is the rather simple block-white-white-black image. What's nice about this template is that it scale tolerant and will recognize the crash dummy symbol at different magnifications:
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/bwwb.png?raw=true">
+
+<pre>firesight -i img/fiducial-cam1.jpg -p json/match-fiducial.json -o target/match-fiducial.jpg -Dtemplate=img/bwwb.png</pre> 
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/match-fiducial.jpg?raw=true">
+
