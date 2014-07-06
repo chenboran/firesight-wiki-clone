@@ -89,6 +89,7 @@ Here is a simple way to recognize four orientations with a single pipeline. Alth
 <img src="https://github.com/firepick1/FireSight/blob/master/img/chris-match.jpg?raw=true">
 
 #### Example: Find the crash dummy [pipeline](https://github.com/firepick1/FireSight/blob/master/json/match-fiducial.json)
+<pre>firesight -i img/fiducial-cam1.jpg -p json/match-fiducial.json -o target/match-fiducial.jpg -Dtemplate=img/bwwb.png</pre> 
 <a href="http://crashtestdummy.com.au/wp-content/uploads/2010/12/crash-test-dummy-awards.jpg"><img src="http://crashtestdummy.com.au/wp-content/uploads/2010/12/crash-test-dummy-awards.jpg" height=100></a>
 
 A common problem in vision recognition is locating the crash dummy symbol: 
@@ -98,8 +99,5 @@ A common problem in vision recognition is locating the crash dummy symbol:
 Interestingly, the best template for matching that symbol is a rather simple black-white-white-black squares image. What's nice about this template is that it scale tolerant and will recognize the crash dummy symbol at different magnifications:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/bwwb.png?raw=true">
-
-<pre>firesight -i img/fiducial-cam1.jpg -p json/match-fiducial.json -o target/match-fiducial.jpg -Dtemplate=img/bwwb.png</pre> 
-
 <img src="https://github.com/firepick1/FireSight/blob/master/img/match-fiducial.jpg?raw=true">
 
