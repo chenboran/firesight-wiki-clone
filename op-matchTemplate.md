@@ -96,7 +96,8 @@ A common problem in vision recognition is locating the crash dummy symbol:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/fiducial-50.jpg?raw=true">
 
-Interestingly, the best template for matching that symbol is a rather simple black-white-white-black squares image. What's nice about this template is that it scale tolerant and will recognize the crash dummy symbol at different magnifications:
+Interestingly, the best template for matching the crash dummy symbol is a rather simple black-white-white-black squares image. 
+What's nice about this template is that it is scale tolerant and will recognize the crash dummy symbol in multiple sizes.
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/bwwb.png?raw=true">
 
