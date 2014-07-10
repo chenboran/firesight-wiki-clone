@@ -1,9 +1,9 @@
-# circles -> **RANSAC -> line -> least-squares** -> resolution
-Determine the px/mm resolution of the image from a smt tape (4mm separation of holes).
+# From points to image (px/mm) resolution
+Determine the px/mm resolution of the image from a regular pattern (e.g. smt tape with 4mm separation of the holes).
 
-The input to this stage are points (e.g. detected by the [[op HoughCircles]] stage).
+The input to this stage are points (e.g. circles detected by the [[op HoughCircles]] stage).
 
-This stage is not yet implemented in FireSight, this page only documents the idea. The current implementation is in MATLAB.
+This stage is now implemented in FireSight. This page documents the idea, usage and results of an previous implementation in MATLAB.
 
 ## Principle
 
