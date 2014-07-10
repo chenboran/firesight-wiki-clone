@@ -1,13 +1,22 @@
 # circles -> **RANSAC -> line -> least-squares** -> resolution
 Determine the px/mm resolution of the image from a smt tape (4mm separation of holes).
 
-The input to this stage are circles, detected by the [[op HoughCircles]] stage.
+The input to this stage are points (e.g. detected by the [[op HoughCircles]] stage).
 
 This stage is not yet implemented in FireSight, this page only documents the idea. The current implementation is in MATLAB.
 
 ## Principle
 
-The Hough circles detector is not perfect and often produces some false negatives and false positives. We know that the holes in the tape form a line, thus a [RANSAC](https://en.wikipedia.org/wiki/RANSAC) is employed to detect the line from all the circles. This gives a somewhat robust estimate of the line position. The line is fitted to the inliers by least-squares.
+The Hough circles detector is not perfect and often produces some false negatives and false positives. We know that the holes in the tape form a line, thus a [RANSAC](https://en.wikipedia.org/wiki/RANSAC) is employed to detect the line from all the circles. This gives a somewhat robust estimate of the line position. The line is fitted to the inliers (returned by RANSAC) by least-squares. Next, regularly spaced points on the line are found by second application of RANSAC with a different error measure. Finally, the median of distances of neighbouring points determines the resolution.
+
+Sample json pipeline is given in the following code snippet. The output of HoughCircles stage is passed to points2resolution_RANSAC stage. The separation of holes in the smt tape is 4mm, which is set by the 'separation' variable.
+
+`
+[
+  {"op":"HoughCircles", "name":"circles", "diamMin":14.0, "diamMax":20.0, "show":1},
+  {"op":"points2resolution_RANSAC", "name":"p2r_RANSAC", "model":"circles", "separation":4.0}
+]
+`
 
 In the images, all circles (red and green) are the output of the HoughCircles stage. The green ones are the inliers found by RANSAC.
 
