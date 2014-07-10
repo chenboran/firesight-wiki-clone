@@ -11,12 +11,12 @@ The Hough circles detector is not perfect and often produces some false negative
 
 Sample json pipeline is given in the following code snippet. The output of HoughCircles stage is passed to points2resolution_RANSAC stage. The separation of holes in the smt tape is 4mm, which is set by the 'separation' variable.
 
-`
+<pre>
 [
   {"op":"HoughCircles", "name":"circles", "diamMin":14.0, "diamMax":20.0, "show":1},
   {"op":"points2resolution_RANSAC", "name":"p2r_RANSAC", "model":"circles", "separation":4.0}
 ]
-`
+</pre>
 
 In the images, all circles (red and green) are the output of the HoughCircles stage. The green ones are the inliers found by RANSAC.
 
