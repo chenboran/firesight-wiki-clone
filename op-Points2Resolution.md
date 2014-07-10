@@ -3,7 +3,7 @@ Determine the px/mm resolution of the image from a regular pattern (e.g. smt tap
 
 The input to this stage are points (e.g. circles detected by the [[op HoughCircles]] stage).
 
-This stage is now implemented in FireSight. This page documents the idea, usage and results of an previous implementation in MATLAB.
+This stage is now implemented in FireSight. This page documents the idea, usage and results of the previous implementation in MATLAB.
 
 ## Principle
 
