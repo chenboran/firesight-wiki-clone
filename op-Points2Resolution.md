@@ -1,4 +1,4 @@
-# circles -> RANSAC -> line -> least-squares -> resolution
+# circles -> **RANSAC -> line -> least-squares** -> resolution
 Determine the px/mm resolution of the image from a smt tape (4mm separation of holes).
 
 The input to this stage are circles, detected by the [[op HoughCircles]] stage.
