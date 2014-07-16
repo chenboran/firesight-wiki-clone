@@ -14,8 +14,7 @@ This stage uses the zbar library (http://zbar.sourceforge.net/).
 
 Running the following command
 <pre>firesight -p json/qrDecode.json -i 600px-QR_Code_Damaged.jpg -o qr-damaged-result.jpg</pre>
-on an image taken from Wikipedia <img src=en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg/>
-yields the following result.
+on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> taken from Wikipedia yields the following results:
 <pre>{
   "s1":{
     "qrdata":[
