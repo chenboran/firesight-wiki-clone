@@ -12,6 +12,8 @@ This stage uses the zbar library (http://zbar.sourceforge.net/).
 
 #### Results
 
+The output of the stage is an array of qr code center coordinates and decoded text. If the qr code is not decoded (or not present in the image), both the coordinates default to -1.
+
 Running the following command
 <pre>firesight -p json/qrDecode.json -i 600px-QR_Code_Damaged.jpg -o qr-damaged-result.jpg</pre>
 on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> taken from Wikipedia yields the following results:
