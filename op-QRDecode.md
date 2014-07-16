@@ -10,3 +10,22 @@ This stage uses the zbar library (http://zbar.sourceforge.net/).
  `0`:do not show detected QR codes; 
  `1`:show boundaries of detected QR codes; 
 
+#### Results
+
+Running the following command
+<pre>firesight -p json/qrDecode.json -i 600px-QR_Code_Damaged.jpg -o qr-damaged-result.jpg</pre>
+on an image taken from Wikipedia <img src=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg/>
+yields the following result.
+<pre>{
+  "s1":{
+    "qrdata":[
+      {
+        "x":304.0,
+        "y":292.0,
+        "text":"http://en.m.wikipedia.org"
+      }
+    ]
+  }
+}</pre>
+
+![qr-damaged-result](img/qr-damaged-result.jpg)
