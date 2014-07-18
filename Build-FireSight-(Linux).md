@@ -12,7 +12,7 @@ Linux installation is easy. The following has been tested on :
 sudo apt-get install git
 git clone git://github.com/firepick1/FireSight
 cd FireSight
-sudo ./build
+. ./build
 </pre>
 
 ### Gentoo
