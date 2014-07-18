@@ -10,7 +10,7 @@ This stage uses the zbar library (http://zbar.sourceforge.net/).
  `0`:do not show detected QR codes; 
  `1`:show boundaries of detected QR codes; 
 
-#### Example: Wiki Ripper [pipeline](https://github.com/firepick1/FireSight/blob/master/json/qrDecode.json)
+#### Example: A ripped wiki [pipeline](https://github.com/firepick1/FireSight/blob/master/json/qrDecode.json)
 
 The output of the stage is an array of qr code center coordinates and decoded text. If the qr code is not decoded (or not present in the image), both the coordinates default to -1.
 
@@ -31,7 +31,7 @@ on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> t
 
 ![qr-damaged-result](img/qr-damaged-result.jpg)
 
-#### Example: A tiny git [pipeline](https://github.com/firepick1/FireSight/blob/master/json/qrDecode.json)
+#### Example: See the tiny git [pipeline](https://github.com/firepick1/FireSight/blob/master/json/qrDecode.json)
 <pre>firesight -p json/qrDecode.json -i img/qr-tiny.jpg -o target/qr-tiny.png</pre>
 Here's a tiny, not quite rectangular QRCode with a git commit hash
 on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> taken from Wikipedia yields the following results:
