@@ -33,8 +33,11 @@ on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> t
 
 #### Example: See the tiny git [pipeline](https://github.com/firepick1/FireSight/blob/master/json/qrDecode.json)
 <pre>firesight -p json/qrDecode.json -i img/qr-tiny.jpg -o target/qr-tiny.png</pre>
-Here's a tiny, not quite rectangular QRCode with a git commit hash
-on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> taken from Wikipedia yields the following results:
+
+Here's a tiny, not quite rectangular QRCode with a git commit hash:
+
+![qr-tiny.png](https://github.com/firepick1/FireSight/blob/master/img/qr-tiny.jpg?raw=true)
+![qr-tiny.png](https://github.com/firepick1/FireSight/blob/master/img/qr-tiny.png?raw=true)
 
 <pre>{
 "s1":{
@@ -48,4 +51,3 @@ on an <a href=https://en.wikipedia.org/wiki/File:QR_Code_Damaged.jpg>image</a> t
   }
 }</pre>
 
-![qr-tiny.png](https://github.com/firepick1/FireSight/blob/master/img/qr-tiny.png?raw=true)
