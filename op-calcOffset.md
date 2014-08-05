@@ -24,7 +24,7 @@ The default is `[]`, which specifies a grayscale conversion. Use `[0,1,2]` for a
 Use `[2]` for a red channel comparison.
 * **minval** Minimum matching correlation value (0 is no match, 1 is perfect match). The default is `0.7`.
 * **roi** Region of interest JSON array with [x,y,width,height]. 
-Default is image rectangle inset by xtol on left/right and ytol on top/bottom. See Example 3.
+Default is image rectangle inset by xtol on left/right and ytol on top/bottom. See Example 3. If x or y is -1, the region of interest is centered on that axis.
 * **template** File path of baseline template image
 * **xtol** X-axis +/- image comparison tolerance. Default is `32` pixels. 
 Smaller values will result in higher accuracy. Larger tolerances are less accurate but let you detect larger offsets.
