@@ -4,8 +4,8 @@
 <pre>{"op":"MSER", "color":[255, 0, 255], "minArea":1100, "maxArea":1200}</pre>
 
 * **delta** delta, in the code, it compares (size_{i}-size_{i-delta})/size_{i-delta}. Larger delta yields fewer images. Default `5`
-* **minArea** prune the area which smaller than minArea. Default `60`
-* **maxArea** prune the area which bigger than maxArea. Default `14400`
+* **minArea** prune the blobs whose area is smaller than minArea. Default `60`
+* **maxArea** prune the blobs whose area is bigger than maxArea. Default `14400`
 * **maxVariation** prune the area have simliar size to its children. Default `0.25`
 * **minDiversity** trace back to cut off mser with diversity < min_diversity. Default `0.2`
 * **maxEvolution** for color image, the evolution steps. Default `200`
