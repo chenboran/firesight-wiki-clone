@@ -6,3 +6,13 @@ FireSight wrapper for OpenCV [warpPerspective](http://docs.opencv.org/modules/im
 
 #### Stage Model
 <pre>{}</pre>
+
+#### Example: Rotate a duck by 30 degrees and scale it by 0.5
+<pre>"matrix":[0.433, 0.25, 0, -0.25, 0.433, 0, 0, 0, 1]</pre>
+
+![Duck](https://github.com/simonfojtu/FireSight/raw/master/img/duck.jpg)&nbsp;![Duck -30deg, 0.5scale](https://github.com/simonfojtu/FireSight/raw/master/img/duck_-30deg_0.5scale.jpg)
+
+#### Example: Invert x and y axes.
+<pre>"matrix":[0, 1, 0, 1, 0, 0, 0, 0, 1]</pre>
+
+![Duck](https://github.com/simonfojtu/FireSight/raw/master/img/duck.jpg)&nbsp;![Duck -30deg, 0.5scale](https://github.com/simonfojtu/FireSight/raw/master/img/duck_xy_inv.jpg)
