@@ -36,6 +36,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op transparent]] Make image transparent by adding an alpha channel
 * [[op warpAffine]] Scale, translate and/or rotate image
 * [[op warpRing]] Create rotation-invariant matching templates
+* [[op warpPerspective]] Apply a perspective transformation to the image.
 
 #### See Also
 * [[Pipeline Parameters]] Create customizable pipelines
