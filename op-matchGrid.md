@@ -15,6 +15,8 @@ constitutes the grid (e.g., holes, diamonds, crosshairs, etc.). Recognized featu
 be provided to `matchGrid` via the FireSight model pipeline as a JSON array of rects
 such as those returned by [[op-matchTemplate]].
 
+<img src="https://github.com/firepick1/FireSight/blob/master/img/cal-grid.png?raw=true">
+
 OpenCV chessboard calibration requires many images at different chessboard angles, 
 chessboard distances and camera angles. For `matchGrid`, the input imaging requirement 
 is different, and the calibration grid should be presented to the camera in a 
@@ -125,12 +127,20 @@ The method used to match the grid is FireSight specific.
 * **candidates** number of matched grid points
 * **matched** number of matched grid points actually used as input to OpenCV cameraCalibrate()
 
+#### Example: Full grid calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
+<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile1</pre>
+Using all the grid points for calibration minimizes overall error:
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/grid-tile1.jpg?raw=true">
+
 #### Example: Tic-Tac-Tile3 calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile3</pre>
+Using 9 sub images provides greater local accuracy at the expense of some loss in "the big picture"
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-tile3.jpg?raw=true">
 
 #### Example: Cutting-corners calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
+If the corners are never used, then ignore them for calibration:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-ellipse-85.jpg?raw=true">
