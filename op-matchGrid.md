@@ -28,18 +28,19 @@ use sub-images to mimic chessboard calibration.
 The method used to match the grid is FireSight specific.
 
 * **sep** JSON [X,Y] array of horizontal (x) and vertical (y) grid separation. Default is `[5,5]` for a 5mm grid
-* **calibrate** Default is `best`, which chooses the best known matching algorithm
+* **calibrate** Default is `best`, which chooses the best known matching algorithm. See **calibrate options**.
 * **tolerance** used to match features in a row or column. Default is `0.35`.
 * **color** JSON BGR color array to mark unused image features. Default is `[255,255,255]`.
-* **scale** JSON [X,Y] array of scaling coefficients for calibration. Currently only used by `ELLIPSE`, default value is `[1,1]`
+* **scale** JSON [X,Y] array of scaling coefficients for calibration. Currently only used by `ellipse`, default value is `[1,1]`
 
 #### calibrate options
-* **TILE1** Use all matched grid points in a single calibration image
-* **TILE2** Use all matched grid points in each image quadrant to make up a set of four calibration images
-* **TILE3** Use all matched grid points in a 3x3 matrix of 9 calibration images
-* **TILE4** Use all matched grid points in a 4x4 matrix of 16 calibration images
-* **TILE5** Use all matched grid points in a 5x5 matrix of 25 calibration images
-* **ELLIPSE** Use all matched grid points within a scaled XY ellipse for a single calibration image.
+* **best** Use best known option (may change between software versions)
+* **tile1** Use all matched grid points in a single calibration image
+* **tile2** Use all matched grid points in each image quadrant to make up a set of four calibration images
+* **tile3** Use all matched grid points in a 3x3 matrix of 9 calibration images
+* **tile4** Use all matched grid points in a 4x4 matrix of 16 calibration images
+* **tile5** Use all matched grid points in a 5x5 matrix of 25 calibration images
+* **ellipse** Use all matched grid points within a scaled XY ellipse for a single calibration image.
 * other experimental options may be available
 
 #### Stage Model
