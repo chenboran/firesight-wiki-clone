@@ -1,8 +1,10 @@
 ### UNDER DEVELOPMENT (FUNCTION MAY CHANGE)
 
-Conceptually `matchGrid` works much like standard chessboard 
-[[OpenCV Camera Calibration](http://docs.opencv.org/doc/tutorials/calib3d/camera_calibration/camera_calibration.html). However, `matchGrid` is designed to for use in pick-and-place camera calibration,
-which has slightly different requirements than standard chessboard calibration.
+FireSight `matchGrid` works much like standard chessboard 
+[OpenCV Camera Calibration](http://docs.opencv.org/doc/tutorials/calib3d/camera_calibration/camera_calibration.html). 
+However, `matchGrid` is designed to for use in pick-and-place camera calibration,
+which has slightly different requirements (flat, almost 2D space used for motion planning measurement) 
+than standard chessboard calibration (large 3D space used for location/pose detection).
 
 The FireSight `matchGrid` stage matches recognized features from a preceding FireSight stage
 to a rectangular grid and computes
@@ -19,63 +21,116 @@ is different, and the calibration grid should be presented to the camera in a
 single Z plane, since that corresponds directly with the pick-and-place use case.
 For best results, the presented grid should be aligned with the camera axes
 (i.e., avoid random orientations)
-Currently, only a single image is required, but future versions of `matchGrid` will
-support calibration from multiple images.
+FireSight `matchGrid` only requires a single image for calibration, but it can
+use sub-images to mimic chessboard calibration.
 
 The method used to match the grid is FireSight specific.
 
-* **sepX** measured grid X separation (printed calibration grids must be measured). Default is `5mm`
-* **sepY** measured grid Y separation (printed calibration grids must be measured). Default is `5mm`
+* **sep** JSON [X,Y] array of horizontal (x) and vertical (y) grid separation. Default is `[5,5]` for a 5mm grid
+* **calibrate** Default is `best`, which chooses the best known matching algorithm
 * **tolerance** used to match features in a row or column. Default is `0.35`.
-* **imageColor** JSON BGR color array to mark image features. Default is `-1` for no marking.
-* **objectColor** JSON BGR color array to mark object features. Default is `-1` for no marking.
+* **color** JSON BGR color array to mark unused image features. Default is `[255,255,255]`.
+* **scale** JSON [X,Y] array of scaling coefficients for calibration. Currently only used by `ELLIPSE`, default value is `[1,1]`
+
+#### calibrate options
+* **TILE1** Use all matched grid points in a single calibration image
+* **TILE2** Use all matched grid points in each image quadrant to make up a set of four calibration images
+* **TILE3** Use all matched grid points in a 3x3 matrix of 9 calibration images
+* **TILE4** Use all matched grid points in a 4x4 matrix of 16 calibration images
+* **TILE5** Use all matched grid points in a 5x5 matrix of 25 calibration images
+* **ELLIPSE** Use all matched grid points within a scaled XY ellipse for a single calibration image.
+* other experimental options may be available
 
 #### Stage Model
 <pre>
 {
-	"gridX":6.23453423412,
-	"gridY":6.23453423412,
+  ...
+  "grid1":{
+    "dxMedian":-31.0,
+    "dxCount1":119,
+    "dxCount2":108,
+    "dxdxAvg1":-31.512605667114258,
+    "dxdyAvg1":0.81512606143951416,
+    "dxdxAvg2":-31.527778625488281,
+    "dxdyAvg2":0.81944441795349121,
+    "gridX":6.307685375213623,
+    "dyMedian":-31.0,
+    "dyCount1":117,
+    "dyCount2":105,
+    "dydxAvg1":-0.76068377494812012,
+    "dydyAvg1":-31.24786376953125,
+    "dydxAvg2":-0.77142858505249023,
+    "dydyAvg2":-31.233333587646484,
+    "gridY":6.2485718727111816,
     "rects":[
       {
-        "x":467.0,
-        "y":68.0,
-        "width":29.0,
-        "height":37.0,
-		"color":[255,0,0]
+        "x":21.0,
+        "y":37.0,
+        "objX":-27.961538314819336,
+        "objY":-24.269229888916016
       },
+	  ...
       {
-        "x":518.0,
-        "y":69.0,
-        "width":29.0,
-        "height":37.0,
-		"color":[255,0,0]
-      },
-      {
-        "x":711.0,
-        "y":71.0,
-        "width":29.0,
-        "height":37.0,
-		"color":[255,0,0]
-      },
-      {
-        "x":760.0,
-        "y":71.0,
-        "width":29.0,
-        "height":37.0,
-		"color":[255,0,0]
+        "x":343.0,
+        "y":341.0,
+        "objX":22.038461685180664,
+        "objY":25.730770111083984
       }
-    ]
-  }
+    ],
+    "calibrate":{
+      "op":"tile3",
+      "cameraMatrix":[
+        1440.1324385220225,
+        0.0,
+        196.70893717039402,
+        0.0,
+        1454.3392551157376,
+        200.6564634241056,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "perspective":[
+        0.033142981113263262,
+        0.0010300462632817817,
+        0.27592684208159102,
+        0.00082654537237368509,
+        0.035259955173039821,
+        -0.31193463702077528,
+        -1.3832327695672043e-5,
+        0.00027923340765282609,
+        1.0
+      ],
+      "distCoeffs":[
+        0.77584616408796647,
+        -27.648993864449466,
+        0.054364941338627917,
+        -0.011841923059093425,
+        122.75376662043016
+      ],
+      "candidates":130,
+      "matched":130,
+      "rmserror":0.38765870207220959,
+      "images":9.0
+    }
+  },
+  ...
+}
 </pre>
-* **gridX** The calculated pixels for grid X-separation
-* **gridY** The calculated pixels for grid Y-separation
+* **gridX** The calculated pixels per grid X-separation unit
+* **gridY** The calculated pixels per grid Y-separation unit
 * **rects** The RotatedRect values of the matched positions
-* **x** Center x
-* **y** Center y
-* **height** Height of rectangle 
-* **width** Widht of rectangle
+* **rmserror** The root of the mean squared error returned by OpenCV cameraCalibrate()
+* **images** number of sub-images used for calibration
+* **candidates** number of matched grid points
+* **matched** number of matched grid points actually used as input to OpenCV cameraCalibrate()
 
-#### Example: TBD [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchCCOEFF_NORMED.json)
-<pre>TBD</pre>
+#### Example: Tic-Tac-Tile3 calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
+<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile3</pre>
 
-<img src="https://github.com/firepick1/FireSight/blob/master/img/pcb.jpg?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/grid-tile3.jpg?raw=true">
+
+#### Example: Cutting-corners calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
+<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/grid-ellipse-85.jpg?raw=true">

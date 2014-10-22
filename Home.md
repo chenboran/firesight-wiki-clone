@@ -20,7 +20,8 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op HoughCircles]] Circle detector based on Hough transform
 * [[op imread]] Read image (multiple formats)
 * [[op imwrite]] Write image (multiple formats)
-* [[op matchTemplate]] 
+* [[op matchGrid]] Match line intersection points of simple grid
+* [[op matchTemplate]] Match all instances of given template image
 * [[op minAreaRect]] Find minimum area rectangle enclosing pixels within intensity range
 * [[op MSER]] Blob detection
 * [[op morph]] Morphological operations
@@ -35,6 +36,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op stageImage]] Replace current pipeline image with previous stage image
 * [[op threshold]] Manipulate pixel intensity ranges
 * [[op transparent]] Make image transparent by adding an alpha channel
+* [[op undistort]] Apply camera calibration to undistort image
 * [[op warpAffine]] Scale, translate and/or rotate image
 * [[op warpRing]] Create rotation-invariant matching templates
 
