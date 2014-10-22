@@ -1,4 +1,3 @@
-### UNDER DEVELOPMENT (FUNCTION MAY CHANGE)
 
 FireSight `matchGrid` works much like standard chessboard 
 [OpenCV Camera Calibration](http://docs.opencv.org/doc/tutorials/calib3d/camera_calibration/camera_calibration.html). 
