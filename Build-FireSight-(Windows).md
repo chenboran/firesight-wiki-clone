@@ -31,6 +31,12 @@ Usage: opencv_performance
   [-h <sample_height = 24>]
 </pre>
 
+#### Prerequisites: Zbar
+
+<a href="https://github.com/firepick1/FirePick/wiki/LGPL-Restricted"><img src="https://raw.githubusercontent.com/wiki/firepick1/FirePick/LGPL-restricted.jpg"</img></a>
+
+1.  [Install libZBar for Windows](http://sourceforge.net/projects/zbar/files/zbar/0.10/zbar-0.10-setup.exe/download).  Select "Full" during the install.  Keep note of where it installs the files to (they default to `C:\Program Files (x86)\ZBar`).
+
 #### Prerequisites: Visual C++ 2010 Express
 Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, which can run on Windows 7. Visual Studio 2013 requires Windows 8.
 1. [Install Visual C++ 2010 Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
