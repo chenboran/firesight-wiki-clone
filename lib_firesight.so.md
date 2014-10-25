@@ -5,13 +5,33 @@ You can use the FireSight C++ shared library, `lib_firesight.so`, to build your 
 
 #### Example (process)
 To use FireSight as a library, first specify a pipeline:
-<pre>char *pPipelineStr = provideYourOwnJsonPipelineString();</pre>
+```
+#include <FireSight.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
-Then create a simple Pipeline with a JSON string
-<pre>Pipeline pipeline(pPipelineStr);</pre>
+using namespace cv;
+using namespace firesight;
 
-Call the pipeline to process the image
-<pre>json_t *pModel = pipeline.process(image);</pre>
+int main()
+{
+    //Open an image
+    Mat image; // new blank image
+    image = cv::imread("test.png", 0);// read the file
 
-When you're done with it, free the returned model!
-<pre>json_decref(pModel);</pre>
+    char *pPipelineStr = "[{\"op\":\"blur\",\"ksize.width\":10,\"ksize.height\":10},{\"op\":\"imwrite\", \"path\":\"blur.jpg\"}]";
+
+    //Create a pipeline
+    Pipeline pipeline(pPipelineStr);
+    //Create an argMap.  Can be empty.
+    ArgMap argMap;
+
+    //Process the pipeline
+    json_t *pModel = pipeline.process(image, argMap);
+
+    //Release some memory
+    json_decref(pModel);
+
+    return 0;
+}
+```
