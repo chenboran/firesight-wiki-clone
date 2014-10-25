@@ -4,7 +4,7 @@ You can use the FireSight C++ shared library, `lib_firesight.so`, to build your 
 * See [CMakeLists.txt](https://github.com/firepick1/FireSight/blob/master/CMakeLists.txt) for an example of how to build an application that uses the shared library
 
 #### Example (process)
-To use FireSight as a library, first specify a pipeline:
+To use FireSight as a library, here is some boilerplate code:
 ```
 #include <FireSight.hpp>
 #include <opencv2/core/core.hpp>
