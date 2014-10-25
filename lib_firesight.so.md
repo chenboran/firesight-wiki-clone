@@ -19,10 +19,10 @@ int main()
     Mat image; // new blank image
     image = cv::imread("test.png", 0);// read the file
 
-    char *pPipelineStr = "[{\"op\":\"blur\",\"ksize.width\":10,\"ksize.height\":10},{\"op\":\"imwrite\", \"path\":\"blur.jpg\"}]";
-
     //Create a pipeline
+    char *pPipelineStr = "[{\"op\":\"blur\",\"ksize.width\":10,\"ksize.height\":10},{\"op\":\"imwrite\", \"path\":\"blur.jpg\"}]";
     Pipeline pipeline(pPipelineStr);
+
     //Create an argMap.  Can be empty.
     ArgMap argMap;
 
