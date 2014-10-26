@@ -15,23 +15,29 @@ using namespace firesight;
 
 int main()
 {
-    //Open an image
     Mat image; // new blank image
     image = cv::imread("test.png", 0);// read the file
 
-    //Create a pipeline
     char *pPipelineStr = "[{\"op\":\"blur\",\"ksize.width\":10,\"ksize.height\":10},{\"op\":\"imwrite\", \"path\":\"blur.jpg\"}]";
+    //printf(pPipelineStr);
+    //printf("\n");
     Pipeline pipeline(pPipelineStr);
-
-    //Create an argMap.  Can be empty.
     ArgMap argMap;
 
-    //Process the pipeline
     json_t *pModel = pipeline.process(image, argMap);
 
+    // Print out returned model
+    char *pModelStr = json_dumps(pModel, JSON_PRESERVE_ORDER|JSON_COMPACT|JSON_INDENT(2));
+    printf("%s\n", pModelStr);
+
     //Release some memory
+    free(pModelStr);
     json_decref(pModel);
 
+    //the 'Mat image' has been modified to show the output image.  Display to screen for debug.
+    namedWindow( "Display window", CV_WINDOW_AUTOSIZE );// create a window for display.
+    imshow( "Display window", image );// show our image inside it.
+    waitKey(0);
     return 0;
 }
 ```
