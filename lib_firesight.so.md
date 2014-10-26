@@ -5,7 +5,7 @@ You can use the FireSight C++ shared library, `lib_firesight.so`, to build your 
 
 #### Example (process)
 To use FireSight as a library, here is some boilerplate code:
-```
+```cpp
 #include <FireSight.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
