@@ -19,8 +19,7 @@ int main()
     image = cv::imread("test.png", 0);// read the file
 
     char *pPipelineStr = "[{\"op\":\"blur\",\"ksize.width\":10,\"ksize.height\":10},{\"op\":\"imwrite\", \"path\":\"blur.jpg\"}]";
-    //printf(pPipelineStr);
-    //printf("\n");
+    printf("Input json: \n%s\n\n\n", pPipelineStr);
     Pipeline pipeline(pPipelineStr);
     ArgMap argMap;
 
