@@ -5,7 +5,7 @@
 ### Pipeline Stages 
 Each stage in a pipeline performs a specific operation on the current pipeline image. Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
 * [[op absdiff]] Compare pixel intensities of two images 
-* [[op backgroundSubtractor]]
+* [[op backgroundSubtractor]] Also will run if passed the pipeline name `bgsub`
 * [[op blur]]
 * [[op calcHist]] Add histogram to pipeline model
 * [[op calcOffset]] Calculate offset between two images
