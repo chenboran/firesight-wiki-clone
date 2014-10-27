@@ -1,7 +1,7 @@
 Draws a circle.
 
 #### Example
-<pre>{"op":"circle","center":[x,y],"radius":25,"color":(0,0,0),"thickness":1,"lineType":8,"fill":(255,255,255),"shift":0}</pre>
+<pre>{"op":"circle","center":[x,y],"radius":25,"color":[0,0,0],"thickness":1,"lineType":8,"fill":[-1,-1,-1],"shift":0}</pre>
 
 * **center** Center of the circle (0,0)
 * **radius** Radius of the circle (0)
