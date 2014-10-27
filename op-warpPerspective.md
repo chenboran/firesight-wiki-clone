@@ -3,7 +3,7 @@ Applies a perspective transformation to an image.
 Reference: [Geometric Image Transformations: warpPerspective()](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective)
 
 #### Example
-<pre>{"op":"warpPerspective","borderMode":"BORDER_CONSTANT","borderValue":"0}</pre>
+<pre>{"op":"warpPerspective","borderMode":"BORDER_CONSTANT","borderValue":0}</pre>
 
 * **flags** combination of interpolation methods ( or `INTER_NEAREST`) and the optional flag `WARP_INVERSE_MAP`, that sets M as the inverse transformation ( `dst` -> `src` ).
 * **borderMode** pixel extrapolation method (`BORDER_CONSTANT` or `BORDER_REPLICATE`).
