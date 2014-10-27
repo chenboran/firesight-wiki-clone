@@ -9,7 +9,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op blur]]
 * [[op calcHist]] Add histogram to pipeline model
 * [[op calcOffset]] Calculate offset between two images
-* [[op Canny]]
+* [[op Canny]] Finds edges in an image using the [Canny86](http://docs.opencv.org/modules/imgproc/doc/feature_detection.html?highlight=canny#canny86)algorithm.
 * [[op cvtColor]] Change image color model
 * [[op dft]] Discrete Fourier Transform
 * [[op dftSpectrum]] Analyze DFT
