@@ -5,16 +5,19 @@
 ### Pipeline Stages 
 Each stage in a pipeline performs a specific operation on the current pipeline image. Pipeline stages can be named. If the "name" field is omitted, stages are named in sequence: s1, s2, etc. Stage operation is defined by the "op" field:
 * [[op absdiff]] Compare pixel intensities of two images 
-* [[op backgroundSubtractor]]
+* [[op backgroundSubtractor]] Also will run if passed the pipeline name `bgsub`
 * [[op blur]]
 * [[op calcHist]] Add histogram to pipeline model
 * [[op calcOffset]] Calculate offset between two images
-* [[op Canny]]
+* [[op Canny]] Finds edges in an image using the Canny86 algorithm.
+* [[op Circle]] Draws a circle
 * [[op cvtColor]] Change image color model
 * [[op dft]] Discrete Fourier Transform
 * [[op dftSpectrum]] Analyze DFT
+* [[op dilate]] Morphological operation.  The background (bright) dilates around the black regions of the letter.
 * [[op drawKeypoints]] Visualize key feature points in pipeline model
 * [[op drawRects]] Visualize rectangles in pipeline model 
+* [[op erode]] Morphological operation.  Bright areas of the image (usually the background) get thinner, whereas the dark zones (the “writing”) gets bigger.
 * [[op FireSight]] FireSight configuration
 * [[op HoleRecognizer]]
 * [[op HoughCircles]] Circle detector based on Hough transform
@@ -26,7 +29,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op MSER]] Blob detection
 * [[op morph]] Morphological operations
 * [[op normalize]] Adjust intensity
-* [[op Points2Resolution]]
+* [[op Points2Resolution_RANSAC]]
 * [[op PSNR]] Compare two images for similarity using peak signal to noise ratio 
 * [[op putText]] Annotate image
 * [[op QRDecode]] Decode QR
@@ -39,6 +42,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op undistort]] Apply camera calibration to undistort image
 * [[op warpAffine]] Scale, translate and/or rotate image
 * [[op warpRing]] Create rotation-invariant matching templates
+* [[op warpPerspective]] Calculates a perspective transform from four pairs of the corresponding points.
 
 #### See Also
 * [[Pipeline Parameters]] Create customizable pipelines
