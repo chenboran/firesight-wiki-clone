@@ -113,7 +113,15 @@ The method used to match the grid is FireSight specific.
       "candidates":130,
       "matched":130,
       "rmserror":0.38765870207220959,
-      "images":9.0
+      "images":9.0,
+      "gridnessIn":[
+        3.8133699893951416,
+        4.2762274742126465
+      ],
+      "gridnessOut":[
+        0.34463158249855042,
+        0.37010332942008972
+      ]
     }
   },
   ...
@@ -126,6 +134,8 @@ The method used to match the grid is FireSight specific.
 * **images** number of sub-images used for calibration
 * **candidates** number of matched grid points
 * **matched** number of matched grid points actually used as input to OpenCV cameraCalibrate()
+* **gridnessIn** RMS point-by-point error of input image with respect to overlaid grid. A perfect grid match is 0.
+* **gridnessOut** RMS point-by-point error of output image with respect to overlaid grid. A perfect grid match is 0.
 
 #### Example: Full grid calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile1</pre>
