@@ -144,3 +144,10 @@ Using 9 sub images provides greater local accuracy at the expense of some loss i
 If the corners are never used, then ignore them for calibration:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-ellipse-85.jpg?raw=true">
+
+#### Example: A different perspective [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid-perspective.json)
+<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid-perspective.json -Dtemplate=img/cross32.png</pre>
+If the imaged objects line on flat surface at an angle with the camera, use _matchGrid_ to determine
+the perspective matrix for [warpPerspective](op-warpPerspective).
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/matchGrid-perspective.png?raw=true">
