@@ -158,6 +158,8 @@ If the corners are never used, then ignore them for calibration:
 #### Example: A different perspective [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid-perspective.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid-perspective.json -Dtemplate=img/cross32.png</pre>
 If the imaged objects line on flat surface at an angle with the camera, use _matchGrid_ to determine
-the perspective matrix for [warpPerspective](op-warpPerspective).
+the perspective matrix for [warpPerspective](op-warpPerspective). For the image shown below, the RMS gridness
+error is about 1/3 of a pixel. In this case, a perspective transformation provides a very usable
+cartesian map of the imaged surface _without any calibration._
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/matchGrid-perspective.png?raw=true">
