@@ -3,6 +3,7 @@ FireSight op draws _RotatedRect_ array from named stage model.  Because some fol
 #### Pipeline
 <pre>{"op":"drawRects","model":"s2", "color":[255, 0, 255], "flags":5}</pre>
 * **model** name of stage that generates _rects_ model to be drawn
+* **radius** if `radius`>0, draw of a circle of the given radius instead of rectangle. Default is `0`
 * **color** JSON array corresponding to cv::Scalar with 1-4 elements (`[-1 -1 -1 -1]` default)
 
 #### Stage Model
