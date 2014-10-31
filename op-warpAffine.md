@@ -22,7 +22,7 @@ FireSight wrapper for OpenCV [warpAffine](http://docs.opencv.org/modules/imgproc
 
 #### Example: Rotate a duck by 30 degrees with BORDER_REPLICATE [pipeline](https://github.com/firepick1/FireSight/blob/master/json/warpAffine-rotate2.json)
 <pre>firesight -i img/duck.jpg -p json/warpAffine-rotate2.json -o target/warpAffine-rotate2.jpg</pre>
-The choice of border fill when rotating an image can strongly influence the use of that image as a template for matching. Using BORDER_REPLICATE can greatly improve matching accuracy:
+The choice of border fill when rotating an image can strongly influence the use of that image as a template for matching. Using BORDER_REPLICATE can greatly improve matching accuracy. Notice that rotation destroys image information and replaces it with replicated borders:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-rotate2.jpg?raw=true">
 
