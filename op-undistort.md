@@ -9,6 +9,9 @@ returned by
 1. Computed and obtained from a preceding camera calibration stage (see [[op-matchGrid]]).
 1. Provided externally as FireSight pipeline arguments
 
+The _undistort_ stage is normally used only for removing intrinsic distortion.
+Use other stages for removing extrinisic distortion (e.g., [[op-warpPerspective]])
+
 * **cameraMatrix** JSON array [v11,v12,v13,v21,v22,v23,v31,v32.v33] representing a 3x3 cameraMatrix. Default is `[1,0,0,0,1,0,0,0,1]`
 * **distCoeffs** JSON array of 4,5, or 8 radial/tangential distortion coefficients. Default is `[]`.
 * **model** Name of stage whose model has a JSON "calibrate" object having _cameraMatrix_ and _distCoeffs_.
@@ -20,7 +23,8 @@ returned by
 
 #### Example: Cutting-corners calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
-If the corners are never used, then ignore them for calibration:
+This example shows how undistort can be applied to remove distortion in the center of an image. Notice that
+the extrinsic perspective foreshortening is present in both images.
 
 **Distorted image**<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/cal-grid.png?raw=true">
