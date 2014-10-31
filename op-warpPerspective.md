@@ -4,7 +4,7 @@ Reference: [Geometric Image Transformations: warpPerspective()](http://docs.open
 
 The perspective matrix can be:
 
-1. Specified in the _undistort_ stage itself
+1. Specified in the _perspective_ stage itself
 1. Computed and obtained from a preceding camera calibration stage (see [[op-matchGrid]]).
 1. Provided externally as FireSight pipeline arguments
 
