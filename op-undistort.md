@@ -23,7 +23,7 @@ Use other stages for removing extrinisic distortion (e.g., [[op-warpPerspective]
 
 #### Example: Cutting-corners calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
 <pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
-This example shows how undistort can be applied to remove distortion in the center of an image. Notice that
+This example shows how _undistort_ can be applied to remove distortion in the center of an image. Notice that
 the extrinsic perspective foreshortening is present in both images.
 
 **Distorted image**<br>
