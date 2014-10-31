@@ -138,25 +138,25 @@ The method used to match the grid is FireSight specific.
 * **gridnessOut** RMS point-by-point error of output image with respect to overlaid grid. A perfect grid match is 0.
 
 #### Example: Full grid calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
-<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile1</pre>
+<pre>firesight -i img/cal-grid.png -p json/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile1</pre>
 Using all the grid points for calibration minimizes overall error:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-tile1.jpg?raw=true">
 
 #### Example: Tic-Tac-Tile3 calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
-<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile3</pre>
+<pre>firesight -i img/cal-grid.png -p json/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=tile3</pre>
 Using 9 sub images provides greater local accuracy at the expense of some loss in "the big picture"
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-tile3.jpg?raw=true">
 
 #### Example: Cutting-corners calibration [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid.json)
-<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
+<pre>firesight -i img/cal-grid.png -p json/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
 If the corners are never used, then ignore them for calibration:
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/grid-ellipse-85.jpg?raw=true">
 
 #### Example: A different perspective [pipeline](https://github.com/firepick1/FireSight/blob/master/json/matchGrid-perspective.json)
-<pre>firesight -i img/cal-grid.jpg -Djson/matchGrid-perspective.json -Dtemplate=img/cross32.png</pre>
+<pre>firesight -i img/cal-grid.png -p json/matchGrid-perspective.json -Dtemplate=img/cross32.png</pre>
 If the imaged objects line on flat surface at an angle with the camera, use _matchGrid_ to determine
 the perspective matrix for [warpPerspective](op-warpPerspective). For the image shown below, the RMS gridness
 error is about 1/3 of a pixel. In this case, a perspective transformation provides a very usable
