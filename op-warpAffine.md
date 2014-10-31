@@ -31,7 +31,7 @@ The choice of border fill when rotating an image can strongly influence the use 
 
 <img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-translate.jpg?raw=true">
 
-#### Example: Flip a duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/flipv.json)
-<pre>firesight -i img/duck.png -p json/flipv.json -o target/flipv.png</pre>
+#### Example: Flip a duck [pipeline](https://github.com/firepick1/FireSight/blob/master/json/fliph.json)
+<pre>firesight -i img/duck.png -p json/fliph.json -o target/fliph.png</pre>
 
-<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.png?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-v.png?raw=true">
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.png?raw=true">&nbsp;<img src="https://github.com/firepick1/FireSight/blob/master/img/warpAffine-h.png?raw=true">
