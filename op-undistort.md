@@ -25,7 +25,24 @@ Use other stages for removing extrinisic distortion (e.g., [[op-warpPerspective]
 <pre>firesight -i img/cal-grid.png -p json/matchGrid.json -Dtemplate=img/cross32.png -Dcalibrate=ellipse -Dscale=[0.85,0.85]</pre>
 This example shows how _undistort_ can be applied to remove distortion in the center of an image. Notice that
 extrinsic perspective foreshortening is present in both images, but is lessened by _undistort_ because of the
-different x- and y-focal lengths that are part of the intrinsic camera matrix.
+different x- and y-focal lengths that are part of the intrinsic camera matrix (i.e., 157.2 vs. 156.7):
+
+<pre>
+...
+  "cameraMatrix":[
+	157.24943374708459, 0.0,                201.69831718976516,
+	0.0,                156.67200025317413, 207.69154501963604,
+	0.0,                0.0,                1.0
+  ],
+  "distCoeffs":[
+	-0.004237833051241255,
+	0.015224317198337892,
+	0.00053565532320704154,
+	-0.0013002127252612144,
+	-0.0086531013078221357
+  ],
+...
+</pre>
 
 **Distorted image**<br>
 <img src="https://github.com/firepick1/FireSight/blob/master/img/cal-grid.png?raw=true">
