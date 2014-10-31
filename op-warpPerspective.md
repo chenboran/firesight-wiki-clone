@@ -2,11 +2,18 @@ Applies a perspective transformation to an image.
 
 Reference: [Geometric Image Transformations: warpPerspective()](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html#warpperspective)
 
+The perspective matrix can be:
+
+1. Specified in the _undistort_ stage itself
+1. Computed and obtained from a preceding camera calibration stage (see [[op-matchGrid]]).
+1. Provided externally as FireSight pipeline arguments
+
 #### Example
 <pre>{"op":"warpPerspective","borderMode":"BORDER_CONSTANT","borderValue":[0,0,0]}</pre>
 
 * **borderMode** pixel extrapolation method (`BORDER_CONSTANT` or `BORDER_REPLICATE`).
 * **borderValue** value used in case of a constant border; by default, it equals [0,0,0].
+* **model** Name of stage whose model has a JSON "calibrate" object having _cameraMatrix_ and _distCoeffs_.
 
 NOTE: Currently, this stage is written with the `flags` parameter hard-coded to `INTER_LINEAR`.
 
@@ -19,11 +26,13 @@ In this example, we used [[op-matchGrid]] to give us a perspective matrix that m
 a dramatic difference.
 
 <pre>
+...
 "perspective":[
 1.0405136564383939,    0.026744906574870872, -2.943810346145538,
 0.024529984309304427,  1.097007339310166,    -14.050588819421538,
 -1.7780681696463529e-5,0.00027266213560320576,1.0
 ],
+...
 </pre>
 
 **Distorted image**<br>
