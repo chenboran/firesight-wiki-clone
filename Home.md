@@ -30,6 +30,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op putText]] Annotate image
 * [[op QRDecode]] Decode QR
 * [[op resize]]
+* [[op Sharpness]] Compute 'sharpness' of an image
 * [[op SimpleBlobDetector]]
 * [[op stageImage]] Replace current pipeline image with previous stage image
 * [[op threshold]] Manipulate pixel intensity ranges
