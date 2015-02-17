@@ -1,4 +1,4 @@
-Estimate 'sharpness' of an input image. See [fpd-vision XP005](https://github.com/firepick1/fpd-vision/tree/master/XP005-focal-range) for more information
+Estimate 'sharpness' of an input image. See [fpd-vision XP005](https://github.com/firepick1/fpd-vision/tree/master/XP005-focal-range) for more information.
 
 #### Pipeline
 <pre> {"op":"sharpness", "method":"GRAS"}</pre>
