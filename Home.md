@@ -18,7 +18,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op drawKeypoints]] Visualize key feature points in pipeline model
 * [[op drawRects]] Visualize rectangles in pipeline model 
 * [[op erode]] Morphological operation.  Bright areas of the image (usually the background) get thinner, whereas the dark zones (the “writing”) gets bigger.
-* [[op FireSight]] FireSight configuration
+* [[op FireSight]] FireSight configuration 
 * [[op HoleRecognizer]]
 * [[op HoughCircles]] Circle detector based on Hough transform
 * [[op imread]] Read image (multiple formats)
