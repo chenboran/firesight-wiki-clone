@@ -25,6 +25,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op imwrite]] Write image (multiple formats)
 * [[op matchGrid]] Match line intersection points of simple grid
 * [[op matchTemplate]] Match all instances of given template image
+* [[op meanStdDev]] Find mean and standard deviation of intensities
 * [[op minAreaRect]] Find minimum area rectangle enclosing pixels within intensity range
 * [[op MSER]] Blob detection
 * [[op morph]] Morphological operations
