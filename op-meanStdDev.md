@@ -25,6 +25,8 @@ Mean and standard deviation values are provided as blue, green, red values (BGR)
 }
 </pre>
 
-#### Example: Not all green [pipeline](https://github.com/firepick1/FireSight/blob/master/json/meanStdDev.json)
+#### Example: How bright a duck? [pipeline](https://github.com/firepick1/FireSight/blob/master/json/meanStdDev.json)
 <pre>firesight -i img/duck.jpg -p json/meanStdDev.json</pre>
+
+<img src="https://github.com/firepick1/FireSight/blob/master/img/duck.jpg?raw=true">
 
