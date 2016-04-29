@@ -1,3 +1,7 @@
+### Warning!
+
+**These Windows specific installation instructions are depreciated as Windows support has been dropped throughout the FirePick project, therefore it is highly likely these steps will not work for you. This page is merely for guidance as to how a Windows build could be accomplished, and will require modification for use.** 
+
 On Windows, _FireSight_ builds as:
 * **lib_firesight.dll** a C++ Release DLL
 * **lib_firesight.lib** a C++ Release LIB
