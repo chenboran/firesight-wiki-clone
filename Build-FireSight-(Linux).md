@@ -23,5 +23,5 @@ Note: Depending on your distro, you may need to install `build-essential` via th
 Paul Jones has built FireSight on Gentoo.
 
 #### See Also
-* [[Build FireSight (Windows)]]
+* [[Build FireSight (Windows) | Depreciated]]
 * [[Build FireSight (SmartOS/Solaris)]]
