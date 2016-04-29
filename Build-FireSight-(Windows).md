@@ -39,8 +39,10 @@ Usage: opencv_performance
 
 #### Prerequisites: Visual C++ 2010 Express
 Given the limitations of Windows 8, we recommend Visual Studio 2010 Express, which can run on Windows 7. Visual Studio 2013 requires Windows 8.
+
 1. [Install Visual C++ 2010 Express](http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_4)
-2. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
+
+1. [Install Visual Studio 2010 SP1](http://www.microsoft.com/en-us/download/details.aspx?id=23691)
 
 #### Prerequisites: Build Jansson
 1. [Install CMake for Windows](http://www.cmake.org/cmake/resources/software.html)
