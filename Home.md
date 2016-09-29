@@ -11,6 +11,7 @@ Each stage in a pipeline performs a specific operation on the current pipeline i
 * [[op calcOffset]] Calculate offset between two images
 * [[op Canny]] Finds edges in an image using the Canny86 algorithm.
 * [[op Circle]] Draws a circle
+* [[op crop]] Crops pipeline image to rectangle
 * [[op cvtColor]] Change image color model
 * [[op dft]] Discrete Fourier Transform
 * [[op dftSpectrum]] Analyze DFT
