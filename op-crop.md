@@ -7,7 +7,7 @@ Crops current pipeline image to given (x,y,width,height) rectangle
 <pre>{}</pre>
 
 #### Example 1: Duck eyes [pipeline](https://github.com/firepick1/FireSight/blob/master/json/crop.json)
-<pre>firesight -i img/duck.jpg -p json/crop.json -Dx=50 -Dy=75 -Dwidth=100 -Dheight=50</pre>
+<pre>firesight -i img/duck.jpg -p json/crop.json -o crop.png -Dx=50 -Dy=75 -Dwidth=100 -Dheight=50</pre>
 > Pixel: 3ms
 
 duck.jpg &rarr; <br>
